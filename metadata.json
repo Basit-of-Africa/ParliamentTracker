@@ -1,0 +1,6 @@
+{
+  "name": "ParliamentTracker",
+  "description": "A comprehensive tracking platform for the Nigerian National Assembly, monitoring senators, reps, bills, and legislative progress with AI-powered analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
