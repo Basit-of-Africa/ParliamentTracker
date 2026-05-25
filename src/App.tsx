@@ -264,6 +264,10 @@ export default function App() {
                       legislators={legislators}
                       bills={bills}
                       onSelectBill={handleSelectBillAndRedirect}
+                      onRefreshLegislators={(updated) => {
+                        setLegislators(updated);
+                        calculateStats(bills, updated);
+                      }}
                     />
                   )}
 

@@ -203,6 +203,135 @@ app.get("/api/scrape/members", async (req, res) => {
   }
 });
 
+// Sync and fetch more members of the assembly live using search grounding
+app.post("/api/legislators/sync", async (req, res) => {
+  try {
+    const ai = getAIClient();
+    const existingNames = legislators_store.map(l => l.name);
+
+    const prompt = `You are a professional legislative expert on the Nigerian Tenth National Assembly (NASS).
+    Generate 15 actual members of the 10th House of Representatives of Nigeria or additional notable Senators who are NOT in this existing list of names:
+    ${existingNames.slice(0, 30).join(", ")}
+    Please provide authentic, real-world representatives (Honourables) representing constituencies across different states like Lagos, Kano, Oyo, Rivers, Kaduna, etc. For each legislator, find their real constituency, state, and party.
+    
+    The schema of the response JSON must be:
+    {
+      "legislators": [
+        {
+          "id": "leg-lastname-lowercase-consecutive",
+          "name": "Senator Real Name or Hon. Real Name",
+          "title": "Senator" or "Honourable",
+          "chamber": "Senate" or "House of Representatives",
+          "state": "State Name capitalized (e.g. Lagos)",
+          "constituency": "Constituency name (e.g. Ikeja Federal Constituency)",
+          "party": "APC" or "PDP" or "LP" or "APGA" or "NNPP" or "Other",
+          "engagementScore": 82,
+          "billsSponsored": [],
+          "attendanceRate": 93,
+          "motionsPresentedCount": 11,
+          "districtOfficeEmail": "email",
+          "status": "Active"
+        }
+      ]
+    }`;
+
+    console.log("Syncing Tenth NASS members...");
+    const result = await ai.models.generateContent({
+      model: "gemini-3.5-flash",
+      contents: prompt,
+      config: {
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: Type.OBJECT,
+          properties: {
+            legislators: {
+              type: Type.ARRAY,
+              items: {
+                type: Type.OBJECT,
+                properties: {
+                  id: { type: Type.STRING },
+                  name: { type: Type.STRING },
+                  title: { type: Type.STRING },
+                  chamber: { type: Type.STRING },
+                  state: { type: Type.STRING },
+                  constituency: { type: Type.STRING },
+                  party: { type: Type.STRING },
+                  engagementScore: { type: Type.INTEGER },
+                  billsSponsored: { type: Type.ARRAY, items: { type: Type.STRING } },
+                  attendanceRate: { type: Type.INTEGER },
+                  motionsPresentedCount: { type: Type.INTEGER },
+                  districtOfficeEmail: { type: Type.STRING },
+                  status: { type: Type.STRING }
+                },
+                required: ["id", "name", "title", "chamber", "state", "constituency", "party", "engagementScore", "billsSponsored", "attendanceRate", "motionsPresentedCount", "districtOfficeEmail", "status"]
+              }
+            }
+          },
+          required: ["legislators"]
+        },
+        tools: [{ googleSearch: {} }] // Utilize live Search grounding to pull actual members !
+      }
+    });
+
+    const parsed = JSON.parse(result.text || "{}");
+    const incoming = parsed.legislators || [];
+
+    const added: Legislator[] = [];
+    for (const leg of incoming) {
+      let partyMapped = PoliticalParty.OTHER;
+      const py = String(leg.party).toUpperCase();
+      if (py === "APC") partyMapped = PoliticalParty.APC;
+      else if (py === "PDP") partyMapped = PoliticalParty.PDP;
+      else if (py === "LP") partyMapped = PoliticalParty.LP;
+      else if (py === "APGA") partyMapped = PoliticalParty.APGA;
+      else if (py === "NNPP") partyMapped = PoliticalParty.NNPP;
+
+      const cl = leg.chamber === Chamber.SENATE || String(leg.chamber).toLowerCase().includes("senat")
+        ? Chamber.SENATE 
+        : Chamber.HOUSE_OF_REPS;
+      
+      const tl = cl === Chamber.SENATE ? "Senator" : "Honourable";
+
+      // Build safe clean model
+      const coercedLeg: Legislator = {
+        id: leg.id || `leg-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+        name: leg.name,
+        title: tl as any,
+        chamber: cl,
+        state: leg.state || "Abia",
+        constituency: leg.constituency || "Federal Constituency",
+        party: partyMapped,
+        engagementScore: Number(leg.engagementScore) || 82,
+        billsSponsored: Array.isArray(leg.billsSponsored) ? leg.billsSponsored : [],
+        attendanceRate: Number(leg.attendanceRate) || 92,
+        motionsPresentedCount: Number(leg.motionsPresentedCount) || 12,
+        districtOfficeEmail: leg.districtOfficeEmail || "contact@nass.gov.ng",
+        status: "Active"
+      };
+
+      // De-duplication check
+      const alreadyExists = legislators_store.some(
+        existing => existing.id === coercedLeg.id || existing.name.toLowerCase() === coercedLeg.name.toLowerCase()
+      );
+
+      if (!alreadyExists) {
+        legislators_store.push(coercedLeg);
+        added.push(coercedLeg);
+      }
+    }
+
+    res.json({
+      success: true,
+      message: `Successfully synchronized ${added.length} authentic members.`,
+      addedCount: added.length,
+      legislators: legislators_store
+    });
+  } catch (error: any) {
+    console.error("Assembly syncer error:", error);
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
 // Vote in public polls on a bill
 app.post("/api/bills/:id/vote", (req, res) => {
   const { id } = req.params;

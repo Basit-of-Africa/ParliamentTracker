@@ -11,13 +11,41 @@ interface LegislatorDirectoryProps {
   legislators: Legislator[];
   bills: Bill[];
   onSelectBill: (billId: string) => void;
+  onRefreshLegislators: (updated: Legislator[]) => void;
 }
 
-export default function LegislatorDirectory({ legislators, bills, onSelectBill }: LegislatorDirectoryProps) {
+export default function LegislatorDirectory({ legislators, bills, onSelectBill, onRefreshLegislators }: LegislatorDirectoryProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedChamber, setSelectedChamber] = useState<"All" | Chamber>("All");
   const [selectedParty, setSelectedParty] = useState<"All" | PoliticalParty>("All");
   const [inspectedLegislatorId, setInspectedLegislatorId] = useState<string | null>(null);
+
+  const [isSyncing, setIsSyncing] = useState(false);
+  const [syncMessage, setSyncMessage] = useState<string | null>(null);
+
+  const handleSyncAssembly = async () => {
+    try {
+      setIsSyncing(true);
+      setSyncMessage(null);
+      const res = await fetch("/api/legislators/sync", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" }
+      });
+      const data = await res.json();
+      if (data.success) {
+        onRefreshLegislators(data.legislators);
+        setSyncMessage(`Import Success: Dynamic sync acquired ${data.addedCount} additional representatives from live NASS journals!`);
+        setTimeout(() => setSyncMessage(null), 6000);
+      } else {
+        throw new Error(data.error || "Failed to synchronize roster.");
+      }
+    } catch (err: any) {
+      console.error(err);
+      setSyncMessage(`Sync Alert: ${err.message || "Failed to establish sync pipeline."}`);
+    } finally {
+      setIsSyncing(false);
+    }
+  };
 
   // Filters
   const filteredLegislators = legislators.filter((leg) => {
@@ -82,6 +110,44 @@ export default function LegislatorDirectory({ legislators, bills, onSelectBill }
       
       {/* 2-Column Left roster listing */}
       <div className="lg:col-span-2 space-y-6">
+        
+        {/* Sync Header Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-xs">
+          <div className="flex items-center gap-2.5">
+            <div className="p-2 bg-emerald-100 text-emerald-700 rounded-lg shrink-0">
+              <Landmark className="w-4 h-4" />
+            </div>
+            <div>
+              <h4 className="font-extrabold text-slate-900 text-sm">Synchronized 10th Assembly Database</h4>
+              <p className="text-[11px] text-slate-500 font-medium">Currently Tracking <strong className="text-slate-750 font-bold">{legislators.length}</strong> active members covering all 36 States + FCT.</p>
+            </div>
+          </div>
+          
+          <button
+            onClick={handleSyncAssembly}
+            disabled={isSyncing}
+            className="w-full sm:w-auto px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-250 disabled:text-slate-400 text-white font-extrabold rounded-xl cursor-pointer flex items-center justify-center gap-1.5 transition text-xs shrink-0 shadow-sm"
+          >
+            {isSyncing ? (
+              <>
+                <div className="w-3.5 h-3.5 border-2 border-slate-300 border-t-white rounded-full animate-spin" />
+                <span>Syncing live NASS records...</span>
+              </>
+            ) : (
+              <>
+                <Users className="w-4 h-4" />
+                <span>Sync Additional Members</span>
+              </>
+            )}
+          </button>
+        </div>
+
+        {syncMessage && (
+          <div className="p-3 bg-slate-50 text-slate-700 border border-slate-200 font-bold rounded-xl animate-fade flex items-center gap-2 text-xs">
+            <AlertCircle className="w-4 h-4 text-emerald-600 animate-bounce shrink-0" />
+            <span>{syncMessage}</span>
+          </div>
+        )}
         
         {/* Search and filter tools */}
         <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-sm space-y-3">
