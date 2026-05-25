@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark } from "lucide-react";
+import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark, ArrowUpRight } from "lucide-react";
 import { Bill, Chamber, LegislativeStage, UserReview, Legislator } from "../types";
 
 interface BillDetailProps {
@@ -616,6 +616,27 @@ export default function BillDetail({
                 </div>
               )}
             </div>
+          </div>
+
+          {/* OFFICIAL PLAC SOURCE LINK */}
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200/60 rounded-2xl p-5 shadow-sm space-y-3.5">
+            <div className="flex items-center gap-2">
+              <Landmark className="w-5 h-5 text-emerald-600 shrink-0" />
+              <h3 className="text-xs font-black text-slate-900 uppercase tracking-wider">PLAC Bills Track Portal</h3>
+            </div>
+            <p className="text-xs text-slate-650 leading-relaxed font-semibold">
+              National Assembly bills are sourced from the official registry of the <strong>Policy and Legal Advocacy Centre (PLAC)</strong>. Track reading texts, complete gazette details, and real-time updates directly on the PLAC portal.
+            </p>
+            <a
+              href="https://p.placbillstrack.org/bills/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 w-[100%] py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md shadow-emerald-700/10 cursor-pointer text-center"
+              id="plac-external-source-link"
+            >
+              <span>Explore All Live PLAC Bills</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-white" />
+            </a>
           </div>
 
           {/* ACTIVE LEGISLATOR PROFILE */}

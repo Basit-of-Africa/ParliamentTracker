@@ -130,7 +130,15 @@ export default function Home({
                 </div>
                 <div>
                   <h3 className="font-extrabold text-slate-100 text-sm">Abia to Zamfara Integration</h3>
-                  <p className="text-xs text-slate-400">Active live syncing with PLAC portal</p>
+                  <a
+                    href="https://p.placbillstrack.org/bills/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-emerald-400 hover:text-emerald-300 hover:underline inline-flex items-center gap-0.5 mt-0.5"
+                  >
+                    <span>Sourced from PLAC Bills Track</span>
+                    <span className="text-[10px]/none">↗</span>
+                  </a>
                 </div>
               </div>
 

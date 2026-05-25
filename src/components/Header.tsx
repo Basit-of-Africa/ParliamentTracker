@@ -22,9 +22,9 @@ interface HeaderProps {
 export default function Header({ activeTab, setActiveTab, stats }: HeaderProps) {
   const tabs = [
     { id: "home", label: "Overview" },
-    { id: "bills", label: "Bills & Legislation" },
+    { id: "bills", label: "Bills" },
     { id: "watchlist", label: "My Watchlist" },
-    { id: "mps", label: "Honourables & Senators" },
+    { id: "mps", label: "Members" },
     { id: "ai-copilot", label: "NASS Advisor AI" },
     { id: "propose", label: "Propose Citizen Bill" },
   ];
