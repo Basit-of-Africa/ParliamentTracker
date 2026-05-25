@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 import Header from "./components/Header";
+import Home from "./components/Home";
 import BillsList from "./components/BillsList";
 import BillDetail from "./components/BillDetail";
 import LegislatorDirectory from "./components/LegislatorDirectory";
@@ -17,7 +18,7 @@ import CitizenProposal from "./components/CitizenProposal";
 import { Bill, Legislator, Chamber, LegislativeStage, UserReview } from "./types";
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<string>("bills");
+  const [activeTab, setActiveTab] = useState<string>("home");
   const [bills, setBills] = useState<Bill[]>([]);
   const [legislators, setLegislators] = useState<Legislator[]>([]);
   const [selectedBillId, setSelectedBillId] = useState<string>("");
@@ -303,6 +304,22 @@ export default function App() {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
                 >
+                  {activeTab === "home" && (
+                    <Home
+                      bills={bills}
+                      legislators={legislators}
+                      onNavigateTab={(tab) => {
+                        setSelectedBillId("");
+                        navigateTo("/");
+                        setActiveTab(tab);
+                      }}
+                      onSelectBill={handleSelectBillAndRedirect}
+                      onSelectLegislator={handleSelectLegislatorAndRedirect}
+                      onRefresh={fetchData}
+                      stats={stats}
+                    />
+                  )}
+
                   {activeTab === "bills" && (
                     <BillsList
                       bills={bills}
