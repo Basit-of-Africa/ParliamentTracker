@@ -56,7 +56,7 @@ export default function Header({ activeTab, setActiveTab, stats }: HeaderProps) 
           </div>
 
           {/* Navigation Tab Bar */}
-          <nav className="flex flex-wrap gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200" id="main-navigation">
+          <nav className="flex overflow-x-auto flex-nowrap md:flex-wrap gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 scrollbar-none max-w-full snap-x" id="main-navigation">
             {tabs.map((tab) => {
               const active = activeTab === tab.id;
               return (
@@ -64,7 +64,7 @@ export default function Header({ activeTab, setActiveTab, stats }: HeaderProps) 
                   key={tab.id}
                   id={`nav-tab-${tab.id}`}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 text-xs font-semibold rounded-lg transition-all ${
+                  className={`px-4 py-2 text-xs font-semibold rounded-lg shrink-0 snap-start transition-all whitespace-nowrap ${
                     active
                       ? "bg-emerald-600 text-white shadow-sm font-bold"
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"

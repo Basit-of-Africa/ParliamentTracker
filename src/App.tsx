@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Wifi, WifiOff, Download, X, Smartphone } from "lucide-react";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -51,6 +52,54 @@ export default function App() {
   };
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+
+  // PWA & Network diagnostics state
+  const [isOnline, setIsOnline] = useState<boolean>(navigator.onLine);
+  const [showNetworkToast, setShowNetworkToast] = useState<boolean>(false);
+  const [deferredInstallPrompt, setDeferredInstallPrompt] = useState<any>(null);
+  const [showInstallBanner, setShowInstallBanner] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleOnline = () => {
+      setIsOnline(true);
+      setShowNetworkToast(true);
+      fetchData(); // auto re-sync with latest assembly records
+      setTimeout(() => setShowNetworkToast(false), 4000);
+    };
+
+    const handleOffline = () => {
+      setIsOnline(false);
+      setShowNetworkToast(true);
+      setTimeout(() => setShowNetworkToast(false), 4000);
+    };
+
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+
+    const handleInstallPrompt = (e: any) => {
+      e.preventDefault();
+      setDeferredInstallPrompt(e);
+      // Auto display install button banner when application registers as installable
+      setShowInstallBanner(true);
+    };
+
+    window.addEventListener("beforeinstallprompt", handleInstallPrompt);
+
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+      window.removeEventListener("beforeinstallprompt", handleInstallPrompt);
+    };
+  }, []);
+
+  const handleInstallApp = async () => {
+    if (!deferredInstallPrompt) return;
+    deferredInstallPrompt.prompt();
+    const { outcome } = await deferredInstallPrompt.userChoice;
+    console.log(`PWA Installation Choice: ${outcome}`);
+    setDeferredInstallPrompt(null);
+    setShowInstallBanner(false);
+  };
 
   // Dynamic route monitoring
   const [routePath, setRoutePath] = useState<string>(window.location.pathname);
@@ -430,6 +479,97 @@ export default function App() {
           </p>
         </div>
       </footer>
+
+      {/* Dynamic Network Connectivity Status Toaster */}
+      <AnimatePresence>
+        {showNetworkToast && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+            className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl border shadow-xl ${
+              isOnline
+                ? "bg-slate-900/95 text-slate-100 border-emerald-800"
+                : "bg-amber-950/95 text-amber-100 border-amber-800"
+            }`}
+            id="network-pwa-toast"
+          >
+            {isOnline ? (
+              <Wifi className="w-5 h-5 text-emerald-400 animate-pulse" />
+            ) : (
+              <WifiOff className="w-5 h-5 text-amber-500 animate-pulse" />
+            )}
+            <div className="flex-1">
+              <h5 className="text-xs font-extrabold tracking-wide uppercase">
+                {isOnline ? "Back Online" : "Assembly Offline Mode"}
+              </h5>
+              <p className="text-[11px] text-slate-300 mt-0.5 font-medium leading-normal">
+                {isOnline
+                  ? "Registry re-synced with active legislative database nodes."
+                  : "Disconnected. Serving verified offline assembly caches safely."}
+              </p>
+            </div>
+            <button
+              onClick={() => setShowNetworkToast(false)}
+              className="p-1 text-slate-400 hover:text-white rounded transition"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Modern, Dismissible Floating PWA Install Banner */}
+      <AnimatePresence>
+        {showInstallBanner && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            className="fixed bottom-6 left-6 right-6 md:left-6 md:right-auto md:max-w-md z-50 bg-slate-900 text-white rounded-3xl border border-slate-850 p-5 shadow-2xl flex flex-col gap-4"
+            id="pwa-install-overlay"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-emerald-950/80 text-emerald-400 rounded-2xl border border-emerald-900/40 flex-shrink-0">
+                <Smartphone className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <h4 className="text-sm font-black font-display text-slate-100">
+                    Install ParliamentTracker
+                  </h4>
+                  <button
+                    onClick={() => setShowInstallBanner(false)}
+                    className="p-1 hover:bg-slate-800 text-slate-400 hover:text-white rounded-xl transition cursor-pointer"
+                    title="Dismiss"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+                <p className="text-xs text-slate-400 mt-1 leading-relaxed font-semibold">
+                  Add NASS ParliamentTracker directly to your mobile home screen for instantaneous access, standalone briefing layouts, and offline performance audits!
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-2 justify-end">
+              <button
+                onClick={() => setShowInstallBanner(false)}
+                className="px-3.5 py-1.5 hover:bg-slate-800 text-slate-300 text-xs font-bold rounded-xl transition cursor-pointer"
+              >
+                Maybe Later
+              </button>
+              <button
+                onClick={handleInstallApp}
+                className="px-4 py-2 bg-emerald-650 hover:bg-emerald-700 text-white text-xs font-extrabold rounded-xl transition shadow-lg shadow-emerald-950/40 flex items-center gap-1.5 cursor-pointer"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>Install WebApp</span>
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
     </div>
   );
