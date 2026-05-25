@@ -12,9 +12,16 @@ interface LegislatorDirectoryProps {
   bills: Bill[];
   onSelectBill: (billId: string) => void;
   onRefreshLegislators: (updated: Legislator[]) => void;
+  onSelectLegislator: (legId: string) => void;
 }
 
-export default function LegislatorDirectory({ legislators, bills, onSelectBill, onRefreshLegislators }: LegislatorDirectoryProps) {
+export default function LegislatorDirectory({
+  legislators,
+  bills,
+  onSelectBill,
+  onRefreshLegislators,
+  onSelectLegislator,
+}: LegislatorDirectoryProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedChamber, setSelectedChamber] = useState<"All" | Chamber>("All");
   const [selectedParty, setSelectedParty] = useState<"All" | PoliticalParty>("All");
@@ -281,6 +288,13 @@ export default function LegislatorDirectory({ legislators, bills, onSelectBill, 
                 </span>
                 <h3 className="text-base font-extrabold font-display mt-2 text-slate-900">{activeInspectedLeg.title} {activeInspectedLeg.name}</h3>
                 <p className="text-xs text-slate-500 mt-1 font-medium">{activeInspectedLeg.constituency}, {activeInspectedLeg.state} State</p>
+                <button
+                  onClick={() => onSelectLegislator(activeInspectedLeg.id)}
+                  className="mt-3 px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl transition shadow-sm w-full cursor-pointer flex items-center justify-center gap-1.5"
+                >
+                  <Users className="w-3.5 h-3.5" />
+                  <span>Open Dedicated Profile</span>
+                </button>
               </div>
             </div>
 

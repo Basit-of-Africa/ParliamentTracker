@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import BillsList from "./components/BillsList";
 import BillDetail from "./components/BillDetail";
 import LegislatorDirectory from "./components/LegislatorDirectory";
+import LegislatorDetail from "./components/LegislatorDetail";
 import AICopilot from "./components/AICopilot";
 import CitizenProposal from "./components/CitizenProposal";
 
@@ -22,6 +23,9 @@ export default function App() {
   const [selectedBillId, setSelectedBillId] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Dynamic route monitoring
+  const [routePath, setRoutePath] = useState<string>(window.location.pathname);
 
   // Statistics ribbon values
   const [stats, setStats] = useState({
@@ -89,6 +93,31 @@ export default function App() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  // Sync routePath on back/forward clicks
+  useEffect(() => {
+    const handlePopState = () => {
+      setRoutePath(window.location.pathname);
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  const navigateTo = (path: string) => {
+    window.history.pushState(null, "", path);
+    setRoutePath(path);
+  };
+
+  // Convert Route UUID e.g. /members/385b1ff4-1a79-45fd-bd6b-65b4ccaaeb15/ to legislator details
+  const matchMember = routePath.match(/\/members\/([a-zA-Z0-9-]+)\/?/);
+  const routeMemberId = matchMember ? matchMember[1] : null;
+
+  useEffect(() => {
+    if (routeMemberId) {
+      setActiveTab("mps");
+      setSelectedBillId("");
+    }
+  }, [routeMemberId]);
 
   // Post citizen comment review to backend rest
   const handlePostReview = async (billId: string, userName: string, rating: number, comment: string): Promise<UserReview> => {
@@ -168,11 +197,14 @@ export default function App() {
 
   const handleSelectBillAndRedirect = (billId: string) => {
     setSelectedBillId(billId);
+    navigateTo("/");
     setActiveTab("bills"); // force bills view tab
   };
 
   const handleSelectLegislatorAndRedirect = (legId: string) => {
     setSelectedBillId(""); // close bill inspections
+    const uuid = legId.replace("leg-", "");
+    navigateTo(`/members/${uuid}/`);
     setActiveTab("mps"); // force legislators view tab
   };
 
@@ -191,6 +223,7 @@ export default function App() {
       {/* Platform Header */}
       <Header activeTab={activeTab} setActiveTab={(tab) => {
         setSelectedBillId(""); // clear bill inspect scope on separate tabs switching
+        navigateTo("/");
         setActiveTab(tab);
       }} stats={stats} />
 
@@ -236,11 +269,30 @@ export default function App() {
                     billId={selectedBillId}
                     bills={bills}
                     legislators={legislators}
-                    onBack={() => setSelectedBillId("")}
+                    onBack={() => {
+                      setSelectedBillId("");
+                      navigateTo("/");
+                    }}
                     onPostReview={handlePostReview}
                     onVoteBill={handleVoteBill}
                     onUpdateStage={handleUpdateStage}
                     onSelectLegislator={handleSelectLegislatorAndRedirect}
+                  />
+                </motion.div>
+              ) : routeMemberId ? (
+                <motion.div
+                  key={`member-details-${routeMemberId}`}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <LegislatorDetail
+                    id={routeMemberId}
+                    legislators={legislators}
+                    bills={bills}
+                    onBack={() => navigateTo("/")}
+                    onSelectBill={handleSelectBillAndRedirect}
                   />
                 </motion.div>
               ) : (
@@ -267,6 +319,10 @@ export default function App() {
                       onRefreshLegislators={(updated) => {
                         setLegislators(updated);
                         calculateStats(bills, updated);
+                      }}
+                      onSelectLegislator={(legId) => {
+                        const uuid = legId.replace("leg-", "");
+                        navigateTo(`/members/${uuid}/`);
                       }}
                     />
                   )}

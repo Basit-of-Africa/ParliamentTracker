@@ -23,6 +23,7 @@ app.use(express.json());
 let legislators_store: Legislator[] = [...INITIAL_LEGISLATORS];
 let bills_store: Bill[] = [...INITIAL_BILLS];
 let reviews_store: UserReview[] = [...INITIAL_REVIEWS];
+let legislator_messages_store: Record<string, any[]> = {};
 
 // Real-world Tenth National Assembly backup roster to serve as robust zero-dependency offline fallback
 const FALLBACK_NASS_MEMBERS: Legislator[] = [
@@ -362,6 +363,39 @@ app.post("/api/bills/:id/stage", (req, res) => {
 // Get all legislators
 app.get("/api/legislators", (req, res) => {
   res.json({ success: true, count: legislators_store.length, legislators: legislators_store });
+});
+
+// Get messages for a specific legislator
+app.get("/api/legislators/:id/messages", (req, res) => {
+  const { id } = req.params;
+  const messages = legislator_messages_store[id] || [];
+  res.json({ success: true, messages });
+});
+
+// Post a message for a specific legislator
+app.post("/api/legislators/:id/messages", (req, res) => {
+  const { id } = req.params;
+  const { senderName, email, topic, message } = req.body;
+
+  if (!senderName || !email || !message) {
+    return res.status(400).json({ success: false, error: "Missing required sender details or message content." });
+  }
+
+  const newMessage = {
+    id: `msg-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+    senderName,
+    email,
+    topic: topic || "Policy Feedback",
+    message,
+    timestamp: new Date().toISOString()
+  };
+
+  if (!legislator_messages_store[id]) {
+    legislator_messages_store[id] = [];
+  }
+  legislator_messages_store[id].unshift(newMessage);
+
+  res.json({ success: true, message: newMessage });
 });
 
 // Fallback scraping trigger - fetches PLAC bills track or loads initial
