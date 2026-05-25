@@ -254,10 +254,9 @@ export default function BillsList({ bills, onSelectBill, onNavigateToPropose }: 
 
   function sortedResultsCount(count: number) {
     return (
-      <span className="ml-auto text-xs text-slate-400">
-        Showing <strong className="text-slate-650 font-semibold">{count}</strong> bills
+      <span className="ml-auto text-xs text-slate-405 font-medium">
+        Showing <strong className="text-slate-700 font-bold">{count}</strong> bills
       </span>
     );
   }
-}
 }
