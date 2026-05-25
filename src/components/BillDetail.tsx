@@ -164,7 +164,7 @@ export default function BillDetail({
         <h2 className="text-xl md:text-2xl font-extrabold font-display tracking-tight text-slate-900 leading-tight mb-3">
           {bill.title}
         </h2>
-        <p className="text-slate-600 text-xs md:text-sm max-w-4xl leading-relaxed mb-6 font-sans">
+        <p className="text-slate-600 text-sm md:text-base max-w-4xl leading-relaxed mb-6 font-sans">
           {bill.fullTitle}
         </p>
 
@@ -259,7 +259,7 @@ export default function BillDetail({
                 <h3 className="text-base font-bold font-display text-slate-900">
                   National Assembly Legislative Path
                 </h3>
-                <p className="text-xs text-slate-500 mt-1">
+                <p className="text-sm text-slate-500 mt-1">
                   How a draft becomes statute. View official clerks timeline records for the 10th Assembly.
                 </p>
               </div>
@@ -550,7 +550,7 @@ export default function BillDetail({
               <Vote className="w-5.5 h-5.5 text-emerald-600 animate-bounce" />
               <span>Participatory Citizen Poll</span>
             </h3>
-            <p className="text-[11px] text-slate-500 leading-normal font-medium">
+            <p className="text-sm text-slate-500 leading-normal font-medium">
               Is this legislative act beneficial for Nigeria? Cast your vote securely. Results are tabulated in real-time.
             </p>
 
@@ -611,7 +611,7 @@ export default function BillDetail({
                 </div>
                 <div>
                   <h4 className="text-sm font-extrabold text-slate-900">{sponsor.title} {sponsor.name}</h4>
-                  <p className="text-[11px] text-slate-500 mt-0.5">{sponsor.party} — {sponsor.constituency}, {sponsor.state} State</p>
+                  <p className="text-xs text-slate-500 mt-0.5">{sponsor.party} — {sponsor.constituency}, {sponsor.state} State</p>
                 </div>
               </div>
 
@@ -652,7 +652,7 @@ export default function BillDetail({
               <Play className="w-4.5 h-4.5 text-emerald-600 transform rotate-90" />
               <span>NASS Legislative Simulator</span>
             </h3>
-            <p className="text-[10px] text-slate-550 leading-normal font-medium">
+            <p className="text-xs text-slate-500 leading-normal font-medium">
               Move this bill stage to test how the stepper, metrics, and timeline records auto-update seamlessly in state!
             </p>
 

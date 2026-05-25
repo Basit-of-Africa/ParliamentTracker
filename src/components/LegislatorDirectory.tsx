@@ -126,7 +126,7 @@ export default function LegislatorDirectory({
             </div>
             <div>
               <h4 className="font-extrabold text-slate-900 text-sm">Synchronized 10th Assembly Database</h4>
-              <p className="text-[11px] text-slate-500 font-medium">Currently Tracking <strong className="text-slate-750 font-bold">{legislators.length}</strong> active members covering all 36 States + FCT.</p>
+              <p className="text-xs md:text-sm text-slate-500 font-medium">Currently Tracking <strong className="text-slate-750 font-bold">{legislators.length}</strong> active members covering all 36 States + FCT.</p>
             </div>
           </div>
           
@@ -287,7 +287,7 @@ export default function LegislatorDirectory({
                   {activeInspectedLeg.party} Party
                 </span>
                 <h3 className="text-base font-extrabold font-display mt-2 text-slate-900">{activeInspectedLeg.title} {activeInspectedLeg.name}</h3>
-                <p className="text-xs text-slate-500 mt-1 font-medium">{activeInspectedLeg.constituency}, {activeInspectedLeg.state} State</p>
+                <p className="text-sm text-slate-500 mt-1 font-medium">{activeInspectedLeg.constituency}, {activeInspectedLeg.state} State</p>
                 <button
                   onClick={() => onSelectLegislator(activeInspectedLeg.id)}
                   className="mt-3 px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl transition shadow-sm w-full cursor-pointer flex items-center justify-center gap-1.5"
@@ -396,7 +396,7 @@ export default function LegislatorDirectory({
           <div className="bg-slate-50 rounded-2xl border border-slate-200/85 p-6 text-center text-slate-400" id="legislator-inspect-fallback">
             <Users className="w-8 h-8 text-slate-400 mx-auto mb-2" />
             <span className="font-bold font-display text-xs text-slate-700">Select a Representative Card</span>
-            <p className="text-[11px] text-slate-500 mt-1">
+            <p className="text-sm text-slate-500 mt-1">
               Click any Senator or Honourable on the left grid to execute a deeper performance audit and sponsored bills index scan.
             </p>
           </div>

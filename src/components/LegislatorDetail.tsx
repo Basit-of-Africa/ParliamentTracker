@@ -226,7 +226,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
           <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5">
             <div>
               <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400">Legislator Performance Matrix</h3>
-              <p className="text-xs text-slate-500 mt-1">Calculated and verified from official 10th National Assembly Hansards and Clerks Registry.</p>
+              <p className="text-sm text-slate-500 mt-1">Calculated and verified from official 10th National Assembly Hansards and Clerks Registry.</p>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-semibold">
@@ -272,7 +272,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div>
                 <h3 className="text-base font-bold font-display text-slate-900">Sponsored Bills & Reforms</h3>
-                <p className="text-xs text-slate-500 mt-0.5">Primary policy reforms proposed or co-signed by this legislator.</p>
+                <p className="text-sm text-slate-500 mt-0.5">Primary policy reforms proposed or co-signed by this legislator.</p>
               </div>
               <span className="text-xs bg-slate-100 text-slate-700 px-2.5 py-1 border border-slate-250 font-bold rounded">
                 Total: {sponsoredBills.length}
@@ -350,7 +350,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
               <MessageSquare className="w-5 h-5 text-emerald-600 shrink-0" />
               <span>Direct Representative Mailer</span>
             </h3>
-            <p className="text-[11px] text-slate-500 leading-relaxed font-sans font-medium">
+            <p className="text-sm text-slate-500 leading-relaxed font-sans font-medium">
               Write a professional, verified constituent message to {legislator.title} {legislator.name.split(" ").pop()}. Your entry generates an email notification and is archived on the platform registry.
             </p>
 
@@ -448,7 +448,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                       <span className="font-mono text-slate-400">{new Date(m.timestamp).toLocaleDateString()}</span>
                     </div>
                     <div className="text-[9px] font-bold text-slate-400">{m.topic}</div>
-                    <p className="text-slate-650 text-[11px] leading-snug mt-1 font-sans">{m.message}</p>
+                    <p className="text-slate-600 text-sm leading-normal mt-1 font-sans">{m.message}</p>
                   </div>
                 ))}
               </div>

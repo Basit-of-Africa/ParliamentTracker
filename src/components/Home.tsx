@@ -130,7 +130,7 @@ export default function Home({
                 </div>
                 <div>
                   <h3 className="font-extrabold text-slate-100 text-sm">Abia to Zamfara Integration</h3>
-                  <p className="text-[11px] text-slate-400">Active live syncing with PLAC portal</p>
+                  <p className="text-xs text-slate-400">Active live syncing with PLAC portal</p>
                 </div>
               </div>
 
@@ -184,7 +184,7 @@ export default function Home({
           <h2 className="text-xl md:text-2xl font-black font-display text-slate-900 tracking-tight">
             Comprehensive Accountability Engine
           </h2>
-          <p className="text-xs text-slate-500 mt-1">Four core modules designed to eliminate transparency barriers and connect you with power.</p>
+          <p className="text-sm text-slate-500 mt-1">Four core modules designed to eliminate transparency barriers and connect you with power.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -199,7 +199,7 @@ export default function Home({
               </div>
               <div>
                 <h3 className="font-black text-sm text-slate-900 leading-tight">Legislation Tracker</h3>
-                <p className="text-xs text-slate-500 leading-relaxed mt-1.5 font-sans">
+                <p className="text-sm text-slate-500 leading-relaxed mt-1.5 font-sans">
                   Browse public legislative drafts, check current readings, and review AI summaries highlighting legal implications.
                 </p>
               </div>
@@ -220,7 +220,7 @@ export default function Home({
               </div>
               <div>
                 <h3 className="font-black text-sm text-slate-900 leading-tight">Senator & MP scorecards</h3>
-                <p className="text-xs text-slate-500 leading-relaxed mt-1.5 font-sans">
+                <p className="text-sm text-slate-500 leading-relaxed mt-1.5 font-sans">
                   Audit attendance rosters, verify bill sponsorship counters, and dispatch verified petitional emails instantly.
                 </p>
               </div>
@@ -241,7 +241,7 @@ export default function Home({
               </div>
               <div>
                 <h3 className="font-black text-sm text-slate-900 leading-tight">NASS AI Copilot</h3>
-                <p className="text-xs text-slate-500 leading-relaxed mt-1.5 font-sans">
+                <p className="text-sm text-slate-500 leading-relaxed mt-1.5 font-sans">
                   Query bills, assess constituency funding distribution, and receive instant policy briefings from Gemini.
                 </p>
               </div>
@@ -262,7 +262,7 @@ export default function Home({
               </div>
               <div>
                 <h3 className="font-black text-sm text-slate-900 leading-tight">Propose Custom Reforms</h3>
-                <p className="text-xs text-slate-500 leading-relaxed mt-1.5 font-sans">
+                <p className="text-sm text-slate-500 leading-relaxed mt-1.5 font-sans">
                   Co-author citizen draft bills, let AI analyze technical feasibility, and share policies for public feedback.
                 </p>
               </div>
@@ -284,7 +284,7 @@ export default function Home({
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <div>
               <h3 className="text-base font-black font-display text-slate-900">Trending Active Legislation</h3>
-              <p className="text-[11px] text-slate-500 mt-0.5">National bills drawing high public debate and rating votes.</p>
+              <p className="text-xs md:text-sm text-slate-500 mt-0.5">National bills drawing high public debate and rating votes.</p>
             </div>
             <button 
               onClick={() => onNavigateTab("bills")}
@@ -343,7 +343,7 @@ export default function Home({
           <div className="flex items-center justify-between border-b border-slate-100 pb-3">
             <div>
               <h3 className="text-base font-black font-display text-slate-900">Highly Engaged Lawmakers</h3>
-              <p className="text-[11px] text-slate-500 mt-0.5">Top performing representatives based on active engagement indexes.</p>
+              <p className="text-xs md:text-sm text-slate-500 mt-0.5">Top performing representatives based on active engagement indexes.</p>
             </div>
             <button 
               onClick={() => onNavigateTab("mps")}
@@ -409,7 +409,7 @@ export default function Home({
           <h2 className="text-xl md:text-2xl font-black font-display text-slate-900 tracking-tight">
             How Parliament Tracker Connects You
           </h2>
-          <p className="text-xs text-slate-500 leading-relaxed font-sans">
+          <p className="text-sm text-slate-500 leading-relaxed font-sans">
             Bridge the representation gap by advancing through our active civic engagement modules stage-by-stage.
           </p>
         </div>
@@ -421,7 +421,7 @@ export default function Home({
               1
             </div>
             <h4 className="font-extrabold text-slate-900 text-sm">Monitor Plenary</h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-sans">
+            <p className="text-sm text-slate-500 leading-relaxed font-sans">
               Discover recently introduced bills from constitutional amendments to economic policies, translating complex legal drafting.
             </p>
           </div>
@@ -431,7 +431,7 @@ export default function Home({
               2
             </div>
             <h4 className="font-extrabold text-slate-900 text-sm">Express Sentiment</h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-sans">
+            <p className="text-sm text-slate-500 leading-relaxed font-sans">
               Cast your simulated vote (Yea/Nay) and write verified reviews to document public sentiment scores for representatives.
             </p>
           </div>
@@ -441,7 +441,7 @@ export default function Home({
               3
             </div>
             <h4 className="font-extrabold text-slate-900 text-sm">Direct Contact</h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-sans">
+            <p className="text-sm text-slate-500 leading-relaxed font-sans">
               Write professional petitions to the sponsor or your local MP. Your letter generates automatic email alerts instantly.
             </p>
           </div>
@@ -451,7 +451,7 @@ export default function Home({
               4
             </div>
             <h4 className="font-extrabold text-slate-900 text-sm">Draft Reforms</h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-sans">
+            <p className="text-sm text-slate-500 leading-relaxed font-sans">
               Formulate your own ideas, get instant Gemini legal alignment feedback, and gather support from civic society.
             </p>
           </div>
@@ -467,7 +467,7 @@ export default function Home({
           </div>
           <div className="space-y-1">
             <h4 className="font-black font-display text-slate-900 text-sm">Transparency Standard Verified</h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-sans font-medium">
+            <p className="text-sm text-slate-540 leading-relaxed font-sans font-medium">
               We gather public registry items and states legislative records systematically. No biased evaluations are added. Our platform operates entirely client-consensual and civic-neutral.
             </p>
           </div>

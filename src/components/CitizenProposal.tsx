@@ -119,7 +119,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
             </div>
             <div>
               <h3 className="text-base font-extrabold font-display text-slate-900">Propose Citizen Legislation</h3>
-              <p className="text-xs text-slate-500 mt-0.5 font-medium">Empowering people-led governance. Pitch a bill draft, align with an active Sponsor, and run AI Impact analysis.</p>
+              <p className="text-sm text-slate-500 mt-0.5 font-medium">Empowering people-led governance. Pitch a bill draft, align with an active Sponsor, and run AI Impact analysis.</p>
             </div>
           </div>
         </div>
@@ -234,7 +234,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
             <Stars className="w-12 h-12 text-yellow-500 mx-auto animate-bounce" />
             <div>
               <h3 className="text-lg font-extrabold text-slate-900 font-display">Legislation Successfully Drafted & Registered!</h3>
-              <p className="text-xs text-slate-500 max-w-md mx-auto mt-1.5 font-medium">
+              <p className="text-sm text-slate-500 max-w-md mx-auto mt-1.5 font-medium">
                 Your proposal has been refined into a formal legislative bill on the server side and mapped directly to your Sponsor's tracking log!
               </p>
             </div>
@@ -248,7 +248,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                 <span className="text-slate-500">{draftResult.category}</span>
               </div>
               <h4 className="font-bold text-slate-800 line-clamp-1">{draftResult.title}</h4>
-              <p className="text-[11px] text-slate-550 font-medium leading-relaxed line-clamp-3">{draftResult.summary}</p>
+              <p className="text-sm text-slate-550 font-medium leading-relaxed line-clamp-3">{draftResult.summary}</p>
             </div>
 
             {/* CTA action buttons */}
@@ -281,7 +281,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
               <Landmark className="w-4 h-4 text-emerald-600" />
               <span>Nigerian Legislative Help</span>
             </h3>
-            <p className="text-[10px] text-slate-500 mt-1 leading-normal font-medium">
+            <p className="text-sm text-slate-500 mt-1 leading-normal font-medium">
               How does a proposed citizen idea flow through the Tenth National Assembly?
             </p>
           </div>
@@ -292,7 +292,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                 <span className="w-5 h-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-mono font-bold text-[10px]">1</span>
                 <span>Draft Submission & Sponsor Matching</span>
               </h4>
-              <p className="text-[11px] text-slate-550 pl-6 text-justify font-medium">
+              <p className="text-xs md:text-sm text-slate-550 pl-6 text-justify font-medium">
                 A draft outlines legal principles. It is matched to an active Senator/Honourable.
               </p>
             </div>
@@ -302,7 +302,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                 <span className="w-5 h-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-mono font-bold text-[10px]">2</span>
                 <span>First and Second Readings</span>
               </h4>
-              <p className="text-[11px] text-slate-550 pl-6 text-justify font-medium">
+              <p className="text-xs md:text-sm text-slate-550 pl-6 text-justify font-medium">
                 Chamber clerks publish the bill text in general gazettes and legislative leaders debate general principles.
               </p>
             </div>
@@ -312,7 +312,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                 <span className="w-5 h-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-mono font-bold text-[10px]">3</span>
                 <span>Committee Stage</span>
               </h4>
-              <p className="text-[11px] text-slate-550 pl-6 text-justify font-medium">
+              <p className="text-xs md:text-sm text-slate-550 pl-6 text-justify font-medium">
                 Referred to dynamic specialized committees (like ICT, Finance, Health) for public consultation, hearing citizen audits, and refining sections clause-by-clause.
               </p>
             </div>
@@ -322,7 +322,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                 <span className="w-5 h-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-mono font-bold text-[10px]">4</span>
                 <span>Third Reading & Presidential Assent</span>
               </h4>
-              <p className="text-[11px] text-slate-550 pl-6 text-justify font-medium">
+              <p className="text-xs md:text-sm text-slate-550 pl-6 text-justify font-medium">
                 The full house votes. If passed, it is transmitted in concurrence to the sister chamber, and then to the President's desk for signature into law.
               </p>
             </div>
