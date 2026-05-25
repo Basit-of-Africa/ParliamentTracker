@@ -4,8 +4,9 @@
  */
 
 import { Chamber, PoliticalParty, BillCategory, LegislativeStage, Bill, Legislator, UserReview } from "./types";
+import { EXTENDED_LEGISLATORS } from "./nassExtendedMembers";
 
-export const INITIAL_LEGISLATORS: Legislator[] = [
+const BASE_LEGISLATORS: Legislator[] = [
   {
     id: "leg-akpabio",
     name: "Senator Godswill Obot Akpabio",
@@ -1002,6 +1003,14 @@ export const INITIAL_LEGISLATORS: Legislator[] = [
     status: "Active"
   }
 ];
+
+const combined = [...BASE_LEGISLATORS, ...EXTENDED_LEGISLATORS];
+const seen = new Set<string>();
+export const INITIAL_LEGISLATORS: Legislator[] = combined.filter(l => {
+  if (seen.has(l.id)) return false;
+  seen.add(l.id);
+  return true;
+});
 
 export const INITIAL_BILLS: Bill[] = [
   {
