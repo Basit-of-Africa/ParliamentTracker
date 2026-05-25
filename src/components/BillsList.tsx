@@ -4,16 +4,26 @@
  */
 
 import React, { useState } from "react";
-import { Search, Filter, ShieldCheck, Milestone, Calendar, ArrowUpRight, HelpCircle } from "lucide-react";
+import { Search, Filter, ShieldCheck, Milestone, Calendar, ArrowUpRight, HelpCircle, Bookmark } from "lucide-react";
 import { Bill, Chamber, BillCategory, LegislativeStage } from "../types";
 
 interface BillsListProps {
   bills: Bill[];
   onSelectBill: (billId: string) => void;
   onNavigateToPropose: () => void;
+  bookmarkedIds?: string[];
+  onToggleBookmark?: (billId: string) => void;
+  emptyStateText?: string;
 }
 
-export default function BillsList({ bills, onSelectBill, onNavigateToPropose }: BillsListProps) {
+export default function BillsList({
+  bills,
+  onSelectBill,
+  onNavigateToPropose,
+  bookmarkedIds = [],
+  onToggleBookmark,
+  emptyStateText,
+}: BillsListProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedChamber, setSelectedChamber] = useState<"All" | Chamber>("All");
   const [selectedCategory, setSelectedCategory] = useState<"All" | BillCategory>("All");
@@ -147,7 +157,7 @@ export default function BillsList({ bills, onSelectBill, onNavigateToPropose }: 
           <HelpCircle className="w-12 h-12 text-slate-400 mx-auto mb-3" />
           <h3 className="text-lg font-bold text-slate-800 font-display">No Bills Found</h3>
           <p className="text-slate-500 text-sm mt-1 max-w-md mx-auto">
-            Try adjusting your words or selections, or click below to draft a brand new legislative concept!
+            {emptyStateText || "Try adjusting your words or selections, or click below to draft a brand new legislative concept!"}
           </p>
           <button
             onClick={onNavigateToPropose}
@@ -160,6 +170,7 @@ export default function BillsList({ bills, onSelectBill, onNavigateToPropose }: 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5" id="bills-grid-container">
           {filteredBills.map((bill) => {
             const isCitizen = bill.tags.includes("Citizen Proposal") || bill.id.startsWith("bill-17");
+            const isBookmarked = bookmarkedIds.includes(bill.id);
             return (
               <div
                 key={bill.id}
@@ -181,9 +192,27 @@ export default function BillsList({ bills, onSelectBill, onNavigateToPropose }: 
                       )}
                     </div>
                     
-                    <span className={`text-[11px] font-medium px-2 py-0.5 border rounded-full ${getStageColorClass(bill.currentStage)}`}>
-                      {bill.currentStage}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <span className={`text-[11px] font-medium px-2 py-0.5 border rounded-full ${getStageColorClass(bill.currentStage)}`}>
+                        {bill.currentStage}
+                      </span>
+                      {onToggleBookmark && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onToggleBookmark(bill.id);
+                          }}
+                          className={`p-1.5 rounded-lg border transition-all duration-150 ${
+                            isBookmarked
+                              ? "bg-amber-500/10 border-amber-300 text-amber-650 hover:bg-amber-500/20"
+                              : "bg-slate-50 border-slate-200 text-slate-400 hover:text-slate-600 hover:bg-slate-100"
+                          }`}
+                          title={isBookmarked ? "Remove from Watchlist" : "Add to Watchlist"}
+                        >
+                          <Bookmark className={`w-3.5 h-3.5 ${isBookmarked ? "fill-amber-500 text-amber-500" : ""}`} />
+                        </button>
+                      )}
+                    </div>
                   </div>
 
                   {/* Title & summary */}

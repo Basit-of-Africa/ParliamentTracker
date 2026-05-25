@@ -22,6 +22,33 @@ export default function App() {
   const [bills, setBills] = useState<Bill[]>([]);
   const [legislators, setLegislators] = useState<Legislator[]>([]);
   const [selectedBillId, setSelectedBillId] = useState<string>("");
+  const [bookmarkedBillIds, setBookmarkedBillIds] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem("watchlist_bills");
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      return [];
+    }
+  });
+
+  // Persist watchlist changes to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem("watchlist_bills", JSON.stringify(bookmarkedBillIds));
+    } catch (e) {
+      console.error("Local storage persistent watchlist save error:", e);
+    }
+  }, [bookmarkedBillIds]);
+
+  const handleToggleBookmark = (billId: string) => {
+    setBookmarkedBillIds((prev) => {
+      if (prev.includes(billId)) {
+        return prev.filter((id) => id !== billId);
+      } else {
+        return [...prev, billId];
+      }
+    });
+  };
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -278,6 +305,8 @@ export default function App() {
                     onVoteBill={handleVoteBill}
                     onUpdateStage={handleUpdateStage}
                     onSelectLegislator={handleSelectLegislatorAndRedirect}
+                    isBookmarked={bookmarkedBillIds.includes(selectedBillId)}
+                    onToggleBookmark={handleToggleBookmark}
                   />
                 </motion.div>
               ) : routeMemberId ? (
@@ -325,7 +354,31 @@ export default function App() {
                       bills={bills}
                       onSelectBill={handleSelectBillAndRedirect}
                       onNavigateToPropose={() => setActiveTab("propose")}
+                      bookmarkedIds={bookmarkedBillIds}
+                      onToggleBookmark={handleToggleBookmark}
                     />
+                  )}
+
+                  {activeTab === "watchlist" && (
+                    <div id="watchlist-workspace">
+                      <div className="mb-6 p-6 bg-gradient-to-br from-emerald-950 via-slate-900 to-emerald-900 text-white rounded-3xl border border-emerald-800/20 shadow-sm relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+                        <h2 className="text-xl md:text-2xl font-black font-display tracking-tight">
+                          My Legislative Watchlist
+                        </h2>
+                        <p className="text-sm text-emerald-250 mt-1 max-w-2xl font-medium">
+                          Your curated selection of 10th National Assembly Senate and House bills and custom citizen proposals. Follow active readings, cast votes, and send direct emails to sponsors.
+                        </p>
+                      </div>
+                      <BillsList
+                        bills={bills.filter(b => bookmarkedBillIds.includes(b.id))}
+                        onSelectBill={handleSelectBillAndRedirect}
+                        onNavigateToPropose={() => setActiveTab("propose")}
+                        bookmarkedIds={bookmarkedBillIds}
+                        onToggleBookmark={handleToggleBookmark}
+                        emptyStateText="Your legislative watchlist is currently empty. Visit the 'Bills & Legislation' tab to find and add active bills to track."
+                      />
+                    </div>
                   )}
 
                   {activeTab === "mps" && (

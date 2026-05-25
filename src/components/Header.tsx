@@ -23,6 +23,7 @@ export default function Header({ activeTab, setActiveTab, stats }: HeaderProps) 
   const tabs = [
     { id: "home", label: "Overview" },
     { id: "bills", label: "Bills & Legislation" },
+    { id: "watchlist", label: "My Watchlist" },
     { id: "mps", label: "Honourables & Senators" },
     { id: "ai-copilot", label: "NASS Advisor AI" },
     { id: "propose", label: "Propose Citizen Bill" },

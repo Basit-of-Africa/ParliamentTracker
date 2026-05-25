@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw } from "lucide-react";
+import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark } from "lucide-react";
 import { Bill, Chamber, LegislativeStage, UserReview, Legislator } from "../types";
 
 interface BillDetailProps {
@@ -16,6 +16,8 @@ interface BillDetailProps {
   onVoteBill: (billId: string, type: "for" | "against") => Promise<{ votesFor: number, votesAgainst: number }>;
   onUpdateStage: (billId: string, stage: LegislativeStage, note: string) => Promise<Bill>;
   onSelectLegislator: (legId: string) => void;
+  isBookmarked?: boolean;
+  onToggleBookmark?: (billId: string) => void;
 }
 
 export default function BillDetail({
@@ -27,6 +29,8 @@ export default function BillDetail({
   onVoteBill,
   onUpdateStage,
   onSelectLegislator,
+  isBookmarked = false,
+  onToggleBookmark,
 }: BillDetailProps) {
   const bill = bills.find((b) => b.id === billId);
   const sponsor = legislators.find((l) => l.id === bill?.sponsorId);
@@ -150,6 +154,20 @@ export default function BillDetail({
         </button>
 
         <div className="flex items-center gap-2">
+          {onToggleBookmark && (
+            <button
+              onClick={() => onToggleBookmark(bill.id)}
+              className={`px-3 py-1.5 text-xs font-semibold rounded-xl border flex items-center gap-1.5 transition ${
+                isBookmarked
+                  ? "bg-amber-500/10 text-amber-700 border-amber-300 hover:bg-amber-500/20"
+                  : "bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-205"
+              }`}
+              id="btn-toggle-watchlist"
+            >
+              <Bookmark className={`w-3.5 h-3.5 ${isBookmarked ? "text-amber-500 fill-amber-500" : ""}`} />
+              <span>{isBookmarked ? "In Watchlist" : "Watchlist"}</span>
+            </button>
+          )}
           <span className="font-mono text-xs px-2.5 py-1 bg-slate-100 text-slate-600 border border-slate-200 rounded font-bold">
             {bill.billNumber}
           </span>
