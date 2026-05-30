@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark, ArrowUpRight, Printer } from "lucide-react";
 import { Bill, Chamber, LegislativeStage, UserReview, Legislator } from "../types";
 
 interface BillDetailProps {
@@ -143,39 +143,228 @@ export default function BillDetail({
 
   return (
     <div className="space-y-6" id={`bill-detail-page-${bill.id}`}>
-      {/* Back button and Meta layout */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
-        <button
-          onClick={onBack}
-          className="px-4 py-2 bg-slate-50 hover:bg-slate-100 text-slate-750 font-semibold text-xs rounded-xl border border-slate-205 flex items-center gap-2 group transition"
-        >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
-          <span>Back to Legislation</span>
-        </button>
+      {/* Printable official document layout */}
+      <div className="hidden print:block text-slate-900 bg-white p-8 max-w-4xl mx-auto space-y-8 animate-fade-in" id="bill-print-document">
+        <div className="border-b-4 border-slate-900 pb-4 text-center">
+          <h1 className="text-xl font-bold tracking-widest uppercase text-slate-900 font-display">
+            National Assembly Bill Registry &amp; Tracking Index
+          </h1>
+          <p className="text-[10px] uppercase font-mono tracking-wider text-slate-500 mt-1.5 font-bold">
+            Democratic Transparency Initiative — Live Legislative Intelligence Brief
+          </p>
+        </div>
 
-        <div className="flex items-center gap-2">
-          {onToggleBookmark && (
-            <button
-              onClick={() => onToggleBookmark(bill.id)}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-xl border flex items-center gap-1.5 transition ${
-                isBookmarked
-                  ? "bg-amber-500/10 text-amber-700 border-amber-300 hover:bg-amber-500/20"
-                  : "bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-205"
-              }`}
-              id="btn-toggle-watchlist"
-            >
-              <Bookmark className={`w-3.5 h-3.5 ${isBookmarked ? "text-amber-500 fill-amber-500" : ""}`} />
-              <span>{isBookmarked ? "In Watchlist" : "Watchlist"}</span>
-            </button>
-          )}
-          <span className="font-mono text-xs px-2.5 py-1 bg-slate-100 text-slate-600 border border-slate-200 rounded font-bold">
-            {bill.billNumber}
-          </span>
-          <span className="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 font-semibold font-sans">
-            {bill.category}
-          </span>
+        {/* Bill Metadata Grid */}
+        <div className="grid grid-cols-2 gap-4 pb-4 border-b border-slate-200 text-xs">
+          <div>
+            <span className="block font-bold text-slate-400 uppercase tracking-wider text-[9px]">Bill Number</span>
+            <span className="text-base font-black font-mono text-slate-955">{bill.billNumber}</span>
+          </div>
+          <div className="text-right">
+            <span className="block font-bold text-slate-400 uppercase tracking-wider text-[9px]">Chamber of Origin</span>
+            <span className="text-sm font-bold text-slate-850">{bill.chamberOfOrigin}</span>
+          </div>
+          <div>
+            <span className="block font-bold text-slate-400 uppercase tracking-wider text-[9px]">Category / Classification</span>
+            <span className="text-xs font-bold text-slate-805 bg-slate-100 px-2 py-0.5 rounded inline-block mt-0.5">{bill.category}</span>
+          </div>
+          <div className="text-right">
+            <span className="block font-bold text-slate-400 uppercase tracking-wider text-[9px]">Report Printed</span>
+            <span className="font-mono text-xs text-slate-700">{new Date().toLocaleDateString()}</span>
+          </div>
+        </div>
+
+        {/* Title */}
+        <div className="space-y-2">
+          <span className="text-[9px] font-black text-emerald-850 bg-emerald-50 border border-emerald-250 px-2 py-0.5 rounded w-max block uppercase tracking-wider">Official Short Title</span>
+          <h2 className="text-xl font-black text-slate-900 tracking-tight leading-snug">
+            {bill.title}
+          </h2>
+          <p className="text-xs text-slate-700 leading-relaxed font-sans mt-2.5 bg-slate-50 p-3.5 rounded-xl border border-slate-200/65">
+            {bill.fullTitle}
+          </p>
+        </div>
+
+        {/* Sponsor details */}
+        <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 grid grid-cols-3 gap-4 text-xs">
+          <div>
+            <span className="block font-bold text-slate-400 uppercase tracking-wider text-[9px]">Sourced Chief Sponsor</span>
+            <span className="font-bold text-slate-850">{sponsor?.title || "Dr."} {bill.sponsorName}</span>
+          </div>
+          <div>
+            <span className="block font-bold text-slate-400 uppercase tracking-wider text-[9px]">Constituency Representation</span>
+            <span className="font-semibold text-slate-700">{sponsor ? `${sponsor.party} — ${sponsor.constituency}, ${sponsor.state} State` : "N/A"}</span>
+          </div>
+          <div>
+            <span className="block font-bold text-slate-400 uppercase tracking-wider text-[9px]">Clerk Records Attendance</span>
+            <span className="font-mono font-black text-slate-850">{sponsor ? `${sponsor.attendanceRate}% Attendance Rate` : "N/A"}</span>
+          </div>
+        </div>
+
+        {/* AI Brief Executive Summary */}
+        {bill.aiAnalysis && (
+          <div className="space-y-4">
+            <h3 className="text-[11px] uppercase font-black tracking-widest text-slate-900 border-b border-slate-350 pb-1.5 flex items-center gap-1.5">
+              <span>Executive Impact Assessment &amp; Policy Intelligence</span>
+            </h3>
+            <div className="space-y-3.5 leading-relaxed text-xs">
+              <div className="bg-slate-50/40 p-3.5 rounded-xl border border-slate-150-dot">
+                <h4 className="font-bold text-slate-850 mb-1 text-[10px] uppercase tracking-wider text-slate-500">Executive Summary Output</h4>
+                <p className="text-slate-800 font-medium text-xs leading-relaxed">
+                  {bill.aiAnalysis.summary}
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-slate-50/50 p-3.5 rounded-xl border border-slate-150">
+                  <h4 className="font-bold text-slate-850 mb-1.5 text-[10px] uppercase tracking-wider text-slate-500">Impact on Common Citizenry</h4>
+                  <p className="text-slate-600 text-[11px] leading-relaxed font-medium">{bill.aiAnalysis.publicImpact}</p>
+                </div>
+                <div className="bg-slate-50/50 p-3.5 rounded-xl border border-slate-150">
+                  <h4 className="font-bold text-slate-850 mb-1.5 text-[10px] uppercase tracking-wider text-slate-500">Financial &amp; Budget Consequences</h4>
+                  <p className="text-slate-600 text-[11px] leading-relaxed font-medium">{bill.aiAnalysis.financialImplication}</p>
+                </div>
+              </div>
+
+              {/* Pros & Cons detailed */}
+              <div className="grid grid-cols-2 gap-4 pt-2">
+                <div>
+                  <h4 className="font-black text-emerald-850 mb-1.5 uppercase text-[9px] tracking-widest border-b border-emerald-100 pb-0.5">Advantages (Pros)</h4>
+                  <ul className="space-y-1.5">
+                    {bill.aiAnalysis.pros.map((pro, i) => (
+                      <li key={i} className="text-[11px] text-slate-650 flex items-start gap-1.5 leading-relaxed">
+                        <span className="text-emerald-600 shrink-0 font-bold">•</span>
+                        <span>{pro}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-black text-rose-850 mb-1.5 uppercase text-[9px] tracking-widest border-b border-rose-100 pb-0.5">Risks (Cons)</h4>
+                  <ul className="space-y-1.5">
+                    {bill.aiAnalysis.cons.map((con, i) => (
+                      <li key={i} className="text-[11px] text-slate-655 flex items-start gap-1.5 leading-relaxed">
+                        <span className="text-rose-600 shrink-0 font-bold">•</span>
+                        <span>{con}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Legislative Progress timeline list */}
+        <div className="space-y-4 pt-2">
+          <h3 className="text-[11px] uppercase font-black tracking-widest text-slate-900 border-b border-slate-350 pb-1.5">
+            Official Progression Timeline &amp; Reading Gazette Notes
+          </h3>
+          <table className="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr className="border-b border-slate-305 text-[9px] uppercase font-black text-slate-400">
+                <th className="py-2.5 w-1/3">Stage</th>
+                <th className="py-2.5 w-1/6">Date</th>
+                <th className="py-2.5">Clerks Gazette Summary Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {bill.timeline.map((step) => (
+                <tr key={step.stage} className={`border-b border-slate-100 py-3 ${step.completed ? "opacity-100 bg-emerald-50/10" : "opacity-40"}`}>
+                  <td className="py-2.5 font-bold text-slate-800">
+                    {step.completed ? "✓ " : "○ "} {step.stage}
+                  </td>
+                  <td className="py-2.5 font-mono text-[11px] text-slate-600">{step.date || "Pending"}</td>
+                  <td className="py-2.5 text-[11px] text-slate-600 leading-relaxed font-medium">{step.note || "No comments filed in official registry."}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Footer info disclosure */}
+        <div className="border-t border-slate-200 pt-5 text-center text-[9px] text-slate-400 leading-relaxed font-sans">
+          <p>This report was automatically synthesized and styles optimized for clean PDF output or A4 printing.</p>
+          <p className="mt-0.5 font-semibold">National Assembly Bills Tracker — Supporting Public Transparency in Legislative Drafting.</p>
         </div>
       </div>
+
+      <style>{`
+        @media print {
+          /* Hide standard elements completely */
+          #app-header, 
+          #platform-clerk-footer, 
+          #network-pwa-toast, 
+          #pwa-install-overlay,
+          .print-hidden,
+          .print\\:hidden,
+          #plac-sync-banner {
+            display: none !important;
+          }
+          
+          /* Reset page backgrounds and root layout containers for print formatting */
+          body, html, #root {
+            background: white !important;
+            color: #0f172a !important; /* slate-900 */
+            margin: 0 !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+          }
+
+          main {
+            padding: 0 !important;
+            margin: 0 !important;
+            max-width: 100% !important;
+          }
+        }
+      `}</style>
+
+      {/* Standard interactive web UI layout */}
+      <div className="space-y-6 print:hidden">
+        {/* Back button and Meta layout */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+          <button
+            onClick={onBack}
+            className="px-4 py-2 bg-slate-50 hover:bg-slate-100 text-slate-755 font-semibold text-xs rounded-xl border border-slate-205 flex items-center gap-2 group transition cursor-pointer"
+          >
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition" />
+            <span>Back to Legislation</span>
+          </button>
+
+          <div className="flex items-center gap-2">
+            {/* Print Summary Button */}
+            <button
+              onClick={() => window.print()}
+              className="px-3 py-1.5 text-xs font-semibold rounded-xl border bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 border-slate-205 flex items-center gap-1.5 transition cursor-pointer shadow-sm hover:border-slate-300"
+              id="btn-print-bill"
+              title="Print clean legislative summary"
+            >
+              <Printer className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
+              <span>Print Summary</span>
+            </button>
+
+            {onToggleBookmark && (
+              <button
+                onClick={() => onToggleBookmark(bill.id)}
+                className={`px-3 py-1.5 text-xs font-semibold rounded-xl border flex items-center gap-1.5 transition ${
+                  isBookmarked
+                    ? "bg-amber-500/10 text-amber-700 border-amber-300 hover:bg-amber-500/20"
+                    : "bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-205"
+                }`}
+                id="btn-toggle-watchlist"
+              >
+                <Bookmark className={`w-3.5 h-3.5 ${isBookmarked ? "text-amber-500 fill-amber-500" : ""}`} />
+                <span>{isBookmarked ? "In Watchlist" : "Watchlist"}</span>
+              </button>
+            )}
+            <span className="font-mono text-xs px-2.5 py-1 bg-slate-100 text-slate-600 border border-slate-200 rounded font-bold">
+              {bill.billNumber}
+            </span>
+            <span className="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 font-semibold font-sans">
+              {bill.category}
+            </span>
+          </div>
+        </div>
 
       {/* Bill Core Summary Hero */}
       <div className="bg-white text-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm">
@@ -738,6 +927,7 @@ export default function BillDetail({
 
         </div>
       </div>
+      </div> {/* Closing standard interactive web UI - print:hidden layout */}
     </div>
   );
 }
