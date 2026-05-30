@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from "react";
-import { Search, Filter, ShieldCheck, Milestone, Calendar, ArrowUpRight, HelpCircle, Bookmark } from "lucide-react";
+import { Search, Filter, ShieldCheck, Milestone, Calendar, ArrowUpRight, HelpCircle, Bookmark, Mail, Bell, Check, Trash2, ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
 import { Bill, Chamber, BillCategory, LegislativeStage } from "../types";
 
 interface BillsListProps {
@@ -25,6 +25,77 @@ export default function BillsList({
   emptyStateText,
 }: BillsListProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  
+  // Weekly Watchlist Updates Subscription States
+  const [isDigestPanelOpen, setIsDigestPanelOpen] = useState(false);
+  const [emailInput, setEmailInput] = useState("");
+  const [subSelectedIds, setSubSelectedIds] = useState<string[]>([]);
+  const [showSuccessToast, setShowSuccessToast] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const [activeDigest, setActiveDigest] = useState<{ email: string; billIds: string[] } | null>(() => {
+    try {
+      const val = localStorage.getItem("nass_watchlist_digest");
+      return val ? JSON.parse(val) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+
+  const handleTogglePanel = () => {
+    if (!isDigestPanelOpen) {
+      if (activeDigest) {
+        setEmailInput(activeDigest.email);
+        const valid = activeDigest.billIds.filter(id => bookmarkedIds.includes(id));
+        setSubSelectedIds(valid);
+      } else {
+        setSubSelectedIds(bookmarkedIds);
+      }
+    }
+    setIsDigestPanelOpen(!isDigestPanelOpen);
+  };
+
+  const handleToggleBillSelect = (id: string) => {
+    setSubSelectedIds(prev => 
+      prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
+    );
+  };
+
+  const handleSelectAll = () => {
+    setSubSelectedIds(bookmarkedIds);
+  };
+
+  const handleSelectNone = () => {
+    setSubSelectedIds([]);
+  };
+
+  const handleSubscribeSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!emailInput || !emailInput.includes("@")) {
+      setErrorMsg("Please enter a valid email address.");
+      return;
+    }
+
+    const newDigest = {
+      email: emailInput,
+      billIds: subSelectedIds
+    };
+
+    localStorage.setItem("nass_watchlist_digest", JSON.stringify(newDigest));
+    setActiveDigest(newDigest);
+    setShowSuccessToast(true);
+    setErrorMsg("");
+    setTimeout(() => setShowSuccessToast(false), 4000);
+  };
+
+  const handleUnsubscribe = () => {
+    localStorage.removeItem("nass_watchlist_digest");
+    setActiveDigest(null);
+    setEmailInput("");
+    setSubSelectedIds([]);
+  };
+
+  const watchlistedBills = bills.filter(b => bookmarkedIds.includes(b.id));
   const [selectedChamber, setSelectedChamber] = useState<"All" | Chamber>("All");
   const [selectedCategory, setSelectedCategory] = useState<"All" | BillCategory>("All");
   const [selectedStage, setSelectedStage] = useState<"All" | "Active" | "Signed" | "Draft">("All");
@@ -181,6 +252,191 @@ export default function BillsList({
 
           {sortedResultsCount(filteredBills.length)}
         </div>
+      </div>
+
+      {/* Watchlist Digest Subscription Station */}
+      <div 
+        className="bg-white border border-slate-200/80 rounded-2xl p-5 shadow-sm space-y-4 transition-all duration-300" 
+        id="watchlist-digest-station"
+      >
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-start sm:items-center gap-3">
+            <div className={`p-2 rounded-xl shrink-0 ${activeDigest ? "bg-emerald-50 text-emerald-600" : "bg-slate-50 text-slate-500"}`}>
+              {activeDigest ? <Bell className="w-5 h-5 animate-bounce" /> : <Mail className="w-5 h-5" />}
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-slate-900 tracking-tight font-display flex flex-wrap items-center gap-2">
+                <span>Weekly Watchlist Digest</span>
+                {activeDigest && (
+                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-emerald-50 border border-emerald-200/50 text-[9px] font-extrabold uppercase tracking-wide rounded-md">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Active Subscription</span>
+                  </span>
+                )}
+              </h3>
+              <p className="text-xs text-slate-550 font-semibold mt-0.5">
+                {activeDigest 
+                  ? `Receiving weekly briefings for ${activeDigest.billIds.length} tracked bills at ${activeDigest.email}`
+                  : "Get clerk reports, reading timetables, and citizen opinions directly in your inbox."
+                }
+              </p>
+            </div>
+          </div>
+          
+          <button
+            onClick={handleTogglePanel}
+            className="px-3.5 py-2 bg-slate-50 hover:bg-slate-100 border border-slate-205 text-slate-755 font-bold text-xs rounded-xl flex items-center justify-center gap-1 transition cursor-pointer self-stretch sm:self-auto shrink-0"
+            id="toggle-digest-setup-btn"
+          >
+            <span>{isDigestPanelOpen ? "Close Setup" : activeDigest ? "Manage Settings" : "Configure Digests"}</span>
+            {isDigestPanelOpen ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+          </button>
+        </div>
+
+        {/* Success Alert */}
+        {showSuccessToast && (
+          <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-3.5 flex items-center gap-3 text-emerald-950 animate-fade-in" id="subscription-success-alert">
+            <Check className="w-4.5 h-4.5 text-emerald-600 shrink-0" />
+            <div className="text-xs font-semibold">
+              <span className="font-bold text-emerald-800">Digest Subscription Saved!</span> Your alerts are scheduled and will be delivered to <strong className="font-bold">{activeDigest?.email}</strong>.
+            </div>
+          </div>
+        )}
+
+        {isDigestPanelOpen && (
+          <div className="pt-4 border-t border-slate-100 space-y-4 animate-fade-in" id="digest-setup-panel">
+            {watchlistedBills.length === 0 ? (
+              <div className="bg-slate-50/50 rounded-xl border border-dashed border-slate-200 p-6 text-center text-xs">
+                <Bookmark className="w-8 h-8 text-slate-400 mx-auto mb-2" />
+                <h4 className="font-extrabold text-slate-800">Your Watchlist is Empty</h4>
+                <p className="text-slate-500 mt-1 max-w-sm mx-auto">
+                  To receive email updates, please add legislative bills to your watchlist first using the bookmark (🔖) buttons on the cards below.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubscribeSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                  
+                  {/* Email Input Column */}
+                  <div className="md:col-span-1 space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-wider text-slate-400 block" htmlFor="sub-email">
+                      Notification Email
+                    </label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 w-4 h-4" />
+                      <input
+                        type="email"
+                        id="sub-email"
+                        required
+                        value={emailInput}
+                        onChange={(e) => {
+                          setEmailInput(e.target.value);
+                          if (errorMsg) setErrorMsg("");
+                        }}
+                        placeholder="e.g. name@domain.com"
+                        className="w-full pl-9 pr-4 py-2.5 bg-slate-50 text-slate-900 border border-slate-200 rounded-xl text-xs font-medium focus:ring-1 focus:ring-emerald-500 focus:outline-none transition shrink-0"
+                      />
+                    </div>
+                    {errorMsg && (
+                      <p className="text-[11px] font-bold text-rose-600 flex items-center gap-1">
+                        <AlertCircle className="w-3.5 h-3.5" />
+                        <span>{errorMsg}</span>
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Bill Chooser Column */}
+                  <div className="md:col-span-2 space-y-2">
+                    <div className="flex items-center justify-between gap-2">
+                      <label className="text-[10px] font-black uppercase tracking-wider text-slate-400 block">
+                        Toggle Tracked Bills ({subSelectedIds.length} of {watchlistedBills.length})
+                      </label>
+                      <div className="flex items-center gap-2 text-[10px]">
+                        <button
+                          type="button"
+                          onClick={handleSelectAll}
+                          className="text-emerald-650 hover:text-emerald-700 font-bold cursor-pointer"
+                        >
+                          Select All
+                        </button>
+                        <span className="text-slate-300">|</span>
+                        <button
+                          type="button"
+                          onClick={handleSelectNone}
+                          className="text-slate-500 hover:text-slate-700 font-bold cursor-pointer"
+                        >
+                          Clear
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="max-h-44 overflow-y-auto border border-slate-100 rounded-xl bg-slate-50/50 p-2 space-y-1.5" id="sub-bills-checkboxes">
+                      {watchlistedBills.map((b) => {
+                        const isChecked = subSelectedIds.includes(b.id);
+                        return (
+                          <div
+                            key={b.id}
+                            onClick={() => handleToggleBillSelect(b.id)}
+                            className={`flex items-start gap-2.5 p-2.5 rounded-lg border text-left cursor-pointer transition duration-150 ${
+                              isChecked 
+                                ? "bg-white border-emerald-200/80 shadow-sm"
+                                : "bg-transparent border-transparent hover:bg-slate-100"
+                            }`}
+                          >
+                            <input
+                              type="checkbox"
+                              checked={isChecked}
+                              onChange={() => {}} // Swallowed since parent handles click
+                              className="mt-0.5 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
+                            />
+                            <div className="text-xs leading-tight">
+                              <span className="font-mono font-bold text-slate-400 block text-[9px] uppercase">
+                                {b.billNumber}
+                              </span>
+                              <span className="font-bold text-slate-800 line-clamp-1 mt-0.5">
+                                {b.title}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Form Buttons */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-slate-100 pt-3.5 gap-3">
+                  <p className="text-[10px] text-slate-400 font-medium max-w-sm leading-relaxed">
+                    Digests are safe &amp; compiled locally. Automated newsletters arrive weekly reporting committee referrals, public hearings, and third-reading outcomes.
+                  </p>
+                  
+                  <div className="flex items-center gap-2 self-stretch sm:self-auto">
+                    {activeDigest && (
+                      <button
+                        type="button"
+                        onClick={handleUnsubscribe}
+                        className="flex-1 sm:flex-initial px-4 py-2 hover:bg-rose-50 border border-slate-205 text-rose-600 hover:text-rose-700 font-extrabold text-xs rounded-xl flex items-center justify-center gap-1.5 transition cursor-pointer"
+                        id="btn-remove-digest"
+                      >
+                        <Trash2 className="w-3.5 h-3.5" />
+                        <span>Unsubscribe</span>
+                      </button>
+                    )}
+                    
+                    <button
+                      type="submit"
+                      className="flex-1 sm:flex-initial px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-1.5 transition cursor-pointer shadow-sm shadow-emerald-500/10"
+                      id="btn-save-digest-settings"
+                    >
+                      <Check className="w-3.5 h-3.5" />
+                      <span>{activeDigest ? "Update Digests" : "Subscribe to Weekly Digest"}</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Grid of Bills */}
