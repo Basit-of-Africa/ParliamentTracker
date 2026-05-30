@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
+import { motion } from "motion/react";
 import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark, ArrowUpRight, Printer } from "lucide-react";
 import { Bill, Chamber, LegislativeStage, UserReview, Legislator } from "../types";
 
@@ -400,11 +401,26 @@ export default function BillDetail({
             </div>
           </div>
 
-          <div>
+          <div className="space-y-1.5 min-w-[150px]">
             <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Status Index</div>
-            <div className="text-slate-700 font-semibold text-xs md:text-sm mt-0.5 flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+            <div className="text-slate-705 font-semibold text-xs md:text-sm mt-0.5 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               Progress: {bill.stageProgress}% ({bill.currentStage})
+            </div>
+            {/* Visual Legislative Progress Bar with dynamic first-render motion */}
+            <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden" id={`bill-detail-progress-${bill.id}`}>
+              <motion.div
+                className={`h-full rounded-full ${
+                  bill.currentStage === LegislativeStage.ASSENTED
+                    ? "bg-emerald-500"
+                    : bill.currentStage === LegislativeStage.VETOED
+                    ? "bg-rose-500"
+                    : "bg-emerald-500"
+                }`}
+                initial={{ width: 0 }}
+                animate={{ width: `${bill.stageProgress}%` }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              />
             </div>
           </div>
         </div>

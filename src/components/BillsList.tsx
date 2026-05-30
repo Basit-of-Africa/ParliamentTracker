@@ -4,6 +4,7 @@
  */
 
 import React, { useState } from "react";
+import { motion } from "motion/react";
 import { Search, Filter, ShieldCheck, Milestone, Calendar, ArrowUpRight, HelpCircle, Bookmark, Mail, Bell, Check, Trash2, ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
 import { Bill, Chamber, BillCategory, LegislativeStage } from "../types";
 
@@ -537,15 +538,17 @@ export default function BillsList({
 
                   {/* Track Bar */}
                   <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden" id={`progress-bar-${bill.id}`}>
-                    <div
-                      className={`h-full rounded-full transition-all duration-300 ${
+                    <motion.div
+                      className={`h-full rounded-full ${
                         bill.currentStage === LegislativeStage.ASSENTED
                           ? "bg-emerald-500"
                           : bill.currentStage === LegislativeStage.VETOED
                           ? "bg-rose-500"
                           : "bg-emerald-500"
                       }`}
-                      style={{ width: `${bill.stageProgress}%` }}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${bill.stageProgress}%` }}
+                      transition={{ duration: 0.8, ease: "easeOut" }}
                     />
                   </div>
 
