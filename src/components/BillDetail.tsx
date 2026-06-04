@@ -64,13 +64,35 @@ export default function BillDetail({
     // Fetch comments for this bill
     setReviewsLoading(true);
     fetch(`/api/bills/${bill.id}/reviews`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok || !res.headers.get("Content-Type")?.includes("application/json")) {
+          throw new Error("Invalid format/status");
+        }
+        return res.json();
+      })
       .then((data) => {
-        if (data.success) {
+        if (data && data.success) {
           setReviews(data.reviews);
         }
       })
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.warn("Reviews load fallback active:", err);
+        try {
+          const key = `nass_reviews_${bill.id}`;
+          const stored = localStorage.getItem(key);
+          if (stored) {
+            setReviews(JSON.parse(stored));
+          } else {
+            // Dynamically query initial database fallback reviews if available
+            import("../initialData").then(({ INITIAL_REVIEWS }) => {
+              const matched = INITIAL_REVIEWS.filter(r => r.billId === bill.id);
+              setReviews(matched);
+            });
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      })
       .finally(() => setReviewsLoading(false));
   }, [billId, bill]);
 

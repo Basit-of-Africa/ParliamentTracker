@@ -17,6 +17,7 @@ import AICopilot from "./components/AICopilot";
 import CitizenProposal from "./components/CitizenProposal";
 
 import { Bill, Legislator, Chamber, LegislativeStage, UserReview } from "./types";
+import { INITIAL_LEGISLATORS, INITIAL_BILLS } from "./initialData";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>("home");
@@ -118,32 +119,80 @@ export default function App() {
       setLoading(true);
       setError(null);
 
-      // Fetch legislators which handles scraping optionally
-      const legRes = await fetch("/api/scrape/members");
-      const legData = await legRes.json();
       let legislatorsList: Legislator[] = [];
-      if (legData.success) {
-        setLegislators(legData.legislators);
-        legislatorsList = legData.legislators;
-      } else {
-        throw new Error("Could not load legislators.");
+      let billsList: Bill[] = [];
+
+      // 1. Fetch Legislators
+      try {
+        const legRes = await fetch("/api/scrape/members");
+        if (!legRes.ok || !legRes.headers.get("Content-Type")?.includes("application/json")) {
+          throw new Error("Invalid response format or offline platform.");
+        }
+        const legData = await legRes.json();
+        if (legData && legData.success) {
+          setLegislators(legData.legislators);
+          legislatorsList = legData.legislators;
+        } else {
+          throw new Error("Could not load legislators.");
+        }
+      } catch (legErr) {
+        console.warn("Could not load legislators from API, using offline client fallback data.", legErr);
+        // Check local storage override
+        const storedLegs = localStorage.getItem("nass_legislators_store");
+        if (storedLegs) {
+          try {
+            const parsed = JSON.parse(storedLegs);
+            setLegislators(parsed);
+            legislatorsList = parsed;
+          } catch (e) {
+            setLegislators(INITIAL_LEGISLATORS);
+            legislatorsList = INITIAL_LEGISLATORS;
+          }
+        } else {
+          setLegislators(INITIAL_LEGISLATORS);
+          legislatorsList = INITIAL_LEGISLATORS;
+        }
       }
 
-      // Fetch Bills
-      const billRes = await fetch("/api/bills");
-      const billData = await billRes.json();
-      let billsList: Bill[] = [];
-      if (billData.success) {
-        setBills(billData.bills);
-        billsList = billData.bills;
-      } else {
-        throw new Error("Could not load bills.");
+      // 2. Fetch Bills
+      try {
+        const billRes = await fetch("/api/bills");
+        if (!billRes.ok || !billRes.headers.get("Content-Type")?.includes("application/json")) {
+          throw new Error("Invalid response format or offline platform.");
+        }
+        const billData = await billRes.json();
+        if (billData && billData.success) {
+          setBills(billData.bills);
+          billsList = billData.bills;
+        } else {
+          throw new Error("Could not load bills.");
+        }
+      } catch (billErr) {
+        console.warn("Could not load bills from API, using offline client fallback data.", billErr);
+        // Check local storage override
+        const storedBills = localStorage.getItem("nass_bills_store");
+        if (storedBills) {
+          try {
+            const parsed = JSON.parse(storedBills);
+            setBills(parsed);
+            billsList = parsed;
+          } catch (e) {
+            setBills(INITIAL_BILLS);
+            billsList = INITIAL_BILLS;
+          }
+        } else {
+          setBills(INITIAL_BILLS);
+          billsList = INITIAL_BILLS;
+        }
       }
 
       calculateStats(billsList, legislatorsList);
     } catch (err: any) {
-      console.error(err);
-      setError(err.message || "Failed to establish synchronization with Tenth Assembly API server.");
+      console.error("Critical Assembly Synchronization error:", err);
+      // Ensure we still load offline arrays even on outer catastrophic failures
+      setLegislators(INITIAL_LEGISLATORS);
+      setBills(INITIAL_BILLS);
+      calculateStats(INITIAL_BILLS, INITIAL_LEGISLATORS);
     } finally {
       setLoading(false);
     }
@@ -198,78 +247,192 @@ export default function App() {
 
   // Post citizen comment review to backend rest
   const handlePostReview = async (billId: string, userName: string, rating: number, comment: string): Promise<UserReview> => {
-    const res = await fetch(`/api/bills/${billId}/reviews`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userName, rating, comment })
-    });
-    const data = await res.json();
-    if (!data.success) {
-      throw new Error(data.error || "Failed to publish review comment.");
+    try {
+      const res = await fetch(`/api/bills/${billId}/reviews`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userName, rating, comment })
+      });
+      if (!res.ok || !res.headers.get("Content-Type")?.includes("application/json")) {
+        throw new Error("Invalid format/status");
+      }
+      const data = await res.json();
+      if (!data.success) {
+        throw new Error(data.error || "Failed to publish review comment.");
+      }
+      return data.review;
+    } catch (err) {
+      console.warn("Using offline fallback review posting:", err);
+      const newReview: UserReview = {
+        id: `rev-${Date.now()}`,
+        billId,
+        userName,
+        rating,
+        comment,
+        timestamp: new Date().toISOString()
+      };
+      
+      try {
+        const key = `nass_reviews_${billId}`;
+        const stored = localStorage.getItem(key);
+        const reviewsList = stored ? JSON.parse(stored) : [];
+        reviewsList.unshift(newReview);
+        localStorage.setItem(key, JSON.stringify(reviewsList));
+      } catch (e) {
+        console.error(e);
+      }
+      
+      return newReview;
     }
-    
-    // Refresh bills in state to reflect incremented stats if needed
-    return data.review;
   };
 
   // Cast vote on bill
   const handleVoteBill = async (billId: string, type: "for" | "against"): Promise<{ votesFor: number, votesAgainst: number }> => {
-    const res = await fetch(`/api/bills/${billId}/vote`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ vote: type })
-    });
-    const data = await res.json();
-    if (!data.success) {
-      throw new Error(data.error || "Failed to cast vote.");
-    }
+    try {
+      const res = await fetch(`/api/bills/${billId}/vote`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ vote: type })
+      });
+      if (!res.ok || !res.headers.get("Content-Type")?.includes("application/json")) {
+        throw new Error("Invalid format/status");
+      }
+      const data = await res.json();
+      if (!data.success) {
+        throw new Error(data.error || "Failed to cast vote.");
+      }
 
-    setBills((prev) =>
-      prev.map((b) => {
-        if (b.id === billId) {
-          return {
-            ...b,
-            votesFor: data.votesFor,
-            votesAgainst: data.votesAgainst
-          };
+      setBills((prev) =>
+        prev.map((b) => {
+          if (b.id === billId) {
+            return {
+              ...b,
+              votesFor: data.votesFor,
+              votesAgainst: data.votesAgainst
+            };
+          }
+          return b;
+        })
+      );
+
+      // Recompute global stats
+      setStats(prev => ({
+        ...prev,
+        totalVotes: prev.totalVotes + 1
+      }));
+
+      return { votesFor: data.votesFor, votesAgainst: data.votesAgainst };
+    } catch (err) {
+      console.warn("Using offline fallback vote casting:", err);
+      let updatedVotes = { votesFor: 0, votesAgainst: 0 };
+      
+      setBills((prev) => {
+        const next = prev.map((b) => {
+          if (b.id === billId) {
+            const vFor = (b.votesFor || 0) + (type === "for" ? 1 : 0);
+            const vAgainst = (b.votesAgainst || 0) + (type === "against" ? 1 : 0);
+            updatedVotes = { votesFor: vFor, votesAgainst: vAgainst };
+            return { ...b, votesFor: vFor, votesAgainst: vAgainst };
+          }
+          return b;
+        });
+        
+        try {
+          localStorage.setItem("nass_bills_store", JSON.stringify(next));
+        } catch (e) {
+          console.error(e);
         }
-        return b;
-      })
-    );
+        
+        return next;
+      });
 
-    // Recompute global stats
-    setStats(prev => ({
-      ...prev,
-      totalVotes: prev.totalVotes + 1
-    }));
+      // Recompute global stats
+      setStats(prev => ({
+        ...prev,
+        totalVotes: prev.totalVotes + 1
+      }));
 
-    return { votesFor: data.votesFor, votesAgainst: data.votesAgainst };
+      return updatedVotes;
+    }
   };
 
   // Update Bill Stage (Stepper progression simulation)
   const handleUpdateStage = async (billId: string, stage: LegislativeStage, note: string): Promise<Bill> => {
-    const res = await fetch(`/api/bills/${billId}/stage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ stage, note })
-    });
-    const data = await res.json();
-    if (!data.success) {
-      throw new Error(data.error || "Failed to update bill stage.");
+    try {
+      const res = await fetch(`/api/bills/${billId}/stage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ stage, note })
+      });
+      if (!res.ok || !res.headers.get("Content-Type")?.includes("application/json")) {
+        throw new Error("Invalid format/status");
+      }
+      const data = await res.json();
+      if (!data.success) {
+        throw new Error(data.error || "Failed to update bill stage.");
+      }
+
+      const updatedBill: Bill = data.bill;
+      setBills((prev) =>
+        prev.map((b) => (b.id === billId ? updatedBill : b))
+      );
+
+      // Recompute passed bills stats count
+      setBills(currentBillsList => {
+        calculateStats(currentBillsList, legislators);
+        return currentBillsList;
+      });
+
+      return updatedBill;
+    } catch (err) {
+      console.warn("Using offline fallback stage update:", err);
+      let updatedBill!: Bill;
+      
+      setBills((prev) => {
+        const next = prev.map((b) => {
+          if (b.id === billId) {
+            const stagesList = Object.values(LegislativeStage);
+            const stageIndex = stagesList.indexOf(stage);
+            const stageProgress = Math.floor(((stageIndex + 1) / stagesList.length) * 100);
+            const today = new Date().toISOString().split('T')[0];
+            
+            const updatedTimeline = b.timeline.map((item) => {
+              const listStageIdx = stagesList.indexOf(item.stage);
+              if (listStageIdx <= stageIndex) {
+                return {
+                  ...item,
+                  completed: true,
+                  date: item.date || today,
+                  note: item.stage === stage ? (note || `Advanced to ${stage}`) : (item.note || "Stage completed.")
+                };
+              }
+              return item;
+            });
+
+            updatedBill = {
+              ...b,
+              currentStage: stage,
+              stageProgress,
+              lastUpdated: today,
+              timeline: updatedTimeline
+            };
+            return updatedBill;
+          }
+          return b;
+        });
+
+        try {
+          localStorage.setItem("nass_bills_store", JSON.stringify(next));
+          calculateStats(next, legislators);
+        } catch (e) {
+          console.error(e);
+        }
+
+        return next;
+      });
+
+      return updatedBill;
     }
-
-    const updatedBill: Bill = data.bill;
-    setBills((prev) =>
-      prev.map((b) => (b.id === billId ? updatedBill : b))
-    );
-
-    // Recompute passed bills stats count
-    setBills(currentBillsList => {
-      calculateStats(currentBillsList, legislators);
-      return currentBillsList;
-    });
-
-    return updatedBill;
   };
 
   const handleSelectBillAndRedirect = (billId: string) => {
@@ -285,12 +448,38 @@ export default function App() {
     setActiveTab("mps"); // force legislators view tab
   };
 
-  const refreshBillsFromServer = async () => {
-    const billRes = await fetch("/api/bills");
-    const billData = await billRes.json();
-    if (billData.success) {
-      setBills(billData.bills);
-      calculateStats(billData.bills, legislators);
+  const refreshBillsFromServer = async (overrideBillsList?: Bill[]) => {
+    if (overrideBillsList && Array.isArray(overrideBillsList)) {
+      setBills(overrideBillsList);
+      try {
+        localStorage.setItem("nass_bills_store", JSON.stringify(overrideBillsList));
+      } catch (e) {}
+      calculateStats(overrideBillsList, legislators);
+      return;
+    }
+
+    try {
+      const billRes = await fetch("/api/bills");
+      if (!billRes.ok || !billRes.headers.get("Content-Type")?.includes("application/json")) {
+        throw new Error("Invalid format/status");
+      }
+      const billData = await billRes.json();
+      if (billData.success) {
+        setBills(billData.bills);
+        calculateStats(billData.bills, legislators);
+      }
+    } catch (e) {
+      console.warn("Could not refresh bills from server, reloading from local storage", e);
+      const storedBills = localStorage.getItem("nass_bills_store");
+      if (storedBills) {
+        try {
+          const parsed = JSON.parse(storedBills);
+          setBills(parsed);
+          calculateStats(parsed, legislators);
+        } catch (err) {
+          // No-op
+        }
+      }
     }
   };
 
