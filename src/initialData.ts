@@ -1323,14 +1323,13 @@ function generateExtendedBills(realCount: number): Bill[] {
   };
 
   const stages = [
-    { stage: LegislativeStage.FIRST_READING, progress: 10 },
-    { stage: LegislativeStage.SECOND_READING, progress: 25 },
-    { stage: LegislativeStage.COMMITTEE_STAGE, progress: 45 },
-    { stage: LegislativeStage.REPORT_CONSIDERATION, progress: 60 },
-    { stage: LegislativeStage.THIRD_READING, progress: 75 },
-    { stage: LegislativeStage.CONCURRENCE, progress: 85 },
-    { stage: LegislativeStage.PRESIDENTIAL_ASSENT, progress: 92 },
-    { stage: LegislativeStage.ASSENTED, progress: 100 }
+    { stage: LegislativeStage.FIRST_READING, progress: 15 },
+    { stage: LegislativeStage.SECOND_READING, progress: 35 },
+    { stage: LegislativeStage.COMMITTEE_ASSIGNMENT, progress: 55 },
+    { stage: LegislativeStage.REPORT, progress: 70 },
+    { stage: LegislativeStage.THIRD_READING, progress: 85 },
+    { stage: LegislativeStage.HARMONIZATION, progress: 92 },
+    { stage: LegislativeStage.ASSENT, progress: 100 }
   ];
 
   for (let idx = 1; idx <= needed; idx++) {
@@ -1349,10 +1348,9 @@ function generateExtendedBills(realCount: number): Bill[] {
     else if (r3 < 0.65) stageObj = stages[1];
     else if (r3 < 0.80) stageObj = stages[2];
     else if (r3 < 0.88) stageObj = stages[3];
-    else if (r3 < 0.93) stageObj = stages[4];
-    else if (r3 < 0.96) stageObj = stages[5];
-    else if (r3 < 0.98) stageObj = stages[6];
-    else stageObj = stages[7];
+    else if (r3 < 0.94) stageObj = stages[4];
+    else if (r3 < 0.98) stageObj = stages[5];
+    else stageObj = stages[6];
 
     const year = 2023 + Math.floor(r4 * 3);
     const month = 1 + Math.floor(r5 * 12);

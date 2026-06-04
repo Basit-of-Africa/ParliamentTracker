@@ -128,16 +128,15 @@ async function run() {
 
   const mapStatusToStageAndProgress = (status) => {
     const s = String(status || "FIRST READING").toUpperCase();
-    if (s.includes("FIRST") || s.includes("1ST")) return { stage: "First Reading", progress: 10 };
-    if (s.includes("SECOND") || s.includes("2ND")) return { stage: "Second Reading", progress: 25 };
-    if (s.includes("COMMITTEE") || s.includes("COMMITTED") || s.includes("REPORT")) return { stage: "Committee Stage", progress: 45 };
-    if (s.includes("CONSIDERATION")) return { stage: "Report Consideration", progress: 60 };
-    if (s.includes("THIRD") || s.includes("3RD")) return { stage: "Third Reading", progress: 75 };
-    if (s.includes("CONCURRENCE")) return { stage: "Concurrence Passage", progress: 85 };
-    if (s.includes("ASSENT") || s.includes("TRANSMITTED")) return { stage: "Presidential Assent", progress: 92 };
-    if (s.includes("PASSED") || s.includes("ASSENTED") || s.includes("SIGNED") || s.includes("ACT") || s.includes("LAW")) return { stage: "Assented (Passed into Law)", progress: 100 };
+    if (s.includes("FIRST") || s.includes("1ST")) return { stage: "First Reading", progress: 15 };
+    if (s.includes("SECOND") || s.includes("2ND")) return { stage: "Second Reading", progress: 35 };
+    if (s.includes("COMMITTEE") || s.includes("COMMITTED") || s.includes("ASSIGNMENT")) return { stage: "Committee Assignment", progress: 55 };
+    if (s.includes("REPORT") || s.includes("CONSIDERATION")) return { stage: "Report", progress: 70 };
+    if (s.includes("THIRD") || s.includes("3RD")) return { stage: "Third Reading", progress: 85 };
+    if (s.includes("HARMONIZATION") || s.includes("CONCURRENCE") || s.includes("PASSAGE")) return { stage: "Harmonization", progress: 92 };
+    if (s.includes("ASSENT") || s.includes("TRANSMITTED") || s.includes("PASSED") || s.includes("ASSENTED") || s.includes("SIGNED") || s.includes("ACT") || s.includes("LAW")) return { stage: "Assent", progress: 100 };
     if (s.includes("VETO") || s.includes("REJECTED") || s.includes("WITHDRAWN")) return { stage: "Vetoed / Rejected", progress: 100 };
-    return { stage: "First Reading", progress: 10 };
+    return { stage: "First Reading", progress: 15 };
   };
 
   const mappedBills = allRawBills.map((item, index) => {
@@ -177,7 +176,7 @@ async function run() {
     const dateProposed = item.created_at ? item.created_at.split('T')[0] : "2023-07-03";
     const lastUpdated = item.updated_at ? item.updated_at.split('T')[0] : "2024-02-15";
 
-    const stagesList = ["First Reading", "Second Reading", "Committee Stage", "Report Consideration", "Third Reading", "Concurrence Passage", "Presidential Assent", "Assented (Passed into Law)"];
+    const stagesList = ["First Reading", "Second Reading", "Committee Assignment", "Report", "Third Reading", "Harmonization", "Assent"];
     const currentIdx = stagesList.indexOf(stage);
 
     const timeline = stagesList.map((st, i) => {

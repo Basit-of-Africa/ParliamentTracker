@@ -103,7 +103,7 @@ export default function BillsList({
 
   const getStageColorClass = (stage: LegislativeStage) => {
     switch (stage) {
-      case LegislativeStage.ASSENTED:
+      case LegislativeStage.ASSENT:
         return "bg-emerald-100 text-emerald-800 border-emerald-200";
       case LegislativeStage.VETOED:
         return "bg-rose-100 text-rose-800 border-rose-200";
@@ -135,9 +135,9 @@ export default function BillsList({
 
     let matchesStage = true;
     if (selectedStage === "Active") {
-      matchesStage = bill.currentStage !== LegislativeStage.ASSENTED && bill.currentStage !== LegislativeStage.VETOED;
+      matchesStage = bill.currentStage !== LegislativeStage.ASSENT && bill.currentStage !== LegislativeStage.VETOED;
     } else if (selectedStage === "Signed") {
-      matchesStage = bill.currentStage === LegislativeStage.ASSENTED;
+      matchesStage = bill.currentStage === LegislativeStage.ASSENT;
     } else if (selectedStage === "Draft") {
       // Proposer bills
       matchesStage = bill.tags.includes("Citizen Proposal") || bill.id.startsWith("bill-17");
@@ -540,7 +540,7 @@ export default function BillsList({
                   <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden" id={`progress-bar-${bill.id}`}>
                     <motion.div
                       className={`h-full rounded-full ${
-                        bill.currentStage === LegislativeStage.ASSENTED
+                        bill.currentStage === LegislativeStage.ASSENT
                           ? "bg-emerald-500"
                           : bill.currentStage === LegislativeStage.VETOED
                           ? "bg-rose-500"

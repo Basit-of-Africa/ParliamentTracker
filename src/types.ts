@@ -31,12 +31,11 @@ export enum BillCategory {
 export enum LegislativeStage {
   FIRST_READING = "First Reading",
   SECOND_READING = "Second Reading",
-  COMMITTEE_STAGE = "Committee Stage",
-  REPORT_CONSIDERATION = "Report Consideration",
+  COMMITTEE_ASSIGNMENT = "Committee Assignment",
+  REPORT = "Report",
   THIRD_READING = "Third Reading",
-  CONCURRENCE = "Concurrence Passage",
-  PRESIDENTIAL_ASSENT = "Presidential Assent",
-  ASSENTED = "Assented (Passed into Law)",
+  HARMONIZATION = "Harmonization",
+  ASSENT = "Assent",
   VETOED = "Vetoed / Rejected"
 }
 

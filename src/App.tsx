@@ -205,7 +205,7 @@ export default function App() {
 
   const calculateStats = (billsList: Bill[], legislatorsList: Legislator[]) => {
     const totalBills = billsList.length;
-    const totalPassed = billsList.filter(b => b.currentStage === LegislativeStage.ASSENTED).length;
+    const totalPassed = billsList.filter(b => b.currentStage === LegislativeStage.ASSENT).length;
     const totalMPs = legislatorsList.length;
     const totalVotes = billsList.reduce((sum, b) => sum + (b.votesFor || 0) + (b.votesAgainst || 0), 0);
     const avgAttendance = legislatorsList.length > 0 

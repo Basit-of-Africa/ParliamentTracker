@@ -288,7 +288,7 @@ app.post("/api/bills", (req, res) => {
       chamberOfOrigin: chamberOfOrigin || sponsor.chamber,
       category: category as BillCategory,
       currentStage: LegislativeStage.FIRST_READING,
-      stageProgress: 10,
+      stageProgress: 15,
       dateProposed: new Date().toISOString().split('T')[0],
       lastUpdated: new Date().toISOString().split('T')[0],
       summary,
@@ -299,12 +299,11 @@ app.post("/api/bills", (req, res) => {
       timeline: [
         { stage: LegislativeStage.FIRST_READING, date: new Date().toISOString().split('T')[0], note: "Citizen/Representative bill proposal submitted.", completed: true },
         { stage: LegislativeStage.SECOND_READING, date: "", note: "Pending secondary committee review.", completed: false },
-        { stage: LegislativeStage.COMMITTEE_STAGE, date: "", note: "", completed: false },
-        { stage: LegislativeStage.REPORT_CONSIDERATION, date: "", note: "", completed: false },
+        { stage: LegislativeStage.COMMITTEE_ASSIGNMENT, date: "", note: "", completed: false },
+        { stage: LegislativeStage.REPORT, date: "", note: "", completed: false },
         { stage: LegislativeStage.THIRD_READING, date: "", note: "", completed: false },
-        { stage: LegislativeStage.CONCURRENCE, date: "", note: "", completed: false },
-        { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "", note: "", completed: false },
-        { stage: LegislativeStage.ASSENTED, date: "", note: "", completed: false }
+        { stage: LegislativeStage.HARMONIZATION, date: "", note: "", completed: false },
+        { stage: LegislativeStage.ASSENT, date: "", note: "", completed: false }
       ]
     };
 
@@ -338,9 +337,20 @@ app.post("/api/bills/:id/stage", (req, res) => {
     return res.status(400).json({ success: false, error: "Invalid legislative stage" });
   }
 
+  const stagesToProgress: Record<string, number> = {
+    [LegislativeStage.FIRST_READING]: 15,
+    [LegislativeStage.SECOND_READING]: 35,
+    [LegislativeStage.COMMITTEE_ASSIGNMENT]: 55,
+    [LegislativeStage.REPORT]: 70,
+    [LegislativeStage.THIRD_READING]: 85,
+    [LegislativeStage.HARMONIZATION]: 92,
+    [LegislativeStage.ASSENT]: 100,
+    [LegislativeStage.VETOED]: 100
+  };
+
   bill.currentStage = stage as LegislativeStage;
   // Calculate approximate percentage progress
-  bill.stageProgress = Math.floor(((stageIndex + 1) / stagesList.length) * 100);
+  bill.stageProgress = stagesToProgress[stage as LegislativeStage] || 15;
   bill.lastUpdated = today;
 
   // Mark timeline events up to this stage as completed

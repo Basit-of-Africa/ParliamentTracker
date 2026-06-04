@@ -148,7 +148,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
           chamberOfOrigin: chamber,
           category: category,
           currentStage: LegislativeStage.FIRST_READING,
-          stageProgress: 10,
+          stageProgress: 15,
           dateProposed: new Date().toISOString().split('T')[0],
           lastUpdated: new Date().toISOString().split('T')[0],
           summary: refined.refinedSummary || summary,
@@ -160,12 +160,11 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
           timeline: [
             { stage: LegislativeStage.FIRST_READING, date: new Date().toISOString().split('T')[0], note: "Citizen/Representative bill proposal submitted.", completed: true },
             { stage: LegislativeStage.SECOND_READING, date: "", note: "Pending secondary committee review.", completed: false },
-            { stage: LegislativeStage.COMMITTEE_STAGE, date: "", note: "", completed: false },
-            { stage: LegislativeStage.REPORT_CONSIDERATION, date: "", note: "", completed: false },
+            { stage: LegislativeStage.COMMITTEE_ASSIGNMENT, date: "", note: "", completed: false },
+            { stage: LegislativeStage.REPORT, date: "", note: "", completed: false },
             { stage: LegislativeStage.THIRD_READING, date: "", note: "", completed: false },
-            { stage: LegislativeStage.CONCURRENCE, date: "", note: "", completed: false },
-            { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "", note: "", completed: false },
-            { stage: LegislativeStage.ASSENTED, date: "", note: "", completed: false }
+            { stage: LegislativeStage.HARMONIZATION, date: "", note: "", completed: false },
+            { stage: LegislativeStage.ASSENT, date: "", note: "", completed: false }
           ]
         };
 

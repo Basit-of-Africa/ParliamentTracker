@@ -505,7 +505,7 @@ export default function BillDetail({
             <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden" id={`bill-detail-progress-${bill.id}`}>
               <motion.div
                 className={`h-full rounded-full ${
-                  bill.currentStage === LegislativeStage.ASSENTED
+                  bill.currentStage === LegislativeStage.ASSENT
                     ? "bg-emerald-500"
                     : bill.currentStage === LegislativeStage.VETOED
                     ? "bg-rose-500"
