@@ -18,7 +18,6 @@ import {
   Mail, 
   PieChart, 
   Star,
-  Activity,
   Award
 } from "lucide-react";
 import { Bill, Legislator, PoliticalParty } from "../types";
@@ -465,29 +464,6 @@ export default function Home({
           </div>
 
         </div>
-      </section>
-
-      {/* 5. Civic Accountability Credential Block */}
-      <section className="p-6 bg-white border border-slate-205 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm" id="assent-certificate-strip">
-        <div className="flex items-start gap-4">
-          <div className="p-3 bg-emerald-50 text-emerald-605 rounded-2xl border border-emerald-150 shrink-0">
-            <ShieldCheck className="w-6 h-6" />
-          </div>
-          <div className="space-y-1">
-            <h4 className="font-black font-display text-slate-900 text-sm">Transparency Standard Verified</h4>
-            <p className="text-sm text-slate-540 leading-relaxed font-sans font-medium">
-              We gather public registry items and states legislative records systematically. No biased evaluations are added. Our platform operates entirely client-consensual and civic-neutral.
-            </p>
-          </div>
-        </div>
-
-        <button 
-          onClick={onRefresh}
-          className="shrink-0 px-5 py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-700 font-extrabold text-xs rounded-xl border border-slate-200 transition flex items-center gap-1.5 cursor-pointer"
-        >
-          <Activity className="w-4 h-4 text-emerald-600 animate-pulse" />
-          <span>Force Registry Refresh</span>
-        </button>
       </section>
 
     </div>
