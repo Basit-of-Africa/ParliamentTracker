@@ -142,8 +142,13 @@ export default function App() {
         if (storedLegs) {
           try {
             const parsed = JSON.parse(storedLegs);
-            setLegislators(parsed);
-            legislatorsList = parsed;
+            if (Array.isArray(parsed) && parsed.length >= 469) {
+              setLegislators(parsed);
+              legislatorsList = parsed;
+            } else {
+              setLegislators(INITIAL_LEGISLATORS);
+              legislatorsList = INITIAL_LEGISLATORS;
+            }
           } catch (e) {
             setLegislators(INITIAL_LEGISLATORS);
             legislatorsList = INITIAL_LEGISLATORS;
