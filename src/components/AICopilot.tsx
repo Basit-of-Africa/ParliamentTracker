@@ -120,7 +120,7 @@ export default function AICopilot({ bills, selectedBillId, onSetSelectedBillId }
       ]);
       setCurrentSources([
         { title: "Nigerian National Assembly Home", uri: "https://nass.gov.ng" },
-        { title: "PLAC Bills Track Portal", uri: "https://p.placbillstrack.org" }
+        { title: "NASS Bills Registry", uri: "https://nass.gov.ng/document/bill" }
       ]);
     } finally {
       setLoading(false);

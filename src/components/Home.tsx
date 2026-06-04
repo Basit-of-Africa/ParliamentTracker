@@ -130,12 +130,12 @@ export default function Home({
                 <div>
                   <h3 className="font-extrabold text-slate-100 text-sm">Abia to Zamfara Integration</h3>
                   <a
-                    href="https://p.placbillstrack.org/bills/"
+                    href="https://nass.gov.ng/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-emerald-400 hover:text-emerald-300 hover:underline inline-flex items-center gap-0.5 mt-0.5"
                   >
-                    <span>Sourced from PLAC Bills Track</span>
+                    <span>Official Gazette & Parliament Records</span>
                     <span className="text-[10px]/none">↗</span>
                   </a>
                 </div>

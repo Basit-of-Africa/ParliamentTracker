@@ -148,7 +148,7 @@ export default function BillsList({
 
   return (
     <div className="space-y-6" id="bills-dashboard">
-      {/* PLAC Sync Banner */}
+      {/* Legislative Sync Banner */}
       <div className="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 text-white rounded-3xl p-5 border border-emerald-900/40 relative overflow-hidden" id="plac-sync-banner">
         <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl -mr-12 -mt-12 pointer-events-none" />
         <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
@@ -158,23 +158,23 @@ export default function BillsList({
                 Official Data Alignment
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[10px] text-slate-350 font-bold uppercase tracking-wider">PLAC Bills Track</span>
+              <span className="text-[10px] text-slate-350 font-bold uppercase tracking-wider">National Assembly</span>
             </div>
             <h3 className="text-base md:text-lg font-black font-display tracking-tight text-white">
               Tenth Assembly Bill Registry
             </h3>
             <p className="text-xs text-slate-300 max-w-xl font-medium leading-relaxed">
-              All legislative bills in our tracking index are aligned with the official registry of the <strong>Policy and Legal Advocacy Centre (PLAC) Bills Track</strong>. Explore further details, gazette indexes, and detailed legal reviews on the live PLAC catalog.
+              All legislative bills in our tracking index are aligned with the official National Assembly registries. Explore further details, gazette indexes, and detailed legislative documents from the live parliament catalog.
             </p>
           </div>
           <a
-            href="https://p.placbillstrack.org/bills/"
+            href="https://nass.gov.ng/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 bg-emerald-605 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl flex items-center gap-1.5 shadow-md shadow-emerald-500/10 cursor-pointer self-start sm:self-auto transition shrink-0"
             id="plac-main-source-btn"
           >
-            <span>Visit PLAC Platform</span>
+            <span>Visit Parliament Portal</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-white" />
           </a>
         </div>

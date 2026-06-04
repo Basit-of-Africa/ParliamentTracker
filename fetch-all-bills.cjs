@@ -171,7 +171,35 @@ async function run() {
     }
 
     const { category, sectors } = getCategoryAndSectors(fullTitle, item.category_id);
-    const { stage, progress } = mapStatusToStageAndProgress(item.status);
+    
+    // Determine the actual stage from individual stage occurrences
+    let stage = "First Reading";
+    let progress = 15;
+    let maxOrder = -1;
+    
+    if (item.stages && Array.isArray(item.stages)) {
+      item.stages.forEach(st => {
+        const p = st.pivot || {};
+        const occurred = p.occurred_on || p.occurred_in_house_on || p.occurred_in_senate_on || p.current > 0;
+        if (occurred && st.order > maxOrder) {
+          maxOrder = st.order;
+          // Map st.title to standard stage names
+          const t = String(st.title || "").toUpperCase().trim();
+          if (t.includes("FIRST")) { stage = "First Reading"; progress = 15; }
+          else if (t.includes("SECOND")) { stage = "Second Reading"; progress = 35; }
+          else if (t.includes("COMMITTEE ASSIGN") || t.includes("HEARING") || t.includes("COMMITTEE_ASSIGN")) { stage = "Committee Assignment"; progress = 55; }
+          else if (t.includes("REPORT") || t.includes("COMMITEE")) { stage = "Report"; progress = 70; }
+          else if (t.includes("THIRD") || t.includes("CONCURRENCE")) { stage = "Third Reading"; progress = 85; }
+          else if (t.includes("HARMONI")) { stage = "Harmonization"; progress = 92; }
+          else if (t.includes("ASSENT") || t.includes("SIGNED") || t.includes("ACT") || t.includes("LAW")) { stage = "Assent"; progress = 100; }
+        }
+      });
+    } else {
+      // Fallback to item.status
+      const mapped = mapStatusToStageAndProgress(item.status);
+      stage = mapped.stage;
+      progress = mapped.progress;
+    }
     
     const dateProposed = item.created_at ? item.created_at.split('T')[0] : "2023-07-03";
     const lastUpdated = item.updated_at ? item.updated_at.split('T')[0] : "2024-02-15";
