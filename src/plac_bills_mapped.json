@@ -1,0 +1,5026 @@
+[
+  {
+    "id": "bill-708736de-0564-46f4-8473-77e55d4c71b6",
+    "billNumber": "HB 276",
+    "title": "Southeast Development Commission (Est) Bill, 2023",
+    "fullTitle": "Southeast Development Commission (Est) Bill, 2023",
+    "sponsorId": "leg-62604f20-2590-4b6f-9748-02afc37f4b23",
+    "sponsorName": "Hon. Mathew Nwogu",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-07-22",
+    "lastUpdated": "2024-07-22",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-07-22",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-07-22",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-07-22",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-07-22",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-07-22",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-07-22",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-07-22",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 87
+    },
+    "votesFor": 109,
+    "votesAgainst": 41,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-189943cb-6a6f-40b7-850d-3a520fa071de",
+    "billNumber": "HB 404",
+    "title": "Southeast Development Commission (Establishment) Bill, 2023",
+    "fullTitle": "Southeast Development Commission (Establishment) Bill, 2023",
+    "sponsorId": "leg-f90dbf0f-a9fb-4ec6-9593-a44cc499eec6",
+    "sponsorName": "Hon. Ugochinyere Onyinye Ikeagwuonu",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-29",
+    "lastUpdated": "2024-08-29",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-29",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-29",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-29",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-29",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-29",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-29",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-08-29",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 93
+    },
+    "votesFor": 115,
+    "votesAgainst": 17,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-6737e1ff-2a55-4c6b-80df-5edb1094e0b9",
+    "billNumber": "HB 153",
+    "title": "Southeast Development Commission (Establishment) Bill, 2023",
+    "fullTitle": "Southeast Development Commission (Establishment) Bill, 2023",
+    "sponsorId": "leg-9dc880bd-d4e2-42e5-8350-06f0eebdbc03",
+    "sponsorName": "Hon. Pascal Agbodike",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-06-19",
+    "lastUpdated": "2024-06-19",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-06-19",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-06-19",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-06-19",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-06-19",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-06-19",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-06-19",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-06-19",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 94
+    },
+    "votesFor": 116,
+    "votesAgainst": 18,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-a64c8af4-60bf-475a-ae70-8eefa247e4c3",
+    "billNumber": "HB 283",
+    "title": "Southwest Development Commission (Est) Bill, 2023",
+    "fullTitle": "Southwest Development Commission (Est) Bill, 2023",
+    "sponsorId": "leg-9e151e3b-3fa0-4723-9b80-5e3daa20e44d",
+    "sponsorName": "Hon. Aliu Ademorin Kuye",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-07-22",
+    "lastUpdated": "2025-06-16",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-07-22",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-07-22",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-07-22",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-07-22",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-07-22",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-07-22",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-06-16",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 82
+    },
+    "votesFor": 129,
+    "votesAgainst": 61,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-7da5651f-6844-4df9-a300-7d87a0d0ea06",
+    "billNumber": "SB 721",
+    "title": "Special Agro Economic Processing Zones (Establishment) Bill, 2025",
+    "fullTitle": "Special Agro Economic Processing Zones (Establishment) Bill, 2025",
+    "sponsorId": "leg-1b9057a0-8530-4a2a-b5d7-3d9e611f25bf",
+    "sponsorName": "Sen. Mohammed Sani Musa",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-08-07",
+    "lastUpdated": "2025-08-07",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-08-07",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-08-07",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-08-07",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-08-07",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-08-07",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-08-07",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-08-07",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Fiscal Appropriations",
+        "Revenue Operations",
+        "Financial Oversight"
+      ],
+      "overallRating": 91
+    },
+    "votesFor": 93,
+    "votesAgainst": 55,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-f3cde68e-e025-41bc-8a8f-ba6bc6aaeaa6",
+    "billNumber": "HB 579",
+    "title": "Standards Organisation of Nigeria Act (Repeal and Enactment) Bill, 2023",
+    "fullTitle": "Standards Organisation of Nigeria Act (Repeal and Enactment) Bill, 2023",
+    "sponsorId": "leg-476d5951-26dd-46ad-b334-89a4047e5d8e",
+    "sponsorName": "Hon. Adewale Hameed",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-04-10",
+    "lastUpdated": "2025-04-10",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-04-10",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-04-10",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-04-10",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-04-10",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-04-10",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-04-10",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-04-10",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 74
+    },
+    "votesFor": 106,
+    "votesAgainst": 56,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-adee0191-84e8-4811-9c6f-1e8b7e8bfd95",
+    "billNumber": "HB 193",
+    "title": "Standards Organisation of Nigeria, Act (Amendment) Bill, 2023",
+    "fullTitle": "Standards Organisation of Nigeria, Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-85e0b89d-4184-48b9-a054-4991e6ac70fb",
+    "sponsorName": "Hon. Saidu Musa Abdullahi",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-06-21",
+    "lastUpdated": "2025-12-04",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-06-21",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-06-21",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-06-21",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-06-21",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-06-21",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-06-21",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-12-04",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 82
+    },
+    "votesFor": 214,
+    "votesAgainst": 50,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-8d67249f-ef83-4285-bf0b-bb87d0e3e6ec",
+    "billNumber": "SB 446",
+    "title": "Standards Organization of Nigeria Act (Amendment) Bill, 2024",
+    "fullTitle": "Standards Organization of Nigeria Act (Amendment) Bill, 2024",
+    "sponsorId": "leg-388d2fd9-9e77-47c9-a571-687cffb5750f",
+    "sponsorName": "Sen. Rufai Hanga",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-31",
+    "lastUpdated": "2024-08-31",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-31",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-31",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-31",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-31",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-31",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-31",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-08-31",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 83
+    },
+    "votesFor": 190,
+    "votesAgainst": 26,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-ee381e20-9c4f-4102-98c2-d5d55942c738",
+    "billNumber": "HB 481",
+    "title": "Standards Organization of Nigeria Act (Repeal and Enactment) Bill, 2023",
+    "fullTitle": "Standards Organization of Nigeria Act (Repeal and Enactment) Bill, 2023",
+    "sponsorId": "leg-463e23c1-f6b3-49fd-b3e6-cdcca3000481",
+    "sponsorName": "Hon. Julius Ihonvbere",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-03-11",
+    "lastUpdated": "2025-03-11",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-03-11",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-03-11",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-03-11",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-03-11",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-03-11",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-03-11",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-03-11",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 73
+    },
+    "votesFor": 105,
+    "votesAgainst": 55,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-c2e57224-3d66-469e-94d6-393c06d9f9e3",
+    "billNumber": "HB 627",
+    "title": "Standards Organization of Nigeria Act, (Repeal and Enactment) Bill, 2023",
+    "fullTitle": "Standards Organization of Nigeria Act, (Repeal and Enactment) Bill, 2023",
+    "sponsorId": "leg-463e23c1-f6b3-49fd-b3e6-cdcca3000481",
+    "sponsorName": "Hon. Julius Ihonvbere",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-04-14",
+    "lastUpdated": "2025-04-14",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-04-14",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-04-14",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-04-14",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-04-14",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-04-14",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-04-14",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-04-14",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 94
+    },
+    "votesFor": 151,
+    "votesAgainst": 29,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-659066db-336b-40be-8e24-03bfc56ff6e7",
+    "billNumber": "HB 1076",
+    "title": "Supplementary Appropriations Act (Amendment) Bill, 2023",
+    "fullTitle": "Supplementary Appropriations Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-176cf119-5170-4972-956d-d4fa0f276c53",
+    "sponsorName": "Hon. Executive",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-07-25",
+    "lastUpdated": "2025-10-07",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-07-25",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-07-25",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-07-25",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-07-25",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-07-25",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-07-25",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-10-07",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Fiscal Appropriations",
+        "Revenue Operations",
+        "Financial Oversight"
+      ],
+      "overallRating": 88
+    },
+    "votesFor": 155,
+    "votesAgainst": 69,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-a74deaba-f6b2-46ea-8d77-3d94fe30878f",
+    "billNumber": "HB 1137",
+    "title": "Surrogacy Bill, 2024",
+    "fullTitle": "Surrogacy Bill, 2024",
+    "sponsorId": "leg-9e14414a-ae11-4b43-9eb9-c38d4d532a6b",
+    "sponsorName": "Hon. Ayodeji Alao",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-07-14",
+    "lastUpdated": "2025-07-28",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-07-14",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-07-14",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-07-14",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-07-14",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-07-14",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-07-14",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-07-28",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 93
+    },
+    "votesFor": 195,
+    "votesAgainst": 61,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-68fabcc1-88ea-4005-b79f-e1f0458ea413",
+    "billNumber": "SB 981",
+    "title": "Survey Coordination Bill, 2025",
+    "fullTitle": "Survey Coordination Bill, 2025",
+    "sponsorId": "leg-18695a4a-c0f6-48c5-8c96-54482398b738",
+    "sponsorName": "Sen. Zam Titus Tartenger",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-12-17",
+    "lastUpdated": "2025-12-17",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-12-17",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-12-17",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-12-17",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-12-17",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-12-17",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-12-17",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-12-17",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 72
+    },
+    "votesFor": 99,
+    "votesAgainst": 7,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-0deb72ab-73d0-41bf-b514-52d0fd58485e",
+    "billNumber": "HB 810",
+    "title": "Sustainable Mining Infrastructure Development Bill, 2023",
+    "fullTitle": "Sustainable Mining Infrastructure Development Bill, 2023",
+    "sponsorId": "leg-56062899-3480-4c5d-8886-63702f8d60c7",
+    "sponsorName": "Hon. Uchenna Okonkwo",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Infrastructure & Power",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-26",
+    "lastUpdated": "2025-05-26",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-26",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-26",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-26",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-26",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-26",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-26",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-26",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Infrastructure & Power to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Infrastructure & Power.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Transportation Channels",
+        "Power Grid Modernization",
+        "Utility Controls"
+      ],
+      "overallRating": 70
+    },
+    "votesFor": 127,
+    "votesAgainst": 35,
+    "tags": [
+      "Infrastructure & Power",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-bc453e2a-f0e5-4745-bc70-24aad028dabe",
+    "billNumber": "SB 17",
+    "title": "Tax Crime Commission Bill, 2024",
+    "fullTitle": "Tax Crime Commission Bill, 2024",
+    "sponsorId": "leg-35adeac3-0f71-467f-a2da-c9b446076d51",
+    "sponsorName": "Sen. Orji Uzor Kalu",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-01-23",
+    "lastUpdated": "2025-05-05",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-01-23",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-01-23",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-01-23",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-01-23",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-01-23",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-01-23",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-05",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Fiscal Appropriations",
+        "Revenue Operations",
+        "Financial Oversight"
+      ],
+      "overallRating": 88
+    },
+    "votesFor": 15,
+    "votesAgainst": 67,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-96c7e20e-3e05-492b-8e8f-d6f87fa9f3f5",
+    "billNumber": "HB 1149",
+    "title": "Taxes and Levies (Approved list for collection) Act (Amendment) Bill, 2024",
+    "fullTitle": "Taxes and Levies (Approved list for collection) Act (Amendment) Bill, 2024",
+    "sponsorId": "leg-83673c5e-5d2f-4c73-9a4f-d82993df165e",
+    "sponsorName": "Hon. Mansur Manu Soro",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-07-30",
+    "lastUpdated": "2025-07-30",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-07-30",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-07-30",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-07-30",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-07-30",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-07-30",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-07-30",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-07-30",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Fiscal Appropriations",
+        "Revenue Operations",
+        "Financial Oversight"
+      ],
+      "overallRating": 93
+    },
+    "votesFor": 140,
+    "votesAgainst": 12,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-9ee40808-6f38-4195-92ab-39d0d0cd20d0",
+    "billNumber": "HB 504",
+    "title": "Teachers Registration Council Act (Amendment) Bill, 2023",
+    "fullTitle": "Teachers Registration Council Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-25609af1-55e4-44f0-8725-79e17efc3dc8",
+    "sponsorName": "Hon. Ereyitomi Thomas",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-03-19",
+    "lastUpdated": "2025-03-19",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-03-19",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-03-19",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-03-19",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-03-19",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-03-19",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-03-19",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-03-19",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 74
+    },
+    "votesFor": 41,
+    "votesAgainst": 27,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-cd2ed4c2-4503-449b-926b-5f7449d8012b",
+    "billNumber": "HB 1539",
+    "title": "Technologies and Scientist (Registration, etc.) Bill, 2024",
+    "fullTitle": "Technologies and Scientist (Registration, etc.) Bill, 2024",
+    "sponsorId": "leg-5c52582f-d3ac-4ceb-a935-56d474db4e6c",
+    "sponsorName": "Hon. Paul Nnamchi",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-04-29",
+    "lastUpdated": "2025-04-29",
+    "summary": "Co-sponsor : 1 Or",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-04-29",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-04-29",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-04-29",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-04-29",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-04-29",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-04-29",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-04-29",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 89
+    },
+    "votesFor": 71,
+    "votesAgainst": 51,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-08dea982-7df1-425f-b6f0-81f214e2e287",
+    "billNumber": "HB 1064",
+    "title": "Telecommunications Facilities (Lawful Interception of Information) Bill, 2023",
+    "fullTitle": "Telecommunications Facilities (Lawful Interception of Information) Bill, 2023",
+    "sponsorId": "leg-94eeb229-e68b-4cf6-bc11-1f9fa01d3667",
+    "sponsorName": "Hon. Benjamin Kalu",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Infrastructure & Power",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-07-25",
+    "lastUpdated": "2025-07-25",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-07-25",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-07-25",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-07-25",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-07-25",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-07-25",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-07-25",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-07-25",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Infrastructure & Power to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Infrastructure & Power.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Transportation Channels",
+        "Power Grid Modernization",
+        "Utility Controls"
+      ],
+      "overallRating": 84
+    },
+    "votesFor": 201,
+    "votesAgainst": 55,
+    "tags": [
+      "Infrastructure & Power",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-46777573-fa51-418f-bd4e-9d6dfe695694",
+    "billNumber": "SB 223",
+    "title": "Terminal Illness Trust Fund (Establishment) Bill, 2023",
+    "fullTitle": "Terminal Illness Trust Fund (Establishment) Bill, 2023",
+    "sponsorId": "leg-2d5d778b-c801-483c-9240-fb89074b0ef1",
+    "sponsorName": "Sen. Justus Olugbenga Daniel",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-06-06",
+    "lastUpdated": "2024-06-06",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-06-06",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-06-06",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-06-06",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-06-06",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-06-06",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-06-06",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-06-06",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 89
+    },
+    "votesFor": 116,
+    "votesAgainst": 36,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-52158af7-12e6-408e-96f3-a9cb6e8285ac",
+    "billNumber": "HB 1682",
+    "title": "Tourism Development Trust Fund Bill, 2024",
+    "fullTitle": "Tourism Development Trust Fund Bill, 2024",
+    "sponsorId": "leg-7d4e11b2-07e0-462a-8c90-c040090eaf6c",
+    "sponsorName": "Hon. Olufemi Richard Bamisile",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-04-22",
+    "lastUpdated": "2025-04-22",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-04-22",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-04-22",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-04-22",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-04-22",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-04-22",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-04-22",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-04-22",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 88
+    },
+    "votesFor": 90,
+    "votesAgainst": 40,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-bda1eeeb-4cae-4d8c-9a30-124d68d32e4e",
+    "billNumber": "HB 131",
+    "title": "Trade and Investment Agreement (Reform and Miscellaneous Provisions) Bill, 2023",
+    "fullTitle": "Trade and Investment Agreement (Reform and Miscellaneous Provisions) Bill, 2023",
+    "sponsorId": "leg-94eeb229-e68b-4cf6-bc11-1f9fa01d3667",
+    "sponsorName": "Hon. Benjamin Kalu",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-06-13",
+    "lastUpdated": "2024-06-13",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-06-13",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-06-13",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-06-13",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-06-13",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-06-13",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-06-13",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-06-13",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 74
+    },
+    "votesFor": 191,
+    "votesAgainst": 45,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-5ba0e661-7b3c-4fc0-aaa3-486df8f426ad",
+    "billNumber": "HB 793",
+    "title": "Trade Dispute (Essential Services) Bill, 2023",
+    "fullTitle": "Trade Dispute (Essential Services) Bill, 2023",
+    "sponsorId": "leg-5c52582f-d3ac-4ceb-a935-56d474db4e6c",
+    "sponsorName": "Hon. Paul Nnamchi",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-15",
+    "lastUpdated": "2025-06-16",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-15",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-15",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-15",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-15",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-15",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-15",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-06-16",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 71
+    },
+    "votesFor": 63,
+    "votesAgainst": 7,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-2cb95360-53bd-4bdd-b90e-6c2b0adf53af",
+    "billNumber": "HB 379",
+    "title": "Trade Dispute Act (Amendment) Bill, 2023",
+    "fullTitle": "Trade Dispute Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-1faa3943-8b53-4a7b-acd4-4b1ef852210b",
+    "sponsorName": "Hon. Rabiu Yusuf",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-29",
+    "lastUpdated": "2024-08-29",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-29",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-29",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-29",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-29",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-29",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-29",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-08-29",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 75
+    },
+    "votesFor": 122,
+    "votesAgainst": 12,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-1e503fd4-bfff-4f08-9983-c83e36e4a130",
+    "billNumber": "SB 946",
+    "title": "Trade Marks Act (Repeal & Enactment) Bill, 2025",
+    "fullTitle": "Trade Marks Act (Repeal & Enactment) Bill, 2025",
+    "sponsorId": "leg-0f04b519-4e57-4996-b3bd-f8a4bd08b596",
+    "sponsorName": "Sen. Asuquo, Ekpenyong",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-11-11",
+    "lastUpdated": "2025-11-11",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-11-11",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-11-11",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-11-11",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-11-11",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-11-11",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-11-11",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-11-11",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 73
+    },
+    "votesFor": 200,
+    "votesAgainst": 6,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-e3cca3fc-4ee2-47ef-816c-de643ec3c588",
+    "billNumber": "SB 48",
+    "title": "Trade Offences (Miscellaneous Provisions) Act (Amendment) Bill, 2023",
+    "fullTitle": "Trade Offences (Miscellaneous Provisions) Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-1017da76-018b-4812-b23b-4d27d63b2ba8",
+    "sponsorName": "Sen. Jibrin Isah",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-05-23",
+    "lastUpdated": "2024-05-23",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-05-23",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-05-23",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-05-23",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-05-23",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-05-23",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-05-23",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-05-23",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 74
+    },
+    "votesFor": 16,
+    "votesAgainst": 44,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-fa3e4574-6531-40d8-9058-d5c33d8ec8f9",
+    "billNumber": "HB 335",
+    "title": "Trade Union Act (Amendment) Bill, 2023",
+    "fullTitle": "Trade Union Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-3643bf7a-baf6-43f6-9e7f-58f939017dbd",
+    "sponsorName": "Hon. Sesi Whingan",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-29",
+    "lastUpdated": "2024-08-29",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-29",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-29",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-29",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-29",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-29",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-29",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-08-29",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 79
+    },
+    "votesFor": 111,
+    "votesAgainst": 7,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-888e1a2c-d2ae-40a7-a475-4acb7607c7ef",
+    "billNumber": "HB 473",
+    "title": "Traditional Complementary and Alternative Medicine Council of Nigeria (Establishment) Bill",
+    "fullTitle": "Traditional Complementary and Alternative Medicine Council of Nigeria (Establishment) Bill, 2023",
+    "sponsorId": "leg-2310e9ed-2471-4570-8a57-d949c2e71edd",
+    "sponsorName": "Hon. Alex Egbona",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Healthcare Services",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-30",
+    "lastUpdated": "2025-03-11",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-30",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-30",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-30",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-30",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-30",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-30",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-03-11",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Healthcare Services to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Healthcare Services.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Primary Health Infrastructure",
+        "Clinical Care standards",
+        "Subsidized Care Services"
+      ],
+      "overallRating": 74
+    },
+    "votesFor": 96,
+    "votesAgainst": 52,
+    "tags": [
+      "Healthcare Services",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-d0cdcdf9-9245-4b25-9feb-8063e53b0483",
+    "billNumber": "HB 901",
+    "title": "Trafficking in Persons (Prohibition) Law Enforcement and Administration Act (Amendment) Bill",
+    "fullTitle": "Trafficking in Persons (Prohibition) Law Enforcement and Administration Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-ebc18c28-5469-46af-9938-3dfac032c2f1",
+    "sponsorName": "Hon. Akanni Enitan Dolapo-badru",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-27",
+    "lastUpdated": "2025-05-27",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-27",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-27",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-27",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-27",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-27",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-27",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-27",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 76
+    },
+    "votesFor": 98,
+    "votesAgainst": 54,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-a23d9f75-ce50-4f87-90c7-852382130dc7",
+    "billNumber": "HB 1026",
+    "title": "Transition and Assumption of Office Bill, 2023",
+    "fullTitle": "Transition and Assumption of Office Bill, 2023",
+    "sponsorId": "leg-b37d5037-90d2-43a2-8791-eb203acc117c",
+    "sponsorName": "Hon. Abdulraheem Olatunji Olawuyi",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-28",
+    "lastUpdated": "2025-05-28",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-28",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-28",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-28",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-28",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-28",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-28",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-28",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 83
+    },
+    "votesFor": 90,
+    "votesAgainst": 28,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-30f75113-6ac1-4d19-a428-064f2161bf24",
+    "billNumber": "HB 2200",
+    "title": "Transparency and Accountability in Public Services Bill, 2025",
+    "fullTitle": "Transparency and Accountability in Public Services Bill, 2025",
+    "sponsorId": "leg-e583e017-3871-4ca5-ba5f-6228629a78ce",
+    "sponsorName": "Hon. Esosa Iyawe",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2026-01-29",
+    "lastUpdated": "2026-01-29",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2026-01-29",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2026-01-29",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2026-01-29",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2026-01-29",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2026-01-29",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2026-01-29",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2026-01-29",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 93
+    },
+    "votesFor": 105,
+    "votesAgainst": 73,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-3388d298-4a95-4325-bf82-9f1430a157b9",
+    "billNumber": "HB 2230",
+    "title": "Treaty (Making Procedure, etc.) Act (Amendment) Bill, 2025",
+    "fullTitle": "Treaty (Making Procedure, etc.) Act (Amendment) Bill, 2025",
+    "sponsorId": "leg-3faf3838-94c6-410e-a803-38128dfa29fb",
+    "sponsorName": "Hon. Amobi Ogah",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2026-01-30",
+    "lastUpdated": "2026-01-30",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2026-01-30",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2026-01-30",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2026-01-30",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2026-01-30",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2026-01-30",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2026-01-30",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2026-01-30",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 78
+    },
+    "votesFor": 180,
+    "votesAgainst": 28,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-d6ab3ebd-a700-43d7-bdb1-058c5fb7ca60",
+    "billNumber": "HB 921",
+    "title": "Tribunal of Inquiry Act (Amendment) Bill, 2023",
+    "fullTitle": "Tribunal of Inquiry Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-c85dd8e7-5788-4cac-b81b-b58f83c98894",
+    "sponsorName": "Hon. Abubakar Hassan Nalaraba",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-27",
+    "lastUpdated": "2025-05-27",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-27",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-27",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-27",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-27",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-27",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-27",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-27",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 94
+    },
+    "votesFor": 86,
+    "votesAgainst": 30,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-a4342222-c1c5-4cf5-8dec-f459a3858c15",
+    "billNumber": "HB 383",
+    "title": "Tribunals of Inquiry Act (Amendment) Bill, 2023",
+    "fullTitle": "Tribunals of Inquiry Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-1faa3943-8b53-4a7b-acd4-4b1ef852210b",
+    "sponsorName": "Hon. Rabiu Yusuf",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-29",
+    "lastUpdated": "2024-08-29",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-29",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-29",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-29",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-29",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-29",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-29",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-08-29",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 86
+    },
+    "votesFor": 203,
+    "votesAgainst": 75,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-3c5473a3-62c2-443e-b912-c8b67e5e4198",
+    "billNumber": "HB 2218",
+    "title": "Ugwuta Sea Port (Establishment) Bill, 2025",
+    "fullTitle": "Ugwuta Sea Port (Establishment) Bill, 2025",
+    "sponsorId": "leg-5c52582f-d3ac-4ceb-a935-56d474db4e6c",
+    "sponsorName": "Hon. Paul Nnamchi",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2026-01-29",
+    "lastUpdated": "2026-01-29",
+    "summary": "Co-sponsors: 60 Ors",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2026-01-29",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2026-01-29",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2026-01-29",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2026-01-29",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2026-01-29",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2026-01-29",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2026-01-29",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 90
+    },
+    "votesFor": 17,
+    "votesAgainst": 39,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-ff5cba07-f6fc-4d86-97bc-35ca5bf6cefb",
+    "billNumber": "HB 1489",
+    "title": "Umar Ibn El-kanemi College of Education",
+    "fullTitle": "Umar Ibn El-kanemi College of Education, Science and Technology Bama, Borno State (Establishment) Bill, 2024",
+    "sponsorId": "leg-8350559c-ba22-48d0-8a47-cf3f553d07d5",
+    "sponsorName": "Hon. Zainab Gimba",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Education & Youth",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-08-06",
+    "lastUpdated": "2025-08-06",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-08-06",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-08-06",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-08-06",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-08-06",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-08-06",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-08-06",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-08-06",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Education & Youth to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Education & Youth.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Higher Education Framework",
+        "Youth Economic Inclusion",
+        "Institutional Standards"
+      ],
+      "overallRating": 82
+    },
+    "votesFor": 194,
+    "votesAgainst": 6,
+    "tags": [
+      "Education & Youth",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-478ef646-6ae6-4f9f-8550-d353ecfd9786",
+    "billNumber": "HB 144",
+    "title": "Unclaimed Financial Assets Commission (Establishment) Bill, 2023",
+    "fullTitle": "Unclaimed Financial Assets Commission (Establishment) Bill, 2023",
+    "sponsorId": "leg-9e151e3b-3fa0-4723-9b80-5e3daa20e44d",
+    "sponsorName": "Hon. Aliu Ademorin Kuye",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-06-19",
+    "lastUpdated": "2024-06-19",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-06-19",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-06-19",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-06-19",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-06-19",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-06-19",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-06-19",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-06-19",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 78
+    },
+    "votesFor": 55,
+    "votesAgainst": 17,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-35461d5b-1f3b-4e29-aeb5-b14a3cab12cf",
+    "billNumber": "SB 429",
+    "title": "Unemployed Youth",
+    "fullTitle": "Unemployed Youth, Elderly and Indigent Sustainability Allowances Trust Fund (Establishment) Bill, 2024",
+    "sponsorId": "leg-505e4414-afca-4cef-9eac-da98c6c2d2c9",
+    "sponsorName": "Sen. Mohammed Ali Ndume",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Education & Youth",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-31",
+    "lastUpdated": "2024-08-31",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-31",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-31",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-31",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-31",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-31",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-31",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-08-31",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Education & Youth to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Education & Youth.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Higher Education Framework",
+        "Youth Economic Inclusion",
+        "Institutional Standards"
+      ],
+      "overallRating": 82
+    },
+    "votesFor": 134,
+    "votesAgainst": 72,
+    "tags": [
+      "Education & Youth",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-7733301d-a6f7-4662-b01e-21c7217b4905",
+    "billNumber": "HB 1051",
+    "title": "Unified and Special Operations Forces (Establishment) Bill, 2023",
+    "fullTitle": "Unified and Special Operations Forces (Establishment) Bill, 2023",
+    "sponsorId": "leg-6796e416-dcb4-4312-8f24-51d3fea04cf3",
+    "sponsorName": "Hon. Sulaiman Gumi Abubakar",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-07-25",
+    "lastUpdated": "2025-07-25",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-07-25",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-07-25",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-07-25",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-07-25",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-07-25",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-07-25",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-07-25",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 72
+    },
+    "votesFor": 24,
+    "votesAgainst": 58,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-1f648519-05c7-46eb-a0a8-418488e07ed1",
+    "billNumber": "HB 968",
+    "title": "Universal Basic Education Act (Amendment) Bill, 2023",
+    "fullTitle": "Universal Basic Education Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-8ff52967-a052-4033-8149-0b276a642563",
+    "sponsorName": "Hon. Sunday Umeha",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Education & Youth",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-27",
+    "lastUpdated": "2026-01-20",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-27",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-27",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-27",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-27",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-27",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-27",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2026-01-20",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Education & Youth to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Education & Youth.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Higher Education Framework",
+        "Youth Economic Inclusion",
+        "Institutional Standards"
+      ],
+      "overallRating": 90
+    },
+    "votesFor": 27,
+    "votesAgainst": 25,
+    "tags": [
+      "Education & Youth",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-f934dd76-4f5d-4650-9acb-f6f3e4d8218f",
+    "billNumber": "HB 1185",
+    "title": "University of Jos Act (Amendment) Bill 2024",
+    "fullTitle": "University of Jos Act (Amendment) Bill 2024",
+    "sponsorId": "leg-c17b28b6-ff6e-40f8-a4b6-06a34026a301",
+    "sponsorName": "Hon. Daniel Asama Ago",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Education & Youth",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-08-04",
+    "lastUpdated": "2025-09-23",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-08-04",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-08-04",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-08-04",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-08-04",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-08-04",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-08-04",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-09-23",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Education & Youth to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Education & Youth.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Higher Education Framework",
+        "Youth Economic Inclusion",
+        "Institutional Standards"
+      ],
+      "overallRating": 81
+    },
+    "votesFor": 108,
+    "votesAgainst": 58,
+    "tags": [
+      "Education & Youth",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-3c3de76f-d6cb-4f93-9848-4c958de5b528",
+    "billNumber": "HB 688",
+    "title": "University of Nigeria Act (Amendment) Bill, 2023",
+    "fullTitle": "University of Nigeria Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-94eeb229-e68b-4cf6-bc11-1f9fa01d3667",
+    "sponsorName": "Hon. Benjamin Kalu",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Education & Youth",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-04-17",
+    "lastUpdated": "2025-04-17",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-04-17",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-04-17",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-04-17",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-04-17",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-04-17",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-04-17",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-04-17",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Education & Youth to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Education & Youth.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Higher Education Framework",
+        "Youth Economic Inclusion",
+        "Institutional Standards"
+      ],
+      "overallRating": 86
+    },
+    "votesFor": 93,
+    "votesAgainst": 31,
+    "tags": [
+      "Education & Youth",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-025c0a8b-0947-4fdb-82c6-3df068e12fd3",
+    "billNumber": "HB 962",
+    "title": "University Teaching Hospital (Reconstruction of Board",
+    "fullTitle": "University Teaching Hospital (Reconstruction of Board, etc.) Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-3ecd5665-90c9-4728-9a23-9c936604473a",
+    "sponsorName": "Hon. Jonathan Ajirioghene Ukodhiko",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Healthcare Services",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-27",
+    "lastUpdated": "2026-01-14",
+    "summary": "Sponsored by Sen. Michael Opeyemi Bamidele (Ekiti Central, Senate Leader) on the floor of the Senate",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-27",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-27",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-27",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-27",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-27",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-27",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2026-01-14",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Healthcare Services to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Healthcare Services.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Primary Health Infrastructure",
+        "Clinical Care standards",
+        "Subsidized Care Services"
+      ],
+      "overallRating": 82
+    },
+    "votesFor": 64,
+    "votesAgainst": 44,
+    "tags": [
+      "Healthcare Services",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-b043db1b-6cfd-4b10-988f-fc42e6e97b3c",
+    "billNumber": "HB 1445",
+    "title": "University Teaching Hospitals (Reconstitution of Board",
+    "fullTitle": "University Teaching Hospitals (Reconstitution of Board, Etc.) Act (Amendment) Bill, 2024",
+    "sponsorId": "leg-ba96dd77-bc59-44ba-b665-8434f13d18dd",
+    "sponsorName": "Hon. Mitema Obordor",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Constitutional Reform",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-04-29",
+    "lastUpdated": "2025-04-29",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-04-29",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-04-29",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-04-29",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-04-29",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-04-29",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-04-29",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-04-29",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Constitutional Reform to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Constitutional Reform.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Federal Constitution Alignment",
+        "Electoral Process",
+        "Administrative Law"
+      ],
+      "overallRating": 75
+    },
+    "votesFor": 22,
+    "votesAgainst": 68,
+    "tags": [
+      "Constitutional Reform",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-8b39a594-8341-4518-9052-63d0e754a562",
+    "billNumber": "HB 817",
+    "title": "University Teaching Hospitals (Reconstitution of Board) Act (Amendment) Bill",
+    "fullTitle": "University Teaching Hospitals (Reconstitution of Board) Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-1aaaf89a-a560-4ba7-a058-cc4f8864ea00",
+    "sponsorName": "Hon. Adedayo Samuel Adesola",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Constitutional Reform",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-26",
+    "lastUpdated": "2025-05-26",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-26",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-26",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-26",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-26",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-26",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-26",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-26",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Constitutional Reform to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Constitutional Reform.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Federal Constitution Alignment",
+        "Electoral Process",
+        "Administrative Law"
+      ],
+      "overallRating": 85
+    },
+    "votesFor": 102,
+    "votesAgainst": 28,
+    "tags": [
+      "Constitutional Reform",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-d68a1c6c-69e2-4618-a64c-905c802c5bbc",
+    "billNumber": "SB 908",
+    "title": "University Teaching Hospitals Act (Amendment) Bill, 2025",
+    "fullTitle": "University Teaching Hospitals Act (Amendment) Bill, 2025",
+    "sponsorId": "leg-2fa94e29-bfe3-4768-99db-bee6083bc2a2",
+    "sponsorName": "Sen. Abba Moro",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Healthcare Services",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-11-19",
+    "lastUpdated": "2025-11-19",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-11-19",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-11-19",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-11-19",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-11-19",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-11-19",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-11-19",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-11-19",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Healthcare Services to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Healthcare Services.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Primary Health Infrastructure",
+        "Clinical Care standards",
+        "Subsidized Care Services"
+      ],
+      "overallRating": 82
+    },
+    "votesFor": 99,
+    "votesAgainst": 13,
+    "tags": [
+      "Healthcare Services",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-65e187e4-c21b-431a-b1c2-0dc9933db10d",
+    "billNumber": "HB 438",
+    "title": "Upgrade Technical School Ile Ode",
+    "fullTitle": "Upgrade Technical School Ile Ode, Ile Ife to federal College of Education (Technical) Ile-Ife, Osun State, 2023",
+    "sponsorId": "leg-f6a42800-5fa0-407e-b04d-64a0f5d59c42",
+    "sponsorName": "Hon. Taofeek Abimbola Ajilesoro",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Education & Youth",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-30",
+    "lastUpdated": "2024-08-30",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-30",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-30",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-30",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-30",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-30",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-30",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-08-30",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Education & Youth to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Education & Youth.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Higher Education Framework",
+        "Youth Economic Inclusion",
+        "Institutional Standards"
+      ],
+      "overallRating": 94
+    },
+    "votesFor": 161,
+    "votesAgainst": 63,
+    "tags": [
+      "Education & Youth",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-a64136c2-8dc6-448a-87e9-11a6c96e0164",
+    "billNumber": "HB 515",
+    "title": "Venture Capital and Start up investment Bill, 2023",
+    "fullTitle": "Venture Capital and Start up investment Bill, 2023",
+    "sponsorId": "leg-13ae6a24-8a0c-47ff-aad0-ca41eb1787a2",
+    "sponsorName": "Hon. Lanre Okunlola",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-03-27",
+    "lastUpdated": "2025-03-27",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-03-27",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-03-27",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-03-27",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-03-27",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-03-27",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-03-27",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-03-27",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 79
+    },
+    "votesFor": 16,
+    "votesAgainst": 14,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-04d2ec79-0eaa-460e-b128-d906952260a4",
+    "billNumber": "SB 896",
+    "title": "Veterinary Teaching Hospitals Bill, 2026",
+    "fullTitle": "Veterinary Teaching Hospitals Bill, 2026",
+    "sponsorId": "leg-5d1681b6-ad23-48db-8a90-d1661a89620f",
+    "sponsorName": "Sen. Mohammed Tahir Monguno",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Healthcare Services",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2026-01-28",
+    "lastUpdated": "2026-01-28",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2026-01-28",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2026-01-28",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2026-01-28",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2026-01-28",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2026-01-28",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2026-01-28",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2026-01-28",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Healthcare Services to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Healthcare Services.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Primary Health Infrastructure",
+        "Clinical Care standards",
+        "Subsidized Care Services"
+      ],
+      "overallRating": 93
+    },
+    "votesFor": 205,
+    "votesAgainst": 17,
+    "tags": [
+      "Healthcare Services",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-7f292de9-a32a-4888-9f2a-75a95f15ba38",
+    "billNumber": "SB 29",
+    "title": "Veterinary Teaching Hospitals of Universities and Veterinary Specialist Hos...",
+    "fullTitle": "Veterinary Teaching Hospitals of Universities and Veterinary Specialist Hospital Abuja (Constitution of Boards and Related Matters) Bill, 2023",
+    "sponsorId": "leg-5d1681b6-ad23-48db-8a90-d1661a89620f",
+    "sponsorName": "Sen. Mohammed Tahir Monguno",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Constitutional Reform",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-05",
+    "lastUpdated": "2025-05-05",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-05",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-05",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-05",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-05",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-05",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-05",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-05",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Constitutional Reform to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Constitutional Reform.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Federal Constitution Alignment",
+        "Electoral Process",
+        "Administrative Law"
+      ],
+      "overallRating": 80
+    },
+    "votesFor": 212,
+    "votesAgainst": 60,
+    "tags": [
+      "Constitutional Reform",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-748ce1fc-1de0-4fea-abee-efd1993d8276",
+    "billNumber": "SB 475",
+    "title": "Victims of Banditry and Kidnapping Trust Fund Bill, 2024",
+    "fullTitle": "Victims of Banditry and Kidnapping Trust Fund Bill, 2024",
+    "sponsorId": "leg-ff8bd2de-e1ea-4b1f-8a7b-0c26a3dd3c1f",
+    "sponsorName": "Sen. Khalid, Ibrahim Mustapha",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-08-31",
+    "lastUpdated": "2024-08-31",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-08-31",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-08-31",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-08-31",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-08-31",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-08-31",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-08-31",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-08-31",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 74
+    },
+    "votesFor": 91,
+    "votesAgainst": 5,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  },
+  {
+    "id": "bill-440b262a-9fef-4adb-b1e1-71c8a0da53df",
+    "billNumber": "HB 920",
+    "title": "Violence Against Persons (Prohibition) Act (Amendment) Bill, 2023",
+    "fullTitle": "Violence Against Persons (Prohibition) Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-c85dd8e7-5788-4cac-b81b-b58f83c98894",
+    "sponsorName": "Hon. Abubakar Hassan Nalaraba",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-27",
+    "lastUpdated": "2025-05-27",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-27",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-27",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-27",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-27",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-27",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-27",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-27",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 94
+    },
+    "votesFor": 156,
+    "votesAgainst": 52,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-4b3fe714-9271-4510-919f-16e0fcfe2391",
+    "billNumber": "HB 898",
+    "title": "Violence Against Persons (Prohibition) Act (Amendment) Bill, 2023",
+    "fullTitle": "Violence Against Persons (Prohibition) Act (Amendment) Bill, 2023",
+    "sponsorId": "leg-7fe157f0-c31e-4d37-adb9-3e4784b5dd0a",
+    "sponsorName": "Hon. Hassan Shehu Hussain",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-05-27",
+    "lastUpdated": "2025-05-27",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-05-27",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-05-27",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-05-27",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-05-27",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-05-27",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-05-27",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-05-27",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 83
+    },
+    "votesFor": 170,
+    "votesAgainst": 66,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-48a778cf-0df4-4724-bd08-de1b589e0d0e",
+    "billNumber": "HB 675",
+    "title": "Violence Against Persons (Prohibition) Act (Repeal and Enactment) Bill, 2023",
+    "fullTitle": "Violence Against Persons (Prohibition) Act (Repeal and Enactment) Bill, 2023",
+    "sponsorId": "leg-8a6b2443-228a-4108-a29c-5282b74f9a01",
+    "sponsorName": "Hon. Chris Nkwonta",
+    "sponsorChamber": "House of Representatives",
+    "chamberOfOrigin": "House of Representatives",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2025-04-17",
+    "lastUpdated": "2025-04-17",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2025-04-17",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2025-04-17",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2025-04-17",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2025-04-17",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2025-04-17",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2025-04-17",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2025-04-17",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 79
+    },
+    "votesFor": 91,
+    "votesAgainst": 29,
+    "tags": [
+      "Finance & Economy",
+      "Reps Draft"
+    ]
+  },
+  {
+    "id": "bill-da12ba22-1357-4b91-b7c4-f029c8b97e4a",
+    "billNumber": "SB 368",
+    "title": "Violence Against Persons Act (Amendment) Bill, 2024",
+    "fullTitle": "Violence Against Persons Act (Amendment) Bill, 2024",
+    "sponsorId": "leg-1017da76-018b-4812-b23b-4d27d63b2ba8",
+    "sponsorName": "Sen. Jibrin Isah",
+    "sponsorChamber": "Senate",
+    "chamberOfOrigin": "Senate",
+    "category": "Finance & Economy",
+    "currentStage": "Presidential Assent",
+    "stageProgress": 92,
+    "dateProposed": "2024-06-07",
+    "lastUpdated": "2024-09-04",
+    "summary": "Draft proposal seeking statutory enactments for key public sectors under the Tenth National Assembly.",
+    "timeline": [
+      {
+        "stage": "First Reading",
+        "date": "2024-06-07",
+        "note": "First Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Second Reading",
+        "date": "2024-06-07",
+        "note": "Second Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Committee Stage",
+        "date": "2024-06-07",
+        "note": "Committee Stage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Report Consideration",
+        "date": "2024-06-07",
+        "note": "Report Consideration milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Third Reading",
+        "date": "2024-06-07",
+        "note": "Third Reading milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Concurrence Passage",
+        "date": "2024-06-07",
+        "note": "Concurrence Passage milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Presidential Assent",
+        "date": "2024-09-04",
+        "note": "Presidential Assent milestones completed and recorded.",
+        "completed": true
+      },
+      {
+        "stage": "Assented (Passed into Law)",
+        "date": "",
+        "note": "Awaiting preceding pipeline actions.",
+        "completed": false
+      }
+    ],
+    "aiAnalysis": {
+      "summary": "A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in Finance & Economy to ensure accountability and standard alignments across states.",
+      "publicImpact": "Introduces guidelines designed to optimize safety, raise local community benefit metrics and guarantee representative accountability in Finance & Economy.",
+      "financialImplication": "To be funded by direct allocations from the Federal Ministry or through budget lines dedicated to statutory operations, minimizing operational load, without new tax burdens.",
+      "pros": [
+        "Provides a cohesive legislative backing for the sector.",
+        "Directly aligns of operations with democratic standards of Nigeria.",
+        "Improves community participation and transparency."
+      ],
+      "cons": [
+        "Operational adaptation period required across federal ministries.",
+        "Requires brief setup funding during departmental rollouts."
+      ],
+      "sectorsAffected": [
+        "Public Welfare Systems",
+        "Financial Management Policies"
+      ],
+      "overallRating": 90
+    },
+    "votesFor": 162,
+    "votesAgainst": 22,
+    "tags": [
+      "Finance & Economy",
+      "Senate Draft"
+    ]
+  }
+]

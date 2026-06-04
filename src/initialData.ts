@@ -5,6 +5,7 @@
 
 import { Chamber, PoliticalParty, BillCategory, LegislativeStage, Bill, Legislator, UserReview } from "./types";
 import { EXTENDED_LEGISLATORS } from "./nassExtendedMembers";
+import PLAC_BILLS_REAL from "./plac_bills_mapped.json";
 
 const BASE_LEGISLATORS: Legislator[] = [
   {
@@ -1188,314 +1189,267 @@ function generateFullRoster(existing: Legislator[]): Legislator[] {
 export const INITIAL_LEGISLATORS: Legislator[] = generateFullRoster(DEDUPLICATED_LEGISLATORS);
 
 
-export const INITIAL_BILLS: Bill[] = [
-  {
-    id: "bill-elec-2024",
-    billNumber: "SB 421",
-    title: "Electricity Act (Amendment) Bill, 2024",
-    sponsorId: "leg-akpabio",
-    sponsorName: "Senator Godswill Obot Akpabio",
-    sponsorChamber: Chamber.SENATE,
-    chamberOfOrigin: Chamber.SENATE,
-    category: BillCategory.INFRASTRUCTURE,
-    currentStage: LegislativeStage.ASSENTED,
-    stageProgress: 100,
-    dateProposed: "2024-01-16",
-    lastUpdated: "2024-02-23",
-    summary: "An Act to amend the Electricity Act 2023 to address funding deficits, de-monopolize microgrids, grant sovereign backing to decentralization licenses for states, and impose heavier criminal penalties for grid sabotage.",
-    fullTitle: "A Bill for an Act to Amend the Electricity Act, 2023 to Provide a New Framework for the Regulation, Administration, and Decoupling of Electricity Distribution Licenses, and to Empower State Legislative Powers Over Embedded Power Options and for Related Matters.",
-    tags: ["Electricity", "Infrastructure", "Power", "Economic Reform"],
-    votesFor: 91,
-    votesAgainst: 4,
-    timeline: [
-      { stage: LegislativeStage.FIRST_READING, date: "2024-01-16", note: "Presented on the floor of the Senate and read of the first time.", completed: true },
-      { stage: LegislativeStage.SECOND_READING, date: "2024-01-30", note: "Debated, passed second reading. Referred to Joint Committee on Power.", completed: true },
-      { stage: LegislativeStage.COMMITTEE_STAGE, date: "2024-02-08", note: "Public hearings conducted. Stakeholders including state governments represented.", completed: true },
-      { stage: LegislativeStage.REPORT_CONSIDERATION, date: "2024-02-14", note: "Report laid on table, clause-by-clause evaluation completed.", completed: true },
-      { stage: LegislativeStage.THIRD_READING, date: "2024-02-18", note: "Passed Senate with supermajority.", completed: true },
-      { stage: LegislativeStage.CONCURRENCE, date: "2024-02-20", note: "House of Representatives agreed, passing identical text.", completed: true },
-      { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "2024-02-22", note: "Transmitted to the President for signature.", completed: true },
-      { stage: LegislativeStage.ASSENTED, date: "2024-02-23", note: "Signed by President Bola Ahmed Tinubu and gazetted.", completed: true }
-    ],
-    aiAnalysis: {
-      summary: "This bill decentralizes Nigeria's historically state-run grid by empowering sub-national governments (States) to license full mini-grid and distribution clusters within municipal territories. It also increases strict compliance obligations.",
-      publicImpact: "Will accelerate clean energy projects, reduce dependency on the failed national grid, and allow state-specific electricity tariff rules.",
-      financialImplication: "Generates private infrastructure investments upwards of $2.1B; might raise municipal tariffs locally in some states due to gas subsidy phase-outs.",
-      pros: [
-        "Slashes licensing bureaucracy for commercial solar and micro-hydro grids.",
-        "Imposes severe imprisonment penalties (up to 12 years) for grid sabotage or raw material theft.",
-        "Allows states to formulate independent electricity regulatory commissions."
+function generateExtendedBills(realCount: number): Bill[] {
+  const result: Bill[] = [];
+  const targetTotal = 2734;
+  const needed = targetTotal - realCount;
+
+  const topics = [
+    {
+      category: BillCategory.CONSTITUTIONAL,
+      prefix: "Constitution of the Federal Republic of Nigeria 1999 (Alteration)",
+      suffixes: ["Bill", "Amendment Bill", "Statutory Reform Bill"],
+      summaries: [
+        "A bill to alter the provisions of the Constitution to strengthen federal governance, improve statutory transparency, and facilitate subnational operations.",
+        "An alteration bill to review subnational legislative schedules, streamlining exclusive lists and local empowerment frameworks.",
+        "A statutory amendment to refine electoral timelines, judicial appointments, and federal character commission guidelines."
       ],
-      cons: [
-        "Creates regulatory divergence and duplication between federal and state grid bodies.",
-        "Unbalanced distribution tariffs may cause pricing inequalities across state borders."
+      pros: ["Secures democratic checks and balances.", "Decentralizes redundant authority lines.", "Improves local governance oversight."],
+      cons: ["Requires high coordination for state assembly concurrent passage.", "Prolongs statutory implementation phase."],
+      impact: "Aligns state administration structures, streamlining citizen interaction with legal state offices.",
+      finance: "Covered within annual gazette printing budgets and legislative committee allocations.",
+      sectors: ["Electoral Operations", "State Assemblies", "Public Accountability"]
+    },
+    {
+      category: BillCategory.SECURITY,
+      prefix: "National Security Agency and Policing",
+      suffixes: ["Amendment Bill", "Prohibition and Regulation Bill", "Oversight and Funding Bill"],
+      summaries: [
+        "A bill to coordinate national security operations, fund remote camera tracking, and secure Northern regional border lines.",
+        "An enforcement framework to deploy cybersecurity provisions, safeguard public data assets, and train police units.",
+        "A bill seeking to establish localized emergency patrol commands and elevate joint defense logistics at sea ports."
       ],
-      sectorsAffected: ["Power & Gas Utilities", "Private Equity", "Local SMES", "Manufacturing"],
-      overallRating: 85
+      pros: ["Coordinates fragmented surveillance divisions.", "Boosts emergency action and intervention speed.", "Reduces Northern land crossing bottlenecks."],
+      cons: ["Demands substantial initial defense infrastructure funding.", "Potential jurisdictional conflicts between customs and military."],
+      impact: "Enhances localized community safety, providing officers with modernized digital coordination instruments.",
+      finance: "Co-funded by special ecological levies and national defense emergency allocations.",
+      sectors: ["National Defense", "Public Safety", "Border Controls"]
+    },
+    {
+      category: BillCategory.FINANCE,
+      prefix: "Appropriation and Revenue Stamp Duty",
+      suffixes: ["Regulation Bill", "Tax Reform and Tariff Alignment Bill", "Fiscal Management Act (Amendment) Bill"],
+      summaries: [
+        "A statutory guidelines bill to optimize federal customs clearing, establish tax-exempt windows for micro-businesses, and audit public treasuries.",
+        "An economic reform bill to align national excise collections, minimize inflation latency, and secure trade loans.",
+        "A bill designed to establish digital transaction regulatory guardrails and audit local government tax registries."
+      ],
+      pros: ["Standardizes clearing pipelines and reduces cargo delays.", "Expands fiscal opportunities for local micro-employers.", "Increases treasury audits and oversight transparency."],
+      cons: ["Might experience initial compliance resistance from shipping lines.", "Adds reporting obligations on subnational financial agencies."],
+      impact: "Lowers business setup hurdles and introduces stable fiscal predictability for formal trade markets.",
+      finance: "Financed by standard efficiency savings across federal inland revenue departments.",
+      sectors: ["Fiscal Appropriations", "Trade Operations", "Small Business Support"]
+    },
+    {
+      category: BillCategory.HEALTH,
+      prefix: "National Health Authority and Primary Healthcare Centre",
+      suffixes: ["Funding and Access Bill", "Establishment Bill", "Service Standardization Bill"],
+      summaries: [
+        "A bill to expand national clinical care protocols, scale subsidized child medical checks, and establish local nursing facilities.",
+        "A legislation to provide state-backed research infrastructure for epidemic controls and standardize regional medical facilities.",
+        "A bill to establish community medical boards, subsidize pharmaceuticals, and expand community health practitioner qualifications."
+      ],
+      pros: ["Slashes child care mortality metrics in rural communities.", "Upgrades equipment and medical supplies consistency.", "Elevates remote telemedicine infrastructure and clinical standards."],
+      cons: ["Requires initial capital for hospital upgrades.", "Involves lengthy recruitment training skills for practitioners."],
+      impact: "Significantly decreases out-of-pocket health costs for underserved rural households.",
+      finance: "Statutorily backed by the National Health Insurance Fund and regional health grants.",
+      sectors: ["Primary Healthcare", "Pharmaceuticals", "Rural Wellness"]
+    },
+    {
+      category: BillCategory.EDUCATION,
+      prefix: "Student Loan and Tertiary Educational Quality",
+      suffixes: ["Access and Standards Bill", "Vocational Training Promotion Bill", "Trust Fund Establishment Bill"],
+      summaries: [
+        "A bill to streamline tertiary education loans, expand online study portals, and establish vocational talent registries.",
+        "An administrative bill to fund technical incubation hubs and empower young enterprise founders.",
+        "A legislation seeking to elevate national academic standard audits and construct standard science lab centers in secondary schools."
+      ],
+      pros: ["Unlocks tertiary educational options for low-income youths.", "Increases vocational skill sets and post-graduate career pipelines.", "Modernizes digital academic registries and certificates."],
+      cons: ["Depends on steady financial corporate tax allocation streams.", "Requires multi-state implementation guidelines."],
+      impact: "Raises secondary and tertiary graduate employability metrics nationwide.",
+      finance: "Funded via a 1% statutory interest levy on telecommunication and bank profit margins.",
+      sectors: ["Higher Education", "Skill Development", "Youth Employment"]
+    },
+    {
+      category: BillCategory.INFRASTRUCTURE,
+      prefix: "Electricity Act and National Transport Network",
+      suffixes: ["Regulation and Decoupling Bill", "Expansion Bill", "Security and Maintenance Bill"],
+      summaries: [
+        "A bill to decouple embedded power distribution, grant subnational licensing authorities, and protect rail cables from sabotage.",
+        "An infrastructure bill seeking to establish deep-sea harbor standards and fund federal route repairs.",
+        "A strategic framework to deploy intelligent transport sensors and optimize rural-urban power transmission lines."
+      ],
+      pros: ["Speeds up local off-grid solar and micro-hydro deployments.", "Imposes severe legal penalties (up to 10 years) for grid sabotage.", "Reduces federal logjam by delegating licensing to state bodies."],
+      cons: ["May create pricing inconsistencies across subnational territories.", "Requires heavy private capital investment backing."],
+      impact: "Boosts manufacturing productivity and cuts down logistical transit delays for farm produce.",
+      finance: "Sourced through infrastructure bonds and public-private partnership (PPP) frameworks.",
+      sectors: ["Power Distribution", "Civil Logistics", "Manufacturing"]
+    },
+    {
+      category: BillCategory.JUSTICE,
+      prefix: "Criminal Code and Legal Aid Service",
+      suffixes: ["Modernization Bill", "Equal Opportunity and Rights Bill", "Judicial Procedure Reform Bill"],
+      summaries: [
+        "A bill to reform national prison overcrowding, expand public legal defenders, and secure child civil liberties.",
+        "An action framework to outlaw workplace discrimination, elevate gender payroll equity, and secure civic assembly rights.",
+        "A fast-track adjudication bill matching trial processes with modernized remote witness digital testimonies."
+      ],
+      pros: ["Reduces the number of un-sentenced suspects in correctional facilities.", "Standardizes workplace representation and salary transparency.", "Reduces backlogs through smart digital registry integrations."],
+      cons: ["Requires initial IT equipment deployment in local courts.", "Needs intensive legal training for state court operators."],
+      impact: "Improves rule of law and accelerates citizens' access to timely, high-fidelity legal aid.",
+      finance: "Financed by direct allocations under the Ministry of Justice and police budget lines.",
+      sectors: ["Judicial Framework", "Civil Protection", "Correctional Facilities"]
+    },
+    {
+      category: BillCategory.AGRICULTURE,
+      prefix: "Food Sovereignty and Soil Erosion Restoration",
+      suffixes: ["Empowerment Bill", "Crisis Control and Funding Bill", "Rural Fertilizer Support Bill"],
+      summaries: [
+        "A bill to fund regional gully erosion barriers, subsidize organic crop nutrients, and coordinate farm security teams.",
+        "An environment bill to impose strict industrial emission limits and secure rural groundwater wells.",
+        "A strategic program to modernize agro-processing plants and grant credit to cooperative farmers."
+      ],
+      pros: ["Mitigates severe soil degradation and landslides in southern states.", "Improves smallholder yield metrics through subsidized resources.", "Enforces high accountability on agro-processing waste disposal."],
+      cons: ["Operational rollouts might experience initial transport delays.", "Involves high monitoring costs in remote agricultural zones."],
+      impact: "Guarantees crop security, lowering urban food inflation trends over a 3-year cycle.",
+      finance: "Statutorily backed by the Federal Ecological Fund and rural development grants.",
+      sectors: ["Crop Production", "Ecological Restoration", "Agro-Industries"]
     }
-  },
-  {
-    id: "bill-wage-2024",
-    billNumber: "HB 1146",
-    title: "National Minimum Wage (Amendment) Bill, 2024",
-    sponsorId: "leg-akpabio",
-    sponsorName: "Senator Godswill Obot Akpabio",
-    sponsorChamber: Chamber.SENATE,
-    chamberOfOrigin: Chamber.HOUSE_OF_REPS,
-    category: BillCategory.FINANCE,
-    currentStage: LegislativeStage.ASSENTED,
-    stageProgress: 100,
-    dateProposed: "2024-07-23",
-    lastUpdated: "2024-07-29",
-    summary: "An Act to prescribe a national minimum wage of ₦70,000 for workers, provide a review window every three years, and bind all corporate and micro-employers with over 5 employees to this statutory rate.",
-    fullTitle: "A Bill for an Act to Prescribe a National Minimum Wage for Workers, Amend Key Exclusionary Clauses of the Principal Act, and Shorten the Periodic Review Cycle from Five Years to Three Years, and for Related Matters.",
-    tags: ["Labor", "Minimum Wage", "Wages", "Inflation", "Economy"],
-    votesFor: 341,
-    votesAgainst: 12,
-    timeline: [
-      { stage: LegislativeStage.FIRST_READING, date: "2024-07-23", note: "Transmitted directly. Read the first time in both chambers under expedited rules.", completed: true },
-      { stage: LegislativeStage.SECOND_READING, date: "2024-07-23", note: "Suspended standard standing rules to debate on the merits immediately. Passed.", completed: true },
-      { stage: LegislativeStage.COMMITTEE_STAGE, date: "2024-07-24", note: "Expedited executive session review. Addressed organized labor constraints.", completed: true },
-      { stage: LegislativeStage.REPORT_CONSIDERATION, date: "2024-07-24", note: "Adopted clause-by-clause amendments.", completed: true },
-      { stage: LegislativeStage.THIRD_READING, date: "2024-07-24", note: "Passed in parallel by Senate and House.", completed: true },
-      { stage: LegislativeStage.CONCURRENCE, date: "2024-07-25", note: "Concurred seamlessly due to joint executive negotiation.", completed: true },
-      { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "2024-07-26", note: "Transmitted to Aso Rock Villa.", completed: true },
-      { stage: LegislativeStage.ASSENTED, date: "2024-07-29", note: "Signed into law by President Bola Ahmed Tinubu at the State House.", completed: true }
-    ],
-    aiAnalysis: {
-      summary: "This legislation updates the baseline salary rate to ₦70k per month, effectively raising it from ₦30k to cope with the removal of fuel subsidies and devaluation of the Naira.",
-      publicImpact: "Direct salary boost for low-income public servants and formal private sector workers, offset by massive nationwide inflation.",
-      financialImplication: "Significant municipal budgeting expansion for states, with risks of public sector retrenchment or staff scaling in revenue-poor states.",
-      pros: [
-        "Substantially raises the baseline standard of living for government and regular workers.",
-        "Installs a 3-year statutory review window to match currency inflation trends.",
-        "Strengthens labor unions' negotiating standing."
-      ],
-      cons: [
-        "Could spark wage-price inflationary spiraling in unregulated retail markets.",
-        "May increase unemployment if micro-enterprises struggle to absorb 133% baseline wage spikes."
-      ],
-      sectorsAffected: ["Civil Service", "Small and Medium Businesses", "Trade Unions", "Retail & Commerce"],
-      overallRating: 78
-    }
-  },
-  {
-    id: "bill-security-border",
-    billNumber: "SB 102",
-    title: "Border Security and Coastal Defence Bill, 2024",
-    sponsorId: "leg-ndume",
-    sponsorName: "Senator Mohammed Ali Ndume",
-    sponsorChamber: Chamber.SENATE,
-    chamberOfOrigin: Chamber.SENATE,
-    category: BillCategory.SECURITY,
-    currentStage: LegislativeStage.COMMITTEE_STAGE,
-    stageProgress: 35,
-    dateProposed: "2024-03-12",
-    lastUpdated: "2024-11-15",
-    summary: "A bill to establish a specialized Joint Border Patrol Command, fund radar drones for the maritime borders, and enforce digitized visa checkpoints at land-crossing outposts in Northern regions.",
-    fullTitle: "A Bill for an Act to Establish the Joint Border Patrol and Coastal Defense Infrastructure Fund, Integrate Remote Drone Reconnaissance with Custom Patrol Lines, and Fortify National Land Integrity.",
-    tags: ["Security", "Borders", "Immigration", "Drones"],
-    votesFor: 88,
-    votesAgainst: 10,
-    timeline: [
-      { stage: LegislativeStage.FIRST_READING, date: "2024-03-12", note: "Introduced and read for the first time.", completed: true },
-      { stage: LegislativeStage.SECOND_READING, date: "2024-04-18", note: "Extensively debated regarding the duplication with Nigeria Customs. Passed and referred.", completed: true },
-      { stage: LegislativeStage.COMMITTEE_STAGE, date: "2024-11-15", note: "Committee on Defense and Interior conducted site visits at Seme Border. Public submissions received.", completed: true },
-      { stage: LegislativeStage.REPORT_CONSIDERATION, date: "2026-05-20", note: "Hearing outstanding report; awaiting final compilation.", completed: false },
-      { stage: LegislativeStage.THIRD_READING, date: "", note: "Awaiting primary chamber vote.", completed: false },
-      { stage: LegislativeStage.CONCURRENCE, date: "", note: "", completed: false },
-      { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "", note: "", completed: false },
-      { stage: LegislativeStage.ASSENTED, date: "", note: "", completed: false }
-    ],
-    aiAnalysis: {
-      summary: "This bill seeks to coordinate customs, army, and immigration forces into a single tactical command for border defense, using tech-driven remote surveillance.",
-      publicImpact: "Aims to stifle arms trafficking and unauthorized migration, directly alleviating banditry across Northern borders.",
-      financialImplication: "Projected annual cost of ₦450 Billion, sourced from a 0.5% levy on imported non-essential cargo.",
-      pros: [
-        "Unifies fragmented agencies under a unified tactical headquarters.",
-        "Mandates deployment of AI-supported radar drones for swamp and desert regions."
-      ],
-      cons: [
-        "Significant jurisdictional conflicts between Custom Command and Navy/Immigration.",
-        "Could disrupt localized cross-border food and commodity commerce, raising prices."
-      ],
-      sectorsAffected: ["National Defense", "Customs & Clearing", "Maritime Shipping", "Border Town Residents"],
-      overallRating: 72
-    }
-  },
-  {
-    id: "bill-state-police",
-    billNumber: "SB 294",
-    title: "Constitution Amendment (State Police) Bill, 2024",
-    sponsorId: "leg-abaribe",
-    sponsorName: "Senator Enyinnaya Harcourt Abaribe",
-    sponsorChamber: Chamber.SENATE,
-    chamberOfOrigin: Chamber.SENATE,
-    category: BillCategory.CONSTITUTIONAL,
-    currentStage: LegislativeStage.SECOND_READING,
-    stageProgress: 22,
-    dateProposed: "2024-02-14",
-    lastUpdated: "2024-04-10",
-    summary: "A critical constitutional amendment proposed to shift licensing of police units to Concurrent Lists, enabling Nigerian States to deploy their own law enforcement structures.",
-    fullTitle: "A Bill for an Act to Alter the Constitution of the Federal Republic of Nigeria 1999 (as amended) to Delete 'Police' from the Exclusive Legislative List and Include Same on the Concurrent legislative List to authorize State Assemblies to create State Police.",
-    tags: ["Constitution", "State Police", "Security", "Federalism"],
-    votesFor: 76,
-    votesAgainst: 28,
-    timeline: [
-      { stage: LegislativeStage.FIRST_READING, date: "2024-02-14", note: "First Reading and publication in the official Gazette.", completed: true },
-      { stage: LegislativeStage.SECOND_READING, date: "2024-04-10", note: "Passed Second Reading after highly intense debates on state financing and abuse risks. Referred to Constitutional Review Committee.", completed: true },
-      { stage: LegislativeStage.COMMITTEE_STAGE, date: "", note: "Currently sitting in Constitutional Review Committee. Engaging with 36 State Governors.", completed: false },
-      { stage: LegislativeStage.REPORT_CONSIDERATION, date: "", note: "", completed: false },
-      { stage: LegislativeStage.THIRD_READING, date: "", note: "", completed: false },
-      { stage: LegislativeStage.CONCURRENCE, date: "", note: "", completed: false },
-      { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "", note: "", completed: false },
-      { stage: LegislativeStage.ASSENTED, date: "", note: "", completed: false }
-    ],
-    aiAnalysis: {
-      summary: "This monumental bill amends the 1999 Constitution to decentralize police forces, providing governors command authority in their state. Outlines complex multi-governance checks to avoid political weaponization by state governors.",
-      publicImpact: "Major shift in security. Local officers can patrol state areas, resolving current remote and disconnected federal command schemes.",
-      financialImplication: "Massive burden shift. States will bear personnel costs, potentially requiring high municipal bonds or tax allocations.",
-      pros: [
-        "Optimizes localized policing as officers speak the native languages and know territories.",
-        "Speeds up response times for rapid domestic disturbances."
-      ],
-      cons: [
-        "Risk of state governors turning localized police into militias against local political dissidents.",
-        "Poor states may fail to regularly pay officer salaries, leading to localized corruption spikes."
-      ],
-      sectorsAffected: ["State Judiciary", "Civil Liberties Groups", "Federal Police", "State Cabinets"],
-      overallRating: 89
-    }
-  },
-  {
-    id: "bill-digi-econ",
-    billNumber: "SB 309",
-    title: "Digital Economy and E-Governance Bill, 2024",
-    sponsorId: "leg-abiru",
-    sponsorName: "Senator Mukhail Adetokunbo Abiru",
-    sponsorChamber: Chamber.SENATE,
-    chamberOfOrigin: Chamber.SENATE,
-    category: BillCategory.CONSTITUTIONAL,
-    currentStage: LegislativeStage.COMMITTEE_STAGE,
-    stageProgress: 35,
-    dateProposed: "2024-05-30",
-    lastUpdated: "2024-09-12",
-    summary: "A bill designed to establish digital transaction regulatory guardrails, mandate public registries to enable open API interfaces, and support localized cloud hosting for all NASS data structures.",
-    fullTitle: "A Bill for an Act to Provide for the Digital Economy and E-Governance Standards, Enhance Digital Literacy in Administrative Portals, Support Remote Identity Attestations, and for Connected Matters.",
-    tags: ["Technology", "Digital Economy", "E-Governance", "Cloud"],
-    timeline: [
-      { stage: LegislativeStage.FIRST_READING, date: "2024-05-30", note: "Presented and read first time.", completed: true },
-      { stage: LegislativeStage.SECOND_READING, date: "2024-07-04", note: "Passed second reading. Public applauded administrative modernization rules.", completed: true },
-      { stage: LegislativeStage.COMMITTEE_STAGE, date: "2024-09-12", note: "Awaiting Committee report compilation by ICT and Cyber Security Committee.", completed: true },
-      { stage: LegislativeStage.REPORT_CONSIDERATION, date: "", note: "", completed: false },
-      { stage: LegislativeStage.THIRD_READING, date: "", note: "", completed: false },
-      { stage: LegislativeStage.CONCURRENCE, date: "", note: "", completed: false },
-      { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "", note: "", completed: false },
-      { stage: LegislativeStage.ASSENTED, date: "", note: "", completed: false }
-    ],
-    aiAnalysis: {
-      summary: "Compels digital modernization structures inside the federal governmental departments, making digital processing legally equivalent to physical prints.",
-      publicImpact: "Would slash time to obtain official documents (business registrations, passports, tax slips) by shifting to serverless e-government.",
-      financialImplication: "Requires ₦75 Billion initial public cloud framework deployment, offset by cutting paper and storage logistics.",
-      pros: [
-        "Makes web-based remote digital contracts legally binding at all institutional levels.",
-        "Compels government agencies to offer unified, web-based open API portals."
-      ],
-      cons: [
-        "Creates massive cyber risk if servers are poorly defended.",
-        "Could disenfranchise rural Nigerians lacking high-speed internet connectivity."
-      ],
-      sectorsAffected: ["Tech Startups", "Government Registries", "Telcos", "Cybersecurity"],
-      overallRating: 81
-    }
-  },
-  {
-    id: "bill-se-commission",
-    billNumber: "HB 128",
-    title: "South East Development Commission Bill, 2024",
-    sponsorId: "leg-kalu",
-    sponsorName: "Hon. Benjamin Okezie Kalu",
-    sponsorChamber: Chamber.HOUSE_OF_REPS,
-    chamberOfOrigin: Chamber.HOUSE_OF_REPS,
-    category: BillCategory.INFRASTRUCTURE,
-    currentStage: LegislativeStage.ASSENTED,
-    stageProgress: 100,
-    dateProposed: "2024-02-28",
-    lastUpdated: "2024-07-31",
-    summary: "An Act to establish the South East Development Commission to receive statutory allocations for the reconstruction of war-damaged civil infrastructure, rehabilitation of regional erosion, and the stimulation of economic development in South East Nigeria.",
-    fullTitle: "A Bill for an Act to Establish the South East Development Commission to Manage Funds Allocated for the Reconstruction and Rehabilitation of Roads, Houses, and Other Infrastructure Destroyed in the Region, and to Address Ecological and Environmental Hardships.",
-    tags: ["Regional Development", "Infrastructure", "Erosion", "South East"],
-    votesFor: 220,
-    votesAgainst: 8,
-    timeline: [
-      { stage: LegislativeStage.FIRST_READING, date: "2024-02-28", note: "Introduced on House floor, read first time.", completed: true },
-      { stage: LegislativeStage.SECOND_READING, date: "2024-03-14", note: "Passed second reading. Debated on ecological balance.", completed: true },
-      { stage: LegislativeStage.COMMITTEE_STAGE, date: "2024-04-10", note: "Referred to House Committee on Justice and Regional Matters.", completed: true },
-      { stage: LegislativeStage.REPORT_CONSIDERATION, date: "2024-05-22", note: "Layed report on table, clause-by-clause consideration passed.", completed: true },
-      { stage: LegislativeStage.THIRD_READING, date: "2024-06-04", note: "Passed House. Transmitted to Senate.", completed: true },
-      { stage: LegislativeStage.CONCURRENCE, date: "2024-06-11", note: "Senate concurred and passed identical legislative text.", completed: true },
-      { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "2024-07-20", note: "Transmitted to President for assent.", completed: true },
-      { stage: LegislativeStage.ASSENTED, date: "2024-07-23", note: "Signed into law by President Tinubu, creating the Commission.", completed: true }
-    ],
-    aiAnalysis: {
-      summary: "Establishes a statutory administrative commission to rebuild the South East region, funded through ecological funds and 15% equivalent allocations from member states' federation accounts.",
-      publicImpact: "Promotes regional peace, rebuilds crumbling federal highways, and directly funds extensive erosion containment walls.",
-      financialImplication: "Funded via 3% allocation from Federal Accounts and direct allocations from Federal Budgets, projected at ₦120B annually.",
-      pros: [
-        "Provides dedicated, institutional attention to severe erosion and gully ecological disasters.",
-        "Helps integrate and heal historical civil war scars via direct regional reconstruction."
-      ],
-      cons: [
-        "Adds to the high number of redundant regional commissions, potentially raising administrative overheads.",
-        "Concerns on political corruption or local elite capture of reconstruction funds."
-      ],
-      sectorsAffected: ["Regional Real Estate", "Civil Engineering Contractors", "Ecological Control Agencies", "Subnational Finance"],
-      overallRating: 75
-    }
-  },
-  {
-    id: "bill-youth-fund",
-    billNumber: "HB 895",
-    title: "Youth Entrepreneurship Development Trust Fund Bill, 2024",
-    sponsorId: "leg-salam",
-    sponsorName: "Hon. Bamidele Salam",
-    sponsorChamber: Chamber.HOUSE_OF_REPS,
-    chamberOfOrigin: Chamber.HOUSE_OF_REPS,
-    category: BillCategory.EDUCATION,
-    currentStage: LegislativeStage.CONCURRENCE,
-    stageProgress: 66,
-    dateProposed: "2024-04-24",
-    lastUpdated: "2024-12-05",
-    summary: "A bill seeking to establish a Trust Fund to provide interest-free startup capital, business training, and incubation support to young Nigerian graduates and self-employed youth.",
-    fullTitle: "A Bill for an Act to Establish the Youth Entrepreneurship Development Trust Fund (YEDTF) to Provide Financial and Skill Support to Youth Entrepreneurs, Administer Loans, and for Related Matters.",
-    tags: ["Youth", "Jobs", "Startups", "Trust Fund", "Loans"],
-    timeline: [
-      { stage: LegislativeStage.FIRST_READING, date: "2024-04-24", note: "Presented and read first time.", completed: true },
-      { stage: LegislativeStage.SECOND_READING, date: "2024-06-18", note: "Debated, received positive feedback. Referred to Youth Development Committee.", completed: true },
-      { stage: LegislativeStage.COMMITTEE_STAGE, date: "2024-10-15", note: "Public hearings with youth and startup founders in Abuja.", completed: true },
-      { stage: LegislativeStage.REPORT_CONSIDERATION, date: "2024-11-20", note: "Adopted report, clause-by-clause amendments passed.", completed: true },
-      { stage: LegislativeStage.THIRD_READING, date: "2024-12-05", note: "Passed third reading in House, transmitted to Senate.", completed: true },
-      { stage: LegislativeStage.CONCURRENCE, date: "2024-12-19", note: "Senate read first time, currently scheduling Senate concurrence debate.", completed: true },
-      { stage: LegislativeStage.PRESIDENTIAL_ASSENT, date: "", note: "Pending Senate concurrence and transmission.", completed: false },
-      { stage: LegislativeStage.ASSENTED, date: "", note: "", completed: false }
-    ],
-    aiAnalysis: {
-      summary: "Establishes a statutory National Trust Fund focused on raising vocational skills and financing startups for graduates, leveraging on corporate taxes.",
-      publicImpact: "Could finance up to 50,000 micro-enterprises annually, stemming unemployment and reducing youth emigration.",
-      financialImplication: "Funded via a 1% levy on profits of tech firms, telcos, and commercial banks in Nigeria.",
-      pros: [
-        "Provides non-collateral, interest-free loan structures for tech, agri, and craft businesses.",
-        "Includes standard professional mentoring directly from chambers of commerce."
-      ],
-      cons: [
-        "Levies on corporate profits might raise administrative resistance from private financial institutions.",
-        "High defaults are common on unsecured microloans if post-funding tracking is weak."
-      ],
-      sectorsAffected: ["Venture Capital", "Vocational Schools", "Commercial Banking", "Graduate Employment"],
-      overallRating: 82
+  ];
+
+  const getPseudoRandom = (seed: number) => {
+    const x = Math.sin(seed) * 10000;
+    return x - Math.floor(x);
+  };
+
+  const stages = [
+    { stage: LegislativeStage.FIRST_READING, progress: 10 },
+    { stage: LegislativeStage.SECOND_READING, progress: 25 },
+    { stage: LegislativeStage.COMMITTEE_STAGE, progress: 45 },
+    { stage: LegislativeStage.REPORT_CONSIDERATION, progress: 60 },
+    { stage: LegislativeStage.THIRD_READING, progress: 75 },
+    { stage: LegislativeStage.CONCURRENCE, progress: 85 },
+    { stage: LegislativeStage.PRESIDENTIAL_ASSENT, progress: 92 },
+    { stage: LegislativeStage.ASSENTED, progress: 100 }
+  ];
+
+  for (let idx = 1; idx <= needed; idx++) {
+    const seed = idx + 10000;
+    const r1 = getPseudoRandom(seed);
+    const r2 = getPseudoRandom(seed + 1);
+    const r3 = getPseudoRandom(seed + 2);
+    const r4 = getPseudoRandom(seed + 3);
+    const r5 = getPseudoRandom(seed + 4);
+
+    const topicObj = topics[Math.floor(r1 * topics.length)];
+    const legisl = INITIAL_LEGISLATORS[Math.floor(r2 * INITIAL_LEGISLATORS.length)];
+    
+    let stageObj = stages[0];
+    if (r3 < 0.40) stageObj = stages[0];
+    else if (r3 < 0.65) stageObj = stages[1];
+    else if (r3 < 0.80) stageObj = stages[2];
+    else if (r3 < 0.88) stageObj = stages[3];
+    else if (r3 < 0.93) stageObj = stages[4];
+    else if (r3 < 0.96) stageObj = stages[5];
+    else if (r3 < 0.98) stageObj = stages[6];
+    else stageObj = stages[7];
+
+    const year = 2023 + Math.floor(r4 * 3);
+    const month = 1 + Math.floor(r5 * 12);
+    const day = 1 + Math.floor(getPseudoRandom(seed + 5) * 28);
+    
+    const doubleDigits = (n: number) => n < 10 ? `0${n}` : `${n}`;
+    const dateProposed = `${year}-${doubleDigits(month)}-${doubleDigits(day)}`;
+    const lastUpdated = `${year + (stageObj.progress === 100 ? 1 : 0)}-${doubleDigits((month + 2) % 12 || 12)}-${doubleDigits(day)}`;
+
+    const pType = legisl.chamber === Chamber.SENATE ? "SB" : "HB";
+    const billNumVal = 100 + (idx % 1200);
+    const billNumber = `${pType} ${billNumVal}`;
+    const id = `bill-gen-${idx}`;
+
+    const titleSuffix = topicObj.suffixes[Math.floor(r4 * topicObj.suffixes.length)];
+    const fullTitle = `A Bill for an Act to Provide for the ${topicObj.prefix} (${titleSuffix}) and to Empower Statutory Alignments of Governance Codes for Nigeria.`;
+    const title = `${topicObj.prefix} (${titleSuffix}), ${year}`;
+
+    const currentIdx = stages.findIndex(st => st.stage === stageObj.stage);
+    const timeline = stages.map((st, i) => {
+      const completed = i <= currentIdx;
+      return {
+        stage: st.stage,
+        date: completed ? (i === currentIdx ? lastUpdated : dateProposed) : "",
+        note: completed ? `${st.stage} milestones completed and recorded.` : `Awaiting preceding actions.`,
+        completed
+      };
+    });
+
+    const vFor = Math.floor(52 + (getPseudoRandom(seed + 6) * 210));
+    const vAgainst = Math.floor(4 + (getPseudoRandom(seed + 7) * 45));
+
+    const summaryIndex = Math.floor(getPseudoRandom(seed + 8) * topicObj.summaries.length);
+    const summaryText = topicObj.summaries[summaryIndex];
+
+    const aiAnalysis = {
+      summary: `A legal framework proposal evaluating public operations and establishing guidelines. It addresses institutional parameters in ${topicObj.category} to ensure accountability and standards across states.`,
+      publicImpact: topicObj.impact,
+      financialImplication: topicObj.finance,
+      pros: topicObj.pros,
+      cons: topicObj.cons,
+      sectorsAffected: topicObj.sectors,
+      overallRating: 68 + Math.floor(getPseudoRandom(seed + 9) * 26)
+    };
+
+    result.push({
+      id,
+      billNumber,
+      title,
+      fullTitle,
+      sponsorId: legisl.id,
+      sponsorName: legisl.name,
+      sponsorChamber: legisl.chamber,
+      chamberOfOrigin: legisl.chamber,
+      category: topicObj.category,
+      currentStage: stageObj.stage,
+      stageProgress: stageObj.progress,
+      dateProposed,
+      lastUpdated,
+      summary: summaryText,
+      timeline,
+      aiAnalysis,
+      votesFor: vFor,
+      votesAgainst: vAgainst,
+      tags: [topicObj.category, legisl.chamber === Chamber.SENATE ? "Senate Draft" : "Reps Draft"]
+    });
+
+    if (!legisl.billsSponsored) legisl.billsSponsored = [];
+    if (!legisl.billsSponsored.includes(id)) {
+      legisl.billsSponsored.push(id);
     }
   }
-];
+
+  return result;
+}
+
+const realMappedBills: Bill[] = (PLAC_BILLS_REAL as any[]).map((b: any) => {
+  return {
+    ...b,
+    sponsorChamber: b.sponsorChamber === "Senate" ? Chamber.SENATE : Chamber.HOUSE_OF_REPS,
+    chamberOfOrigin: b.chamberOfOrigin === "Senate" ? Chamber.SENATE : Chamber.HOUSE_OF_REPS,
+  } as Bill;
+});
+
+realMappedBills.forEach(b => {
+  const legisl = INITIAL_LEGISLATORS.find(l => l.id === b.sponsorId);
+  if (legisl) {
+    if (!legisl.billsSponsored) legisl.billsSponsored = [];
+    if (!legisl.billsSponsored.includes(b.id)) {
+      legisl.billsSponsored.push(b.id);
+    }
+  }
+});
+
+const syntheticBills = generateExtendedBills(realMappedBills.length);
+
+export const INITIAL_BILLS: Bill[] = [...realMappedBills, ...syntheticBills];
 
 export const INITIAL_REVIEWS: UserReview[] = [
   {
