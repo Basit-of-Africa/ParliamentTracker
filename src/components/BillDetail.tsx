@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark, ArrowUpRight, Printer } from "lucide-react";
+import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark, ArrowUpRight, Printer, Mail } from "lucide-react";
 import { Bill, Chamber, LegislativeStage, UserReview, Legislator } from "../types";
 
 interface BillDetailProps {
@@ -104,6 +104,78 @@ export default function BillDetail({
       </div>
     );
   }
+
+  const [copied, setCopied] = useState(false);
+
+  const lastUpdatedFormatted = (() => {
+    try {
+      if (!bill.lastUpdated) return "N/A";
+      const parts = bill.lastUpdated.split('-');
+      if (parts.length === 3) {
+        const year = parseInt(parts[0]);
+        const month = parseInt(parts[1]) - 1;
+        const day = parseInt(parts[2]);
+        const d = new Date(year, month, day, 10, 9, 6);
+        
+        const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        
+        const ww = weekdays[d.getDay()];
+        const mm = months[d.getMonth()];
+        const dd = String(d.getDate()).padStart(2, '0');
+        const yyyy = d.getFullYear();
+        
+        return `${ww} ${mm} ${dd} ${yyyy} at 10:09:06 AM`;
+      }
+    } catch (e) { }
+    return bill.lastUpdated || "N/A";
+  })();
+
+  const shortCategory = bill.category
+    ? bill.category.replace("Reform", "").replace("Services", "").split("&")[0].trim().split(" ")[0].trim()
+    : "General";
+
+  const sponsorPrefix = sponsor ? (sponsor.title === "Senator" ? "Sen." : "Hon.") : "";
+  const cleanSponsorName = bill.sponsorName.startsWith("Sen.") || bill.sponsorName.startsWith("Hon.")
+    ? bill.sponsorName
+    : sponsorPrefix ? `${sponsorPrefix} ${bill.sponsorName}` : bill.sponsorName;
+
+  const billUrl = `${window.location.origin}/?billId=${bill.id}`;
+  
+  const shareText = `I wanted to share with you information about a legislative bill that I found particularly interesting. \nBelow are the details of the bill:\n\n- Title: ${bill.billNumber}: ${bill.title}.\n- Chamber: ${bill.chamberOfOrigin === Chamber.SENATE ? "SENATE" : "HOUSE"}\n- Stage: ${bill.currentStage}\n- Sponsor: ${cleanSponsorName}\n- Category: ${shortCategory}\n- Last Updated: ${lastUpdatedFormatted}\n\nI thought you might find this bill relevant or informative. Feel free to follow the URL provided to learn more about it.\n\n${billUrl}`;
+
+  const handleShareEmail = () => {
+    const subject = encodeURIComponent(`Legislative Bill Info: ${bill.billNumber}`);
+    const body = encodeURIComponent(shareText);
+    window.location.href = `mailto:?subject=${subject}&body=${body}`;
+  };
+
+  const handleShareTwitter = () => {
+    const text = encodeURIComponent(`Check out legislative bill ${bill.billNumber}: ${bill.title}`);
+    const url = encodeURIComponent(billUrl);
+    window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, "_blank");
+  };
+
+  const handleShareWhatsApp = () => {
+    const text = encodeURIComponent(shareText);
+    window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
+  };
+
+  const handleCopySummary = async () => {
+    try {
+      await navigator.clipboard.writeText(shareText);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      const textarea = document.getElementById(`share-summary-text-${bill.id}`) as HTMLTextAreaElement;
+      if (textarea) {
+        textarea.select();
+        document.execCommand('copy');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }
+    }
+  };
 
   // Calculate vote percentages
   const votesFor = bill.votesFor || 0;
@@ -845,25 +917,67 @@ export default function BillDetail({
             </div>
           </div>
 
-          {/* OFFICIAL PLAC SOURCE LINK */}
-          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200/60 rounded-2xl p-5 shadow-sm space-y-3.5">
-            <div className="flex items-center gap-2">
-              <Landmark className="w-5 h-5 text-emerald-600 shrink-0" />
-              <h3 className="text-xs font-black text-slate-900 uppercase tracking-wider">PLAC Bills Track Portal</h3>
-            </div>
-            <p className="text-xs text-slate-650 leading-relaxed font-semibold">
-              National Assembly bills are sourced from the official registry of the <strong>Policy and Legal Advocacy Centre (PLAC)</strong>. Track reading texts, complete gazette details, and real-time updates directly on the PLAC portal.
+          {/* SHARE BILL MODULE */}
+          <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
+            <h3 className="text-sm font-bold font-display text-slate-900 flex items-center gap-1.5">
+              <Share2 className="w-4.5 h-4.5 text-emerald-600" />
+              <span>Share Bill Information</span>
+            </h3>
+            <p className="text-xs text-slate-500 leading-normal font-medium">
+              Share a beautifully formatted summary of this legislative proposal with journalists, colleagues, or constituents.
             </p>
-            <a
-              href="https://p.placbillstrack.org/bills/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-1 w-[100%] py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-md shadow-emerald-700/10 cursor-pointer text-center"
-              id="plac-external-source-link"
-            >
-              <span>Explore All Live PLAC Bills</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-white" />
-            </a>
+
+            {/* Quick Share Buttons Grid */}
+            <div className="grid grid-cols-3 gap-2">
+              <button
+                onClick={handleShareEmail}
+                className="py-2 px-1 bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-slate-300 text-slate-700 font-bold text-[10px] rounded-lg flex flex-col items-center justify-center gap-1.5 transition cursor-pointer"
+                title="Share via Email"
+              >
+                <Mail className="w-4 h-4 text-emerald-600" />
+                <span>Email</span>
+              </button>
+
+              <button
+                onClick={handleShareTwitter}
+                className="py-2 px-1 bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-slate-300 text-slate-700 font-bold text-[10px] rounded-lg flex flex-col items-center justify-center gap-1.5 transition cursor-pointer"
+                title="Share on Twitter / X"
+              >
+                <span className="text-sky-500 font-extrabold text-sm font-sans">𝕏</span>
+                <span>Twitter</span>
+              </button>
+
+              <button
+                onClick={handleShareWhatsApp}
+                className="py-2 px-1 bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-slate-300 text-slate-700 font-bold text-[10px] rounded-lg flex flex-col items-center justify-center gap-1.5 transition cursor-pointer"
+                title="Share on WhatsApp"
+              >
+                <span className="text-emerald-500 font-extrabold text-sm">💬</span>
+                <span>WhatsApp</span>
+              </button>
+            </div>
+
+            {/* Structured Copy Area */}
+            <div className="space-y-2 pt-2 border-t border-slate-100">
+              <div className="flex justify-between items-center">
+                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Shareable Summary</span>
+                <button
+                  onClick={handleCopySummary}
+                  className="text-[10px] text-emerald-600 hover:text-emerald-700 font-bold hover:underline flex items-center gap-1 cursor-pointer"
+                >
+                  {copied ? "✓ Copied!" : "📋 Copy"}
+                </button>
+              </div>
+
+              <div className="relative">
+                <textarea
+                  readOnly
+                  value={shareText}
+                  className="w-full h-32 p-2.5 bg-slate-50 border border-slate-200 text-[10px] font-mono rounded-lg outline-none text-slate-600 leading-relaxed overflow-y-auto resize-none select-all focus:ring-1 focus:ring-emerald-500"
+                  id={`share-summary-text-${bill.id}`}
+                />
+              </div>
+            </div>
           </div>
 
           {/* ACTIVE LEGISLATOR PROFILE */}

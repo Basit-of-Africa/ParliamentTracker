@@ -225,6 +225,21 @@ export default function App() {
     fetchData();
   }, []);
 
+  // Handle billId deep links from URL query parameters
+  useEffect(() => {
+    if (bills.length > 0) {
+      const params = new URLSearchParams(window.location.search);
+      const queryBillId = params.get("billId") || params.get("bill");
+      if (queryBillId) {
+        const found = bills.find(b => b.id === queryBillId || b.billNumber.toLowerCase() === queryBillId.toLowerCase());
+        if (found) {
+          setSelectedBillId(found.id);
+          setActiveTab("bills");
+        }
+      }
+    }
+  }, [bills]);
+
   // Sync routePath on back/forward clicks
   useEffect(() => {
     const handlePopState = () => {
