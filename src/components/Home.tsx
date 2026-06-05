@@ -268,11 +268,11 @@ export default function Home({
       {/* "What You Can Do on Parliament Tracker" Feature Highlights Grid */}
       <section className="bg-white p-8 md:p-14 rounded-3xl border border-slate-200/90 shadow-xs space-y-10" id="what-you-can-do-section">
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-sm font-bold text-blue-600 uppercase tracking-widest block font-sans">
+          <span className="text-sm font-bold text-emerald-600 uppercase tracking-widest block font-sans">
             What We Do
           </span>
           <h2 className="text-3xl md:text-4xl font-black font-display text-slate-900 tracking-tight leading-tight">
-            What You Can Do on <span className="text-blue-605 text-blue-600">Parliament Tracker</span>
+            What You Can Do on <span className="text-emerald-600">Parliament Tracker</span>
           </h2>
           <p className="text-sm md:text-base text-slate-500 leading-relaxed font-sans max-w-2xl mx-auto">
             Empowering every citizen with the tools to monitor, participate in, and influence the legislative process — right from your device.
@@ -283,7 +283,7 @@ export default function Home({
           {/* Card 1: Track Bills */}
           <div 
             onClick={() => onNavigateTab("bills")}
-            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-slate-350 transition duration-300 cursor-pointer flex flex-col justify-between"
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-emerald-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
             id="whaddo-card-bills"
           >
             <div className="space-y-4">
@@ -296,7 +296,7 @@ export default function Home({
                 />
               </div>
               <div className="space-y-1 px-1">
-                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-650 transition leading-snug">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-emerald-650 transition leading-snug">
                   Track Bills in Real-Time
                 </h3>
                 <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
@@ -309,7 +309,7 @@ export default function Home({
           {/* Card 2: Raise & Sign Petitions */}
           <div 
             onClick={() => onNavigateTab("propose")}
-            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-slate-350 transition duration-300 cursor-pointer flex flex-col justify-between"
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-emerald-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
             id="whaddo-card-petitions"
           >
             <div className="space-y-4">
@@ -322,7 +322,7 @@ export default function Home({
                 />
               </div>
               <div className="space-y-1 px-1">
-                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-650 transition leading-snug">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-emerald-650 transition leading-snug">
                   Raise & Sign Petitions
                 </h3>
                 <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
@@ -335,7 +335,7 @@ export default function Home({
           {/* Card 3: Legislators */}
           <div 
             onClick={() => onNavigateTab("mps")}
-            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-slate-350 transition duration-300 cursor-pointer flex flex-col justify-between"
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-emerald-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
             id="whaddo-card-legislators"
           >
             <div className="space-y-4">
@@ -348,7 +348,7 @@ export default function Home({
                 />
               </div>
               <div className="space-y-1 px-1">
-                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-650 transition leading-snug">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-emerald-650 transition leading-snug">
                   Legislators
                 </h3>
                 <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
@@ -363,7 +363,7 @@ export default function Home({
         <div className="flex justify-center pt-2">
           <button
             onClick={() => onNavigateTab("bills")}
-            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm rounded-xl transition shadow-lg shadow-blue-600/20 flex items-center gap-2 group cursor-pointer"
+            className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm rounded-xl transition shadow-lg shadow-emerald-600/20 flex items-center gap-2 group cursor-pointer"
             id="btn-what-you-can-do-seemore"
           >
             <span>See More</span>
