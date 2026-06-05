@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Wifi, WifiOff, Download, X, Smartphone } from "lucide-react";
+import { Wifi, WifiOff, Download, X, Smartphone, ChevronUp } from "lucide-react";
 
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -21,6 +21,29 @@ import { INITIAL_LEGISLATORS, INITIAL_BILLS } from "./initialData";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>("home");
+  
+  // Scroll to Top state and event listeners
+  const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 355) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
   const [bills, setBills] = useState<Bill[]>([]);
   const [legislators, setLegislators] = useState<Legislator[]>([]);
   const [selectedBillId, setSelectedBillId] = useState<string>("");
@@ -777,6 +800,23 @@ export default function App() {
               </button>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Floating Scroll-to-Top Button */}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8, y: 15 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 15 }}
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-6 z-40 p-3 bg-emerald-650 hover:bg-emerald-700 text-white rounded-full shadow-lg shadow-emerald-600/20 border border-emerald-500/30 transition-all hover:scale-110 active:scale-90 cursor-pointer flex items-center justify-center group"
+            id="btn-scroll-to-top"
+            title="Scroll back to top"
+          >
+            <ChevronUp className="w-5 h-5 transition-transform group-hover:-translate-y-0.5" />
+          </motion.button>
         )}
       </AnimatePresence>
 

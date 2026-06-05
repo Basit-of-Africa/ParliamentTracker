@@ -30,7 +30,7 @@ export default function Header({ activeTab, setActiveTab, stats }: HeaderProps) 
   ];
 
   return (
-    <header className="bg-white text-slate-800 border-b border-slate-200 font-sans" id="app-header">
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md text-slate-800 border-b border-slate-200/80 font-sans shadow-sm" id="app-header">
       {/* Top bar with Nigerian legislative colors */}
       <div className="h-1.5 bg-gradient-to-r from-emerald-600 via-neutral-100 to-emerald-600 w-full" />
       
