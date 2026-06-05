@@ -289,7 +289,7 @@ export default function Home({
             <div className="space-y-4">
               <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
                 <img 
-                  src="/src/assets/images/track_bills_realtime_1780677571213.png" 
+                  src="/src/assets/images/nigerian_bills_tracking_1780678714513.png" 
                   alt="Track Bills" 
                   className="w-full h-full object-cover group-hover:scale-102 transition duration-500"
                   referrerPolicy="no-referrer"
@@ -315,7 +315,7 @@ export default function Home({
             <div className="space-y-4">
               <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
                 <img 
-                  src="/src/assets/images/raise_sign_petitions_1780677589175.png" 
+                  src="/src/assets/images/nigerian_civic_petitions_1780678729589.png" 
                   alt="Raise & Sign Petitions" 
                   className="w-full h-full object-cover group-hover:scale-102 transition duration-500"
                   referrerPolicy="no-referrer"
@@ -341,7 +341,7 @@ export default function Home({
             <div className="space-y-4">
               <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
                 <img 
-                  src="/src/assets/images/legislators_scorecards_1780677605734.png" 
+                  src="/src/assets/images/nigerian_legislators_scores_1780678744320.png" 
                   alt="Legislators Profile Finder" 
                   className="w-full h-full object-cover group-hover:scale-102 transition duration-500"
                   referrerPolicy="no-referrer"
