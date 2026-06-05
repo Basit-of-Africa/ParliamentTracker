@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
+import React, { useState } from "react";
 import { 
   Landmark, 
   FileText, 
@@ -18,7 +18,11 @@ import {
   Mail, 
   PieChart, 
   Star,
-  Award
+  Award,
+  Calendar,
+  MapPin,
+  Clock,
+  Search
 } from "lucide-react";
 import { Bill, Legislator, PoliticalParty } from "../types";
 
@@ -47,6 +51,82 @@ export default function Home({
   onRefresh,
   stats 
 }: HomeProps) {
+
+  // Legislative Calendar Mock State Data
+  const MOCK_CALENDAR_EVENTS = [
+    {
+      id: "evt-1",
+      title: "Plenary Session: Debate on Constitutional Reform Bills",
+      type: "plenary",
+      date: "June 09, 2026",
+      rawDate: "2026-06-09",
+      time: "10:00 AM",
+      chamber: "Senate",
+      location: "Main Senate Chamber, National Assembly Dome",
+      description: "Second reading and primary debate on the proposed amendments regarding judicial independence, federal budget timeliness, and state police creation frameworks.",
+      facilitator: "Senator Godswill Akpabio (President of the Senate)"
+    },
+    {
+      id: "evt-2",
+      title: "Committee on Finance: Public Hearing on Tax Reform & Harmonization Bill",
+      type: "committee",
+      date: "June 11, 2026",
+      rawDate: "2026-06-11",
+      time: "11:30 AM",
+      chamber: "Joint",
+      location: "Committee Room 102, Senate Building",
+      description: "High-level interactive session gathering civic organization representatives, business coalitions, and finance stakeholders to submit memoranda on digital service tax thresholds.",
+      facilitator: "Hon. James Faleke (Chairman, Joint Finance Committee)"
+    },
+    {
+      id: "evt-3",
+      title: "Plenary Session: Healthcare Workers Protection & Safety Trust Bill",
+      type: "plenary",
+      date: "June 16, 2026",
+      rawDate: "2026-06-16",
+      time: "10:00 AM",
+      chamber: "House",
+      location: "House of Representatives Meeting Hall",
+      description: "Final reading, technical review of clause amendments, and general vote to establish the administrative safety trust fund for federal medical professionals.",
+      facilitator: "Hon. Tajudeen Abbas (Speaker of the House)"
+    },
+    {
+      id: "evt-4",
+      title: "Committee on Security & Intelligence: Closed-Door Security Operations Briefing",
+      type: "committee",
+      date: "June 18, 2026",
+      rawDate: "2026-06-18",
+      time: "1:00 PM",
+      chamber: "Joint",
+      location: "Chamber Briefing Hall C",
+      description: "Review of technology deployment budgets for national defense coordination and inter-agency border automation platforms.",
+      facilitator: "Senator Aliyu Wamakko (Chairman, Committee on Security)"
+    },
+    {
+      id: "evt-5",
+      title: "Summer Legislative Recess: Constituency Working Period",
+      type: "recess",
+      date: "July 23, 2026",
+      rawDate: "2026-07-23",
+      time: "All Day",
+      chamber: "Joint",
+      location: "All Constituency Off-sites",
+      description: "Official Third Quarter parliamentary recess. During this cycle, lawmakers depart the capital to host localized constituent assemblies and review regional community petitions.",
+      facilitator: "NASS Secretariat of Administration"
+    }
+  ];
+
+  const [calendarEvents] = useState(MOCK_CALENDAR_EVENTS);
+  const [selectedEventType, setSelectedEventType] = useState("all");
+  const [calendarSearch, setCalendarSearch] = useState("");
+
+  const filteredEvents = calendarEvents.filter(event => {
+    const matchesType = selectedEventType === "all" || event.type === selectedEventType;
+    const matchesSearch = event.title.toLowerCase().includes(calendarSearch.toLowerCase()) || 
+                          event.description.toLowerCase().includes(calendarSearch.toLowerCase()) ||
+                          event.location.toLowerCase().includes(calendarSearch.toLowerCase());
+    return matchesType && matchesSearch;
+  });
 
   // Get top 3 trending bills based on votes counts
   const trendingBills = [...bills]
@@ -406,6 +486,161 @@ export default function Home({
         </section>
 
       </div>
+
+      {/* Legislative Calendar View Section */}
+      <section className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200/90 shadow-sm space-y-6" id="legislative-calendar-view">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-150/70 pb-5">
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-750 border border-emerald-100 text-[11px] font-bold tracking-tight uppercase">
+              <Calendar className="w-3.5 h-3.5 text-emerald-600" />
+              <span>Official Schedule</span>
+            </div>
+            <h2 className="text-xl md:text-2xl font-black font-display text-slate-900 tracking-tight">
+              Tenth Assembly Legislative Calendar
+            </h2>
+            <p className="text-xs md:text-sm text-slate-550 leading-relaxed font-sans">
+              Keep track of live plenary sessions, public committee hearings, and recess dates. Data is dynamically matched from our official Assembly register.
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-2 shrink-0">
+            {/* Calendar Search */}
+            <div className="relative">
+              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                placeholder="Search schedule events..."
+                value={calendarSearch}
+                onChange={(e) => setCalendarSearch(e.target.value)}
+                className="pl-9 pr-4 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 max-w-full sm:w-56 transition font-medium"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Filters Row */}
+        <div className="flex flex-wrap items-center gap-2" id="calendar-event-filters">
+          {[
+            { id: "all", label: "All Events" },
+            { id: "plenary", label: "Plenary Sessions" },
+            { id: "committee", label: "Committee Hearings" },
+            { id: "recess", label: "Assembly Recesses" },
+          ].map((type) => {
+            const isSelected = selectedEventType === type.id;
+            return (
+              <button
+                key={type.id}
+                onClick={() => setSelectedEventType(type.id)}
+                className={`px-3.5 py-1.5 text-xs font-bold rounded-xl border transition-all cursor-pointer ${
+                  isSelected
+                    ? "bg-slate-900 text-white border-slate-900 shadow-sm"
+                    : "bg-slate-50 text-slate-600 border-slate-205 hover:bg-slate-100 hover:text-slate-800"
+                }`}
+              >
+                {type.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Calendar Events List */}
+        <div className="space-y-4" id="calendar-events-list">
+          {filteredEvents.length === 0 ? (
+            <div className="text-center py-12 bg-slate-50/50 rounded-2xl border border-dashed border-slate-200">
+              <Calendar className="w-8 h-8 text-slate-350 mx-auto mb-2" />
+              <p className="text-xs font-bold text-slate-550">No schedule events found</p>
+              <p className="text-[11px] text-slate-400 mt-0.5">Try widening your search terms or selecting another event category.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+              {filteredEvents.map((event) => {
+                let badgeAndColorTheme = {
+                  bgColor: "bg-indigo-50",
+                  textColor: "text-indigo-700",
+                  borderColor: "border-indigo-150",
+                  hoverBorder: "hover:border-indigo-400/80",
+                  dotColor: "bg-indigo-500",
+                  label: "Plenary Session"
+                };
+
+                if (event.type === "committee") {
+                  badgeAndColorTheme = {
+                    bgColor: "bg-emerald-50",
+                    textColor: "text-emerald-700",
+                    borderColor: "border-emerald-150",
+                    hoverBorder: "hover:border-emerald-400/80",
+                    dotColor: "bg-emerald-500",
+                    label: "Committee Hearing"
+                  };
+                } else if (event.type === "recess") {
+                  badgeAndColorTheme = {
+                    bgColor: "bg-amber-50",
+                    textColor: "text-amber-700",
+                    borderColor: "border-amber-150",
+                    hoverBorder: "hover:border-amber-400/80",
+                    dotColor: "bg-amber-500",
+                    label: "Legislative Recess"
+                  };
+                }
+
+                return (
+                  <div
+                    key={event.id}
+                    className={`p-5 rounded-2xl bg-white border border-slate-200/90 transition duration-150 hover:shadow-xs ${badgeAndColorTheme.hoverBorder} flex flex-col justify-between sm:flex-row gap-4 items-start`}
+                  >
+                    {/* Date Block */}
+                    <div className="flex sm:flex-col items-center sm:items-start gap-2 shrink-0 sm:w-28 border-b sm:border-b-0 sm:border-r border-slate-100 pb-3 sm:pb-0 sm:pr-4">
+                      <span className="font-mono text-xs font-black text-slate-850 uppercase tracking-tight">
+                        {event.date}
+                      </span>
+                      <div className="flex items-center gap-1.5 sm:mt-1">
+                        <span className={`w-2 h-2 rounded-full ${badgeAndColorTheme.dotColor}`} />
+                        <span className={`text-[10px] font-bold uppercase tracking-wider ${badgeAndColorTheme.textColor}`}>
+                          {badgeAndColorTheme.label}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Detailed Info */}
+                    <div className="flex-1 space-y-2">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] bg-slate-50 border border-slate-150 px-1.5 py-0.5 rounded text-slate-550 font-bold uppercase select-none">
+                          {event.chamber} Assembly
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-sm font-black font-display text-slate-900 leading-tight">
+                        {event.title}
+                      </h3>
+                      
+                      <p className="text-xs text-slate-500 leading-relaxed font-sans">
+                        {event.description}
+                      </p>
+
+                      <div className="pt-2 flex flex-wrap gap-x-4 gap-y-2 text-[11px] text-slate-450 border-t border-slate-100/60 mt-2">
+                        <span className="flex items-center gap-1 font-medium text-slate-600">
+                          <Clock className="w-3.5 h-3.5 text-slate-400" />
+                          {event.time}
+                        </span>
+                        <span className="flex items-center gap-1 font-medium text-slate-600">
+                          <MapPin className="w-3.5 h-3.5 text-slate-405 shrink-0" />
+                          <span className="truncate max-w-[180px] md:max-w-none">{event.location}</span>
+                        </span>
+                      </div>
+
+                      {event.facilitator && (
+                        <p className="text-[10px] text-slate-450 italic mt-1.5 font-sans">
+                          Led by: <span className="font-semibold text-slate-600">{event.facilitator}</span>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      </section>
 
       {/* 4. "How Co-Design Policy Works" - The Public Journey timeline */}
       <section className="bg-slate-50 border border-slate-205 rounded-3xl p-6 md:p-8 shadow-inner space-y-6" id="citizen-journey-section">
