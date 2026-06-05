@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Search, Filter, ShieldCheck, Milestone, Calendar, ArrowUpRight, HelpCircle, Bookmark, Mail, Bell, Check, Trash2, ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
 import { Bill, Chamber, BillCategory, LegislativeStage } from "../types";
@@ -26,6 +26,10 @@ export default function BillsList({
   emptyStateText,
 }: BillsListProps) {
   const [searchQuery, setSearchQuery] = useState("");
+  
+  // Pagination States & Settings
+  const ITEMS_PER_PAGE = 12;
+  const [currentPage, setCurrentPage] = useState(1);
   
   // Weekly Watchlist Updates Subscription States
   const [isDigestPanelOpen, setIsDigestPanelOpen] = useState(false);
@@ -145,6 +149,35 @@ export default function BillsList({
 
     return matchesSearch && matchesChamber && matchesCategory && matchesStage;
   });
+
+  // Reset page when search or filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedChamber, selectedCategory, selectedStage]);
+
+  const totalItems = filteredBills.length;
+  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, totalItems);
+  const paginatedBills = filteredBills.slice(startIndex, endIndex);
+
+  const getPageNumbers = () => {
+    const pages: (number | string)[] = [];
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      if (currentPage <= 3) {
+        pages.push(1, 2, 3, 4, "...", totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        pages.push(1, "...", totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+      } else {
+        pages.push(1, "...", currentPage - 1, currentPage, currentPage + 1, "...", totalPages);
+      }
+    }
+    return pages;
+  };
 
   return (
     <div className="space-y-6" id="bills-dashboard">
@@ -456,126 +489,207 @@ export default function BillsList({
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5" id="bills-grid-container">
-          {filteredBills.map((bill) => {
-            const isCitizen = bill.tags.includes("Citizen Proposal") || bill.id.startsWith("bill-17");
-            const isBookmarked = bookmarkedIds.includes(bill.id);
-            return (
-              <div
-                key={bill.id}
-                id={`bill-card-${bill.id}`}
-                onClick={() => onSelectBill(bill.id)}
-                className="group relative cursor-pointer bg-white rounded-2xl border border-slate-200/70 p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition duration-200 flex flex-col justify-between"
-              >
-                <div>
-                  {/* Top line badging */}
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <div className="flex items-center gap-1.5">
-                      <span className="font-mono text-xs font-bold text-slate-500 px-2 py-0.5 bg-slate-50 border border-slate-200 rounded">
-                        {bill.billNumber}
-                      </span>
-                      {isCitizen && (
-                        <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-650 border border-amber-500/20">
-                          Citizen Draft
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5" id="bills-grid-container">
+            {paginatedBills.map((bill) => {
+              const isCitizen = bill.tags.includes("Citizen Proposal") || bill.id.startsWith("bill-17");
+              const isBookmarked = bookmarkedIds.includes(bill.id);
+              return (
+                <div
+                  key={bill.id}
+                  id={`bill-card-${bill.id}`}
+                  onClick={() => onSelectBill(bill.id)}
+                  className="group relative cursor-pointer bg-white rounded-2xl border border-slate-200/70 p-5 shadow-sm hover:shadow-md hover:border-slate-300 transition duration-200 flex flex-col justify-between"
+                >
+                  <div>
+                    {/* Top line badging */}
+                    <div className="flex items-center justify-between gap-2 mb-3">
+                      <div className="flex items-center gap-1.5">
+                        <span className="font-mono text-xs font-bold text-slate-500 px-2 py-0.5 bg-slate-50 border border-slate-200 rounded">
+                          {bill.billNumber}
                         </span>
-                      )}
+                        {isCitizen && (
+                          <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-650 border border-amber-500/20">
+                            Citizen Draft
+                          </span>
+                        )}
+                      </div>
+                      
+                      <div className="flex items-center gap-2">
+                        <span className={`text-[11px] font-medium px-2 py-0.5 border rounded-full ${getStageColorClass(bill.currentStage)}`}>
+                          {bill.currentStage}
+                        </span>
+                        {onToggleBookmark && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onToggleBookmark(bill.id);
+                            }}
+                            className={`p-1.5 rounded-lg border transition-all duration-150 ${
+                              isBookmarked
+                                ? "bg-amber-500/10 border-amber-300 text-amber-650 hover:bg-amber-500/20"
+                                : "bg-slate-50 border-slate-200 text-slate-400 hover:text-slate-600 hover:bg-slate-100"
+                            }`}
+                            title={isBookmarked ? "Remove from Watchlist" : "Add to Watchlist"}
+                          >
+                            <Bookmark className={`w-3.5 h-3.5 ${isBookmarked ? "fill-amber-500 text-amber-500" : ""}`} />
+                          </button>
+                        )}
+                      </div>
                     </div>
-                    
-                    <div className="flex items-center gap-2">
-                      <span className={`text-[11px] font-medium px-2 py-0.5 border rounded-full ${getStageColorClass(bill.currentStage)}`}>
-                        {bill.currentStage}
+
+                    {/* Title & summary */}
+                    <h3 className="text-base font-bold font-display text-slate-900 group-hover:text-emerald-600 transition line-clamp-2 leading-tight">
+                      {bill.title}
+                    </h3>
+                    <p className="text-slate-500 text-xs mt-2 line-clamp-3 leading-relaxed">
+                      {bill.summary}
+                    </p>
+
+                    {/* Sponsor attribution */}
+                    <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+                      <span className="text-slate-400">Sponsor:</span>
+                      <span className="font-semibold text-slate-700">
+                        {bill.sponsorName}
                       </span>
-                      {onToggleBookmark && (
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onToggleBookmark(bill.id);
-                          }}
-                          className={`p-1.5 rounded-lg border transition-all duration-150 ${
-                            isBookmarked
-                              ? "bg-amber-500/10 border-amber-300 text-amber-650 hover:bg-amber-500/20"
-                              : "bg-slate-50 border-slate-200 text-slate-400 hover:text-slate-600 hover:bg-slate-100"
-                          }`}
-                          title={isBookmarked ? "Remove from Watchlist" : "Add to Watchlist"}
-                        >
-                          <Bookmark className={`w-3.5 h-3.5 ${isBookmarked ? "fill-amber-500 text-amber-500" : ""}`} />
-                        </button>
-                      )}
+                      <span className={`px-1.5 py-0.5 text-[10px] rounded border ${getChamberStyleClass(bill.sponsorChamber)}`}>
+                        {bill.sponsorChamber === Chamber.SENATE ? "Senate" : "House"}
+                      </span>
                     </div>
                   </div>
 
-                  {/* Title & summary */}
-                  <h3 className="text-base font-bold font-display text-slate-900 group-hover:text-emerald-600 transition line-clamp-2 leading-tight">
-                    {bill.title}
-                  </h3>
-                  <p className="text-slate-500 text-xs mt-2 line-clamp-3 leading-relaxed">
-                    {bill.summary}
-                  </p>
-
-                  {/* Sponsor attribution */}
-                  <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
-                    <span className="text-slate-400">Sponsor:</span>
-                    <span className="font-semibold text-slate-700">
-                      {bill.sponsorName}
-                    </span>
-                    <span className={`px-1.5 py-0.5 text-[10px] rounded border ${getChamberStyleClass(bill.sponsorChamber)}`}>
-                      {bill.sponsorChamber === Chamber.SENATE ? "Senate" : "House"}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Progress bar visual for legislative stages */}
-                <div className="mt-5 pt-4 border-t border-slate-100 space-y-2">
-                  <div className="flex items-center justify-between text-xs">
-                    <div className="flex items-center gap-1 text-slate-400">
-                      <Milestone className="w-3.5 h-3.5 text-slate-400" />
-                      <span>Legislative Stage Progress</span>
+                  {/* Progress bar visual for legislative stages */}
+                  <div className="mt-5 pt-4 border-t border-slate-100 space-y-2">
+                    <div className="flex items-center justify-between text-xs">
+                      <div className="flex items-center gap-1 text-slate-400">
+                        <Milestone className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Legislative Stage Progress</span>
+                      </div>
+                      <span className="font-mono font-bold text-emerald-600">
+                        {bill.stageProgress}%
+                      </span>
                     </div>
-                    <span className="font-mono font-bold text-emerald-600">
-                      {bill.stageProgress}%
-                    </span>
-                  </div>
 
-                  {/* Track Bar */}
-                  <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden" id={`progress-bar-${bill.id}`}>
-                    <motion.div
-                      className={`h-full rounded-full ${
-                        bill.currentStage === LegislativeStage.ASSENT
-                          ? "bg-emerald-500"
-                          : bill.currentStage === LegislativeStage.VETOED
-                          ? "bg-rose-500"
-                          : "bg-emerald-500"
-                      }`}
-                      initial={{ width: 0 }}
-                      animate={{ width: `${bill.stageProgress}%` }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
-                    />
-                  </div>
+                    {/* Track Bar */}
+                    <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden" id={`progress-bar-${bill.id}`}>
+                      <motion.div
+                        className={`h-full rounded-full ${
+                          bill.currentStage === LegislativeStage.ASSENT
+                            ? "bg-emerald-500"
+                            : bill.currentStage === LegislativeStage.VETOED
+                            ? "bg-rose-500"
+                            : "bg-emerald-500"
+                        }`}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${bill.stageProgress}%` }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                      />
+                    </div>
 
-                  {/* Bottom Footer block */}
-                  <div className="flex items-center justify-between pt-1.5">
-                    <span className="text-[10px] text-slate-400 flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      Proposed: {bill.dateProposed}
-                    </span>
-                    <span className="text-xs text-emerald-600 font-semibold group-hover:underline flex items-center gap-0.5">
-                      Track Progress
-                      <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
-                    </span>
+                    {/* Bottom Footer block */}
+                    <div className="flex items-center justify-between pt-1.5">
+                      <span className="text-[10px] text-slate-400 flex items-center gap-1">
+                        <Calendar className="w-3 h-3" />
+                        Proposed: {bill.dateProposed}
+                      </span>
+                      <span className="text-xs text-emerald-600 font-semibold group-hover:underline flex items-center gap-0.5">
+                        Track Progress
+                        <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
+                      </span>
+                    </div>
                   </div>
                 </div>
+              );
+            })}
+          </div>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-150" id="bills-pagination-controls">
+              <p className="text-xs text-slate-550 font-medium font-sans">
+                Showing <span className="font-extrabold text-slate-805">{startIndex + 1}</span> to{" "}
+                <span className="font-extrabold text-slate-805">{endIndex}</span> of{" "}
+                <span className="font-extrabold text-slate-805">{totalItems}</span> bills
+              </p>
+              
+              <div className="flex items-center gap-1.5 flex-wrap">
+                {/* Prev Button */}
+                <button
+                  type="button"
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                  disabled={currentPage === 1}
+                  className={`px-3 py-1.5 border rounded-xl text-xs font-bold transition flex items-center gap-1 shrink-0 ${
+                    currentPage === 1
+                      ? "bg-slate-50 border-slate-200/60 text-slate-300 cursor-not-allowed"
+                      : "bg-white border-slate-205 text-slate-700 hover:bg-slate-50 hover:text-slate-900 cursor-pointer"
+                  }`}
+                  id="btn-pagination-prev"
+                >
+                  &larr; Prev
+                </button>
+
+                {/* Page Numbers */}
+                <div className="flex items-center gap-1.5">
+                  {getPageNumbers().map((num, idx) => {
+                    if (num === "...") {
+                      return (
+                        <span key={`ellipsis-${idx}`} className="text-slate-400 text-xs px-1 select-none font-bold">
+                          ...
+                        </span>
+                      );
+                    }
+                    const isSelected = currentPage === num;
+                    return (
+                      <button
+                        type="button"
+                        key={`page-${num}`}
+                        onClick={() => setCurrentPage(num as number)}
+                        className={`w-8 h-8 text-xs font-bold rounded-xl transition inline-flex items-center justify-center cursor-pointer border ${
+                          isSelected
+                            ? "bg-emerald-600 text-white shadow-sm shadow-emerald-500/10 border-emerald-600"
+                            : "bg-white border-slate-200 text-slate-705 hover:bg-slate-50 hover:text-slate-900"
+                        }`}
+                        id={`btn-pagination-page-${num}`}
+                      >
+                        {num}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Next Button */}
+                <button
+                  type="button"
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                  disabled={currentPage === totalPages}
+                  className={`px-3 py-1.5 border rounded-xl text-xs font-bold transition flex items-center gap-1 shrink-0 ${
+                    currentPage === totalPages
+                      ? "bg-slate-50 border-slate-200/60 text-slate-300 cursor-not-allowed"
+                      : "bg-white border-slate-205 text-slate-700 hover:bg-slate-50 hover:text-slate-900 cursor-pointer"
+                  }`}
+                  id="btn-pagination-next"
+                >
+                  Next &rarr;
+                </button>
               </div>
-            );
-          })}
+            </div>
+          )}
         </div>
       )}
     </div>
   );
 
   function sortedResultsCount(count: number) {
+    if (count === 0) {
+      return (
+        <span className="ml-auto text-xs text-slate-400 font-medium tracking-tight">
+          Showing <strong className="text-slate-700 font-bold">0</strong> bills
+        </span>
+      );
+    }
     return (
-      <span className="ml-auto text-xs text-slate-405 font-medium">
-        Showing <strong className="text-slate-700 font-bold">{count}</strong> bills
+      <span className="ml-auto text-xs text-slate-405 font-medium tracking-tight">
+        Showing <strong className="text-slate-700 font-bold">{startIndex + 1}–{endIndex}</strong> of <strong className="text-slate-705 font-black">{count}</strong> bills
       </span>
     );
   }
