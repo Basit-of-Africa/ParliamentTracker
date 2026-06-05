@@ -25,22 +25,12 @@ async function run() {
     }
   }
 
-  // Find total pages if not already known
-  let lastPage = cache.lastPage || 547;
-  let total = cache.total || 2734;
+  // Find total pages if not already known - capped at 70 pages (~350 bills) for platform safety
+  let lastPage = 70;
+  let total = 350;
 
-  if (!cache.lastPage) {
-    try {
-      const p1Res = await fetch("https://admin.placbillstrack.org/api/bills?page=1");
-      const p1Json = await p1Res.json();
-      lastPage = p1Json.data.last_page;
-      total = p1Json.data.total;
-      cache.lastPage = lastPage;
-      cache.total = total;
-    } catch (e) {
-      console.error("Could not fetch page 1 metadata, assuming 547 pages.", e.message);
-    }
-  }
+  cache.lastPage = lastPage;
+  cache.total = total;
 
   const allPages = Array.from({ length: lastPage }, (_, i) => i + 1);
   const pagesToFetch = allPages.filter(p => !cache.fetchedPages[p]);
@@ -258,7 +248,7 @@ async function run() {
   });
 
   const outPath = path.join(__dirname, 'src', 'plac_bills_mapped.json');
-  fs.writeFileSync(outPath, JSON.stringify(mappedBills, null, 2));
+  fs.writeFileSync(outPath, JSON.stringify(mappedBills));
 
   console.log(`Successfully mapped and pre-compiled ${mappedBills.length} / ${total} database entries to ${outPath}`);
   console.log(`Execution turn completed in ${Date.now() - startTime}ms.`);
