@@ -44,11 +44,6 @@ export default function Header({ activeTab, setActiveTab, stats }: HeaderProps) 
               <Landmark className="w-8 h-8" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-[10px] px-2 py-0.5 bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-full tracking-wider uppercase font-bold">
-                  10th National Assembly
-                </span>
-              </div>
               <h1 className="text-2xl font-extrabold font-display tracking-tight text-slate-900 mt-1">
                 Parliament<span className="text-emerald-600">Tracker</span>
               </h1>

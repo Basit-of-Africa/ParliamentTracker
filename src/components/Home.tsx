@@ -265,6 +265,113 @@ export default function Home({
         </div>
       </section>
 
+      {/* "What You Can Do on Parliament Tracker" Feature Highlights Grid */}
+      <section className="bg-white p-8 md:p-14 rounded-3xl border border-slate-200/90 shadow-xs space-y-10" id="what-you-can-do-section">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <span className="text-sm font-bold text-blue-600 uppercase tracking-widest block font-sans">
+            What We Do
+          </span>
+          <h2 className="text-3xl md:text-4xl font-black font-display text-slate-900 tracking-tight leading-tight">
+            What You Can Do on <span className="text-blue-605 text-blue-600">Parliament Tracker</span>
+          </h2>
+          <p className="text-sm md:text-base text-slate-500 leading-relaxed font-sans max-w-2xl mx-auto">
+            Empowering every citizen with the tools to monitor, participate in, and influence the legislative process — right from your device.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Card 1: Track Bills */}
+          <div 
+            onClick={() => onNavigateTab("bills")}
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-slate-350 transition duration-300 cursor-pointer flex flex-col justify-between"
+            id="whaddo-card-bills"
+          >
+            <div className="space-y-4">
+              <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+                <img 
+                  src="/src/assets/images/track_bills_realtime_1780677571213.png" 
+                  alt="Track Bills" 
+                  className="w-full h-full object-cover group-hover:scale-102 transition duration-500"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="space-y-1 px-1">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-650 transition leading-snug">
+                  Track Bills in Real-Time
+                </h3>
+                <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
+                  Follow legislation from proposal to passage
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Raise & Sign Petitions */}
+          <div 
+            onClick={() => onNavigateTab("propose")}
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-slate-350 transition duration-300 cursor-pointer flex flex-col justify-between"
+            id="whaddo-card-petitions"
+          >
+            <div className="space-y-4">
+              <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+                <img 
+                  src="/src/assets/images/raise_sign_petitions_1780677589175.png" 
+                  alt="Raise & Sign Petitions" 
+                  className="w-full h-full object-cover group-hover:scale-102 transition duration-500"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="space-y-1 px-1">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-650 transition leading-snug">
+                  Raise & Sign Petitions
+                </h3>
+                <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
+                  Mobilize public support and demand change
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: Legislators */}
+          <div 
+            onClick={() => onNavigateTab("mps")}
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-slate-350 transition duration-300 cursor-pointer flex flex-col justify-between"
+            id="whaddo-card-legislators"
+          >
+            <div className="space-y-4">
+              <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden bg-slate-50 border border-slate-100">
+                <img 
+                  src="/src/assets/images/legislators_scorecards_1780677605734.png" 
+                  alt="Legislators Profile Finder" 
+                  className="w-full h-full object-cover group-hover:scale-102 transition duration-500"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="space-y-1 px-1">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-650 transition leading-snug">
+                  Legislators
+                </h3>
+                <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
+                  Discover detailed profiles of Nigeria's lawmakers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* See More Call-to-Action Button */}
+        <div className="flex justify-center pt-2">
+          <button
+            onClick={() => onNavigateTab("bills")}
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm rounded-xl transition shadow-lg shadow-blue-600/20 flex items-center gap-2 group cursor-pointer"
+            id="btn-what-you-can-do-seemore"
+          >
+            <span>See More</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+          </button>
+        </div>
+      </section>
+
       {/* 2. Bento Service Navigation Capabilities grid */}
       <section className="space-y-5" id="bento-navigation-spotlight">
         <div className="text-center md:text-left">
