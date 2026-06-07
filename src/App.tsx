@@ -27,7 +27,7 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 355) {
+      if (window.scrollY > 200) {
         setShowScrollTop(true);
       } else {
         setShowScrollTop(false);
@@ -793,7 +793,7 @@ export default function App() {
               </button>
               <button
                 onClick={handleInstallApp}
-                className="px-4 py-2 bg-emerald-650 hover:bg-emerald-700 text-white text-xs font-extrabold rounded-xl transition shadow-lg shadow-emerald-950/40 flex items-center gap-1.5 cursor-pointer"
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold rounded-xl transition shadow-lg shadow-emerald-950/40 flex items-center gap-1.5 cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Install WebApp</span>
@@ -811,7 +811,7 @@ export default function App() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 15 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 z-40 p-3 bg-emerald-650 hover:bg-emerald-700 text-white rounded-full shadow-lg shadow-emerald-600/20 border border-emerald-500/30 transition-all hover:scale-110 active:scale-90 cursor-pointer flex items-center justify-center group"
+            className="fixed bottom-6 right-6 z-40 p-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-lg shadow-emerald-600/20 border border-emerald-500/30 transition-all hover:scale-110 active:scale-90 cursor-pointer flex items-center justify-center group"
             id="btn-scroll-to-top"
             title="Scroll back to top"
           >
