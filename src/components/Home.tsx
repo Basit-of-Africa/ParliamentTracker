@@ -812,58 +812,58 @@ export default function Home({
         </div>
       </section>
 
-      {/* 4. "How Co-Design Policy Works" - The Public Journey timeline */}
-      <section className="bg-slate-50 border border-slate-205 rounded-3xl p-6 md:p-8 shadow-inner space-y-6" id="citizen-journey-section">
+      {/* 4. "How Co-Design Policy Works" - The Public Journey timeline (Standalone Section) */}
+      <section className="py-6 sm:py-10 space-y-8" id="citizen-journey-section">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-extrabold text-emerald-600 bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full uppercase tracking-wider">
+          <span className="text-xs font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-100 px-3.5 py-1 rounded-full uppercase tracking-wider">
             Citizen Co-Design Flow
           </span>
-          <h2 className="text-xl md:text-2xl font-black font-display text-slate-900 tracking-tight">
+          <h2 className="text-xl md:text-3xl font-black font-display text-slate-950 tracking-tight">
             How Parliament Tracker Connects You
           </h2>
-          <p className="text-sm text-slate-500 leading-relaxed font-sans">
+          <p className="text-sm md:text-base text-slate-500 leading-relaxed font-sans">
             Bridge the representation gap by advancing through our active civic engagement modules stage-by-stage.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pt-4 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
           
-          <div className="space-y-3 relative z-10 bg-white p-5 rounded-2xl border border-slate-150 shadow-sm">
-            <div className="w-8 h-8 rounded-full bg-slate-900 text-white font-black font-mono flex items-center justify-center text-xs shadow">
+          <div className="space-y-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-slate-300 transition">
+            <div className="w-9 h-9 rounded-xl bg-slate-900 text-white font-black font-mono flex items-center justify-center text-sm shadow-xs">
               1
             </div>
-            <h4 className="font-extrabold text-slate-900 text-sm">Monitor Plenary</h4>
-            <p className="text-sm text-slate-500 leading-relaxed font-sans">
+            <h4 className="font-extrabold text-slate-900 text-base">Monitor Plenary</h4>
+            <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
               Discover recently introduced bills from constitutional amendments to economic policies, translating complex legal drafting.
             </p>
           </div>
 
-          <div className="space-y-3 relative z-10 bg-white p-5 rounded-2xl border border-slate-150 shadow-sm">
-            <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-black font-mono flex items-center justify-center text-xs shadow">
+          <div className="space-y-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-slate-300 transition">
+            <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white font-black font-mono flex items-center justify-center text-sm shadow-xs">
               2
             </div>
-            <h4 className="font-extrabold text-slate-900 text-sm">Express Sentiment</h4>
-            <p className="text-sm text-slate-500 leading-relaxed font-sans">
+            <h4 className="font-extrabold text-slate-900 text-base">Express Sentiment</h4>
+            <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
               Cast your simulated vote (Yea/Nay) and write verified reviews to document public sentiment scores for representatives.
             </p>
           </div>
 
-          <div className="space-y-3 relative z-10 bg-white p-5 rounded-2xl border border-slate-150 shadow-sm">
-            <div className="w-8 h-8 rounded-full bg-slate-900 text-white font-black font-mono flex items-center justify-center text-xs shadow">
+          <div className="space-y-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-slate-300 transition">
+            <div className="w-9 h-9 rounded-xl bg-slate-900 text-white font-black font-mono flex items-center justify-center text-sm shadow-xs">
               3
             </div>
-            <h4 className="font-extrabold text-slate-900 text-sm">Direct Contact</h4>
-            <p className="text-sm text-slate-500 leading-relaxed font-sans">
+            <h4 className="font-extrabold text-slate-900 text-base">Direct Contact</h4>
+            <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
               Write professional petitions to the sponsor or your local MP. Your letter generates automatic email alerts instantly.
             </p>
           </div>
 
-          <div className="space-y-3 relative z-10 bg-white p-5 rounded-2xl border border-slate-150 shadow-sm">
-            <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-black font-mono flex items-center justify-center text-xs shadow">
+          <div className="space-y-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-slate-300 transition">
+            <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white font-black font-mono flex items-center justify-center text-sm shadow-xs">
               4
             </div>
-            <h4 className="font-extrabold text-slate-900 text-sm">Draft Reforms</h4>
-            <p className="text-sm text-slate-500 leading-relaxed font-sans">
+            <h4 className="font-extrabold text-slate-900 text-base">Draft Reforms</h4>
+            <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
               Formulate your own ideas, get instant Gemini legal alignment feedback, and gather support from civic society.
             </p>
           </div>
