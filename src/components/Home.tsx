@@ -328,8 +328,8 @@ export default function Home({
         </div>
       </div>
 
-      {/* "What You Can Do on Parliament Tracker" Feature Highlights Grid */}
-      <section className="bg-white p-8 md:p-14 rounded-3xl border border-slate-200/90 shadow-xs space-y-10" id="what-you-can-do-section">
+      {/* "What You Can Do on Parliament Tracker" Feature Highlights Grid (Standalone Layout) */}
+      <section className="py-4 sm:py-8 lg:py-10 space-y-10" id="what-you-can-do-section">
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <span className="text-sm font-bold text-emerald-600 uppercase tracking-widest block font-sans">
             What We Do
