@@ -54,6 +54,27 @@ export default function Home({
 }: HomeProps) {
 
   // Legislative Calendar Mock State Data
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!searchQuery.trim()) return;
+    
+    // Check if query matches any MP or Bill
+    const queryLower = searchQuery.toLowerCase();
+    const matchedBill = bills.find(b => b.title.toLowerCase().includes(queryLower) || b.billNumber.toLowerCase().includes(queryLower));
+    const matchedMP = legislators.find(l => l.name.toLowerCase().includes(queryLower) || l.constituency.toLowerCase().includes(queryLower) || l.state.toLowerCase().includes(queryLower));
+
+    if (matchedBill) {
+      onSelectBill(matchedBill.id);
+    } else if (matchedMP) {
+      onSelectLegislator(matchedMP.id);
+    } else {
+      onNavigateTab("bills");
+    }
+  };
+
   const MOCK_CALENDAR_EVENTS = [
     {
       id: "evt-1",
@@ -327,6 +348,145 @@ export default function Home({
           </div>
         </div>
       </div>
+
+      {/* Explore Datasets, Infographics and Publications + Our Impact at a Glance Section */}
+      <section className="py-8 sm:py-12 space-y-12" id="explore-publications-and-impact-section">
+        {/* Search & Publications Header */}
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-display text-slate-900 tracking-tight">
+            Explore Datasets, Infographics and Publications
+          </h3>
+          
+          <form onSubmit={handleSearchSubmit} className="relative max-w-2xl mx-auto" id="publications-search-form">
+            <div className="flex items-center bg-white border border-slate-300 rounded-full shadow-xs px-4 py-2 hover:border-emerald-500 focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-500/20 transition">
+              <Search className="w-5 h-5 text-slate-400 shrink-0 ml-1 mr-3" />
+              <input 
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="What are you looking for? (e.g. Electoral Act, National Budget, Senator Barau)"
+                aria-label="What are you looking for?"
+                className="w-full bg-transparent text-slate-800 placeholder-slate-400 text-sm md:text-base focus:outline-none font-sans"
+              />
+              <button 
+                type="submit" 
+                aria-label="Search"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white p-2 sm:px-5 sm:py-2 rounded-full text-xs font-bold transition shrink-0 flex items-center gap-1.5"
+              >
+                <span className="hidden sm:inline">Search</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Quick Keyword Suggestions */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-3 text-xs text-slate-500 font-sans">
+              <span className="font-semibold text-slate-600">Trending queries:</span>
+              <button 
+                type="button" 
+                onClick={() => { setSearchQuery("Appropriation Bill"); onNavigateTab("bills"); }} 
+                className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-full transition"
+              >
+                2026 Appropriation
+              </button>
+              <button 
+                type="button" 
+                onClick={() => { setSearchQuery("Electoral"); onNavigateTab("bills"); }} 
+                className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-full transition"
+              >
+                Electoral Act Reforms
+              </button>
+              <button 
+                type="button" 
+                onClick={() => { onNavigateTab("mps"); }} 
+                className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-full transition"
+              >
+                Find My Representative
+              </button>
+              <button 
+                type="button" 
+                onClick={() => { onNavigateTab("budget"); }} 
+                className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1 rounded-full transition"
+              >
+                Budget Datasets
+              </button>
+            </div>
+          </form>
+        </div>
+
+        {/* Separator & Impact at a Glance Subheading */}
+        <div className="pt-4 space-y-8">
+          <div className="text-center">
+            <p className="text-xs sm:text-sm font-bold tracking-widest text-slate-500 uppercase font-sans">
+              our impact at a glance
+            </p>
+          </div>
+
+          {/* 6 Impact Metrics Grid - 3 rows x 2 columns on desktop with side margins */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 sm:gap-6 max-w-3xl mx-auto px-4 sm:px-8" id="impact-metrics-grid">
+            
+            {/* Metric 1 */}
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
+                24m<span className="text-emerald-600 text-3xl font-bold">+</span>
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium font-sans mt-2">
+                Citizens Reached
+              </p>
+            </div>
+
+            {/* Metric 2 */}
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
+                37
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium font-sans mt-2">
+                States & FCT
+              </p>
+            </div>
+
+            {/* Metric 3 */}
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
+                134
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium font-sans mt-2">
+                CSOs Supported
+              </p>
+            </div>
+
+            {/* Metric 4 */}
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
+                469
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium font-sans mt-2">
+                Lawmakers Tracked
+              </p>
+            </div>
+
+            {/* Metric 5 */}
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
+                850<span className="text-emerald-600 text-3xl font-bold">+</span>
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium font-sans mt-2">
+                Bills & Datasets
+              </p>
+            </div>
+
+            {/* Metric 6 */}
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
+                57
+              </h1>
+              <p className="text-xs sm:text-sm text-slate-500 font-medium font-sans mt-2">
+                Field Monitors
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* "What You Can Do on Parliament Tracker" Feature Highlights Grid (Standalone Layout) */}
       <section className="py-4 sm:py-8 lg:py-10 space-y-10" id="what-you-can-do-section">
