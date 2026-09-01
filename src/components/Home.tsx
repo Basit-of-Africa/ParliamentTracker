@@ -160,8 +160,8 @@ export default function Home({
   return (
     <div className="space-y-12 animate-fade" id="platform-homepage-landing">
       
-      {/* 1. Hero Spotlight Section - Rebuilt with requested hero layout structure */}
-      <section className="hero-section relative overflow-hidden rounded-3xl bg-white shadow-sm p-6 sm:p-10 lg:p-14" id="hero-welcome-banner" data-astro-cid-xuxui7xi="">
+      {/* 1. Hero Spotlight Section - Standalone layout without bounding rounded card container */}
+      <section className="hero-section relative py-4 sm:py-8 lg:py-12" id="hero-welcome-banner" data-astro-cid-xuxui7xi="">
         <div className="hero-wrap max-w-6xl mx-auto" data-astro-cid-xyrvcziz="">
           <header className="hero grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center" data-astro-cid-xyrvcziz="">
             
