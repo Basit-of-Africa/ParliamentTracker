@@ -11,6 +11,7 @@ import {
   Sparkles, 
   BookOpen, 
   Vote, 
+  Percent,
   ChevronRight, 
   ArrowRight, 
   ShieldCheck, 
@@ -271,6 +272,61 @@ export default function Home({
           </header>
         </div>
       </section>
+
+      {/* 2. Key Metrics & Statistics Ribbon (Under Hero Section) */}
+      <div className="bg-white rounded-2xl border border-slate-200/90 p-5 md:p-6 shadow-xs font-sans" id="header-stats-ribbon">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3.5">
+          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-slate-300 transition" id="stat-bills">
+            <div className="flex items-center gap-2 text-slate-500 text-xs mb-1.5 font-medium">
+              <FileText className="w-4 h-4 text-sky-500" />
+              <span>Monitored Bills</span>
+            </div>
+            <div className="text-xl md:text-2xl font-bold text-slate-900 font-display">
+              {stats.totalBills} <span className="text-xs text-slate-500 font-sans font-normal">Registered</span>
+            </div>
+          </div>
+
+          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-slate-300 transition" id="stat-passed">
+            <div className="flex items-center gap-2 text-slate-500 text-xs mb-1.5 font-medium">
+              <Percent className="w-4 h-4 text-emerald-600 animate-pulse" />
+              <span>Assented Bills</span>
+            </div>
+            <div className="text-xl md:text-2xl font-bold text-emerald-600 font-display">
+              {stats.totalPassed} <span className="text-xs text-slate-500 font-sans font-medium">Passed</span>
+            </div>
+          </div>
+
+          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-slate-300 transition" id="stat-mps">
+            <div className="flex items-center gap-2 text-slate-500 text-xs mb-1.5 font-medium">
+              <Users className="w-4 h-4 text-indigo-500" />
+              <span>Legislators</span>
+            </div>
+            <div className="text-xl md:text-2xl font-bold text-slate-900 font-display">
+              {stats.totalMPs} <span className="text-xs text-slate-500 font-sans font-normal">Active</span>
+            </div>
+          </div>
+
+          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-slate-300 transition" id="stat-attendance">
+            <div className="flex items-center gap-2 text-slate-500 text-xs mb-1.5 font-medium">
+              <Percent className="w-4 h-4 text-amber-500" />
+              <span>Avg. Attendance</span>
+            </div>
+            <div className="text-xl md:text-2xl font-bold text-slate-900 font-display">
+              {stats.avgAttendance}% <span className="text-xs text-slate-500 font-sans font-normal">Clerk Records</span>
+            </div>
+          </div>
+
+          <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-slate-300 transition col-span-2 md:col-span-1" id="stat-votes">
+            <div className="flex items-center gap-2 text-slate-500 text-xs mb-1.5 font-medium">
+              <Vote className="w-4 h-4 text-rose-500" />
+              <span>Citizen Sentiment</span>
+            </div>
+            <div className="text-xl md:text-2xl font-bold text-slate-900 font-display">
+              {stats.totalVotes.toLocaleString()} <span className="text-xs text-slate-500 font-sans font-normal">Votes Cast</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* "What You Can Do on Parliament Tracker" Feature Highlights Grid */}
       <section className="bg-white p-8 md:p-14 rounded-3xl border border-slate-200/90 shadow-xs space-y-10" id="what-you-can-do-section">
