@@ -160,108 +160,115 @@ export default function Home({
   return (
     <div className="space-y-12 animate-fade" id="platform-homepage-landing">
       
-      {/* 1. Hero Spotlight Section */}
-      <section className="relative overflow-hidden rounded-3xl bg-slate-900 text-white p-8 md:p-14 border border-slate-800 shadow-xl" id="hero-welcome-banner">
-        {/* Dynamic backdrop map/geometric abstract accents */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl -translate-y-12 translate-x-12 select-none pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl translate-y-24 -translate-x-12 select-none pointer-events-none" />
-        
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-              <span>Tenth National Assembly Accountability Portal</span>
-            </div>
-
-            <h1 className="text-3xl md:text-5xl font-black font-display tracking-tight leading-tight">
-              Democratizing access to <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400">Nigerian Legislation</span>
-            </h1>
-
-            <p className="text-sm md:text-base text-slate-300 leading-relaxed font-sans max-w-xl font-medium">
-              Monitor active bills, inspect lawmaker scorecards, chat with our legislative AI advisor, and publish direct correspondence with Senators and House Representatives. Together, we build a transparent democracy.
-            </p>
-
-            <div className="flex flex-wrap gap-3 pt-2">
-              <button
-                onClick={() => onNavigateTab("bills")}
-                className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm rounded-xl transition shadow-lg shadow-emerald-900/40 flex items-center gap-2 group cursor-pointer"
-              >
-                <span>Track Active Bills</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
-              </button>
-
-              <button
-                onClick={() => onNavigateTab("ai-copilot")}
-                className="px-6 py-3 bg-slate-800 hover:bg-slate-750 text-slate-200 hover:text-white font-extrabold text-sm rounded-xl border border-slate-750 hover:border-slate-700 transition flex items-center gap-2 cursor-pointer"
-              >
-                <Sparkles className="w-4 h-4 text-emerald-400" />
-                <span>Ask AI Advisor</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5 hidden lg:block">
-            {/* National Assembly dome vector/stylized mock illustration card */}
-            <div className="p-6 bg-slate-800/40 border border-slate-750/70 rounded-2xl backdrop-blur-md space-y-5">
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 bg-emerald-500/10 text-emerald-400 rounded-xl border border-emerald-500/20">
-                  <Landmark className="w-6 h-6" />
+      {/* 1. Hero Spotlight Section - Rebuilt with requested hero layout structure */}
+      <section className="hero-section relative overflow-hidden rounded-3xl bg-white border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-14" id="hero-welcome-banner" data-astro-cid-xuxui7xi="">
+        <div className="hero-wrap max-w-6xl mx-auto" data-astro-cid-xyrvcziz="">
+          <header className="hero grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center" data-astro-cid-xyrvcziz="">
+            
+            {/* Left Column: Info / Text & Actions */}
+            <div className="info lg:col-span-7 space-y-6" data-astro-cid-xyrvcziz="">
+              <div className="text space-y-4" data-astro-cid-xyrvcziz="">
+                <p className="topper body-l text-emerald-700 font-bold uppercase tracking-wider text-xs md:text-sm flex items-center gap-2" data-astro-cid-xyrvcziz="">
+                  <Sparkles className="w-4 h-4 text-emerald-600 animate-pulse" />
+                  <b data-astro-cid-xyrvcziz="">10th National Assembly Civic Intelligence</b>
+                </p>
+                <h1 className="display-xxl text-3xl sm:text-4xl lg:text-5xl font-black font-display text-slate-950 tracking-tight leading-[1.18]" data-astro-cid-xyrvcziz="">
+                  <em className="checkmark font-serif italic text-emerald-600 not-italic">Simple, transparent</em> legislative tracking for all Nigerians
+                </h1>
+                <div className="body-xl text-slate-600 text-base md:text-lg leading-relaxed font-normal" data-astro-cid-xyrvcziz="">
+                  Plan civic engagement, monitor live bill readings, track lawmaker attendance records, and inspect voting scorecards — all from a single, easy-to-use platform.
                 </div>
-                <div>
-                  <h3 className="font-extrabold text-slate-100 text-sm">Abia to Zamfara Integration</h3>
-                  <a
-                    href="https://nass.gov.ng/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-emerald-400 hover:text-emerald-300 hover:underline inline-flex items-center gap-0.5 mt-0.5"
+              </div>
+
+              <div className="button-container space-y-5 pt-2" data-astro-cid-xyrvcziz="">
+                <div className="flex flex-wrap items-center gap-3.5">
+                  <button
+                    onClick={() => onNavigateTab("bills")}
+                    className="primary px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm md:text-base rounded-xl transition shadow-md hover:shadow-lg shadow-emerald-900/20 flex items-center gap-2 group cursor-pointer"
+                    id="hero-button"
+                    data-astro-cid-xyrvcziz="true"
+                    role="button"
                   >
-                    <span>Official Gazette & Parliament Records</span>
-                    <span className="text-[10px]/none">↗</span>
-                  </a>
-                </div>
-              </div>
+                    <span>Track Active Bills</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                  </button>
 
-              {/* Stat rows with micro-charts */}
-              <div className="space-y-3 pt-1 text-xs">
-                <div className="space-y-1.5">
-                  <div className="flex justify-between text-slate-350">
-                    <span className="font-medium">Chamber Member Presence</span>
-                    <span className="font-mono font-bold text-slate-100">{stats.totalMPs} / 469 Members</span>
-                  </div>
-                  <div className="w-full bg-slate-705 h-2 rounded-full overflow-hidden">
-                    <div className="bg-emerald-500 h-full" style={{ width: "95%" }} />
-                  </div>
+                  <button
+                    onClick={() => onNavigateTab("ai-copilot")}
+                    className="px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm md:text-base rounded-xl border border-slate-250 transition flex items-center gap-2 cursor-pointer"
+                    id="hero-secondary-button"
+                  >
+                    <Sparkles className="w-4 h-4 text-emerald-600" />
+                    <span>Ask AI Advisor</span>
+                  </button>
                 </div>
 
-                <div className="space-y-1.5">
-                  <div className="flex justify-between text-slate-355">
-                    <span className="font-medium">Citizen Sentiment Feedback</span>
-                    <span className="font-mono font-bold text-slate-100">{stats.totalVotes.toLocaleString()} Appraisals</span>
-                  </div>
-                  <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
-                    <div className="bg-sky-500 h-full" style={{ width: "80%" }} />
-                  </div>
-                </div>
-
-                <div className="space-y-1.5">
-                  <div className="flex justify-between text-slate-355">
-                    <span className="font-medium">Tenth Assembly Passage Ratio</span>
-                    <span className="font-mono font-bold text-slate-150">
-                      {Math.round((stats.totalPassed / (stats.totalBills || 1)) * 100)}% General Assent
-                    </span>
-                  </div>
-                  <div className="w-full bg-slate-750 h-2 rounded-full overflow-hidden">
-                    <div className="bg-amber-500 h-full" style={{ width: `${Math.round((stats.totalPassed / (stats.totalBills || 1)) * 100)}%` }} />
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-3 border-t border-slate-750 text-[10px] text-slate-450 flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Verified data audited directly from official 10th Assembly Hansards.</span>
+                <ul className="styled-list inline type-plain body-m left flex flex-wrap items-center gap-y-2 gap-x-6 text-xs md:text-sm text-slate-600 font-medium">
+                  <li className="li-check-blue flex items-center gap-1.5">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>100% Free & Open Access</span>
+                  </li>
+                  <li className="li-check-blue flex items-center gap-1.5">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>Official 10th NASS Hansard Data</span>
+                  </li>
+                  <li className="li-check-blue flex items-center gap-1.5">
+                    <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <span>Direct Lawmaker Accountability</span>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
+
+            {/* Right Column: Cut-Out Graphic & Visual Showcase */}
+            <div className="cut-out-image lg:col-span-5 relative" data-astro-cid-xyrvcziz="">
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-900">
+                <picture data-astro-cid-xyrvcziz="true">
+                  <img
+                    src="/src/assets/images/nigerian_bills_tracking_1780678714513.png"
+                    alt="Nigerian National Assembly Bills Tracker"
+                    loading="eager"
+                    decoding="async"
+                    data-astro-cid-xyrvcziz="true"
+                    className="w-full h-auto object-cover max-h-[360px] opacity-90 hover:opacity-100 transition duration-500"
+                  />
+                </picture>
+
+                {/* Overlay live statistics badges */}
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent p-4 md:p-5 pt-10 text-white space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-emerald-300">Live 10th Assembly Sync</span>
+                    </div>
+                    <span className="text-xs font-mono text-slate-300 font-semibold">{stats.totalMPs} Members Mapped</span>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800/80 text-center">
+                    <div className="bg-slate-800/60 rounded-lg p-1.5 border border-slate-700/50">
+                      <div className="text-[10px] text-slate-400 font-medium">Active Bills</div>
+                      <div className="text-xs font-black text-white font-mono">{stats.totalBills}</div>
+                    </div>
+                    <div className="bg-slate-800/60 rounded-lg p-1.5 border border-slate-700/50">
+                      <div className="text-[10px] text-slate-400 font-medium">Passed Acts</div>
+                      <div className="text-xs font-black text-emerald-400 font-mono">{stats.totalPassed}</div>
+                    </div>
+                    <div className="bg-slate-800/60 rounded-lg p-1.5 border border-slate-700/50">
+                      <div className="text-[10px] text-slate-400 font-medium">Citizen Votes</div>
+                      <div className="text-xs font-black text-sky-400 font-mono">{stats.totalVotes.toLocaleString()}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating verified badge */}
+              <div className="absolute -top-3 -left-3 bg-white border border-slate-200/90 rounded-xl px-3 py-1.5 shadow-md flex items-center gap-2 text-xs font-bold text-slate-800">
+                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                <span>Verified NASS Records</span>
+              </div>
+            </div>
+
+          </header>
         </div>
       </section>
 
