@@ -173,7 +173,7 @@ export default function Home({
                   <b data-astro-cid-xyrvcziz="">10th National Assembly Civic Intelligence</b>
                 </p>
                 <h1 className="display-xxl text-3xl sm:text-4xl lg:text-5xl font-black font-display text-slate-950 tracking-tight leading-[1.18]" data-astro-cid-xyrvcziz="">
-                  <em className="checkmark font-serif italic text-emerald-600 not-italic">Simple, transparent</em> legislative tracking for all Nigerians
+                  <em className="checkmark font-sans font-black not-italic text-emerald-600">Simple, transparent</em> legislative tracking for all Nigerians
                 </h1>
                 <div className="body-xl text-slate-600 text-base md:text-lg leading-relaxed font-normal" data-astro-cid-xyrvcziz="">
                   Plan civic engagement, monitor live bill readings, track lawmaker attendance records, and inspect voting scorecards — all from a single, easy-to-use platform.
