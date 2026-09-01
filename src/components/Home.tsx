@@ -190,12 +190,12 @@ export default function Home({
             {/* Left Column: Info / Text & Actions */}
             <div className="info lg:col-span-7 space-y-6" data-astro-cid-xyrvcziz="">
               <div className="text space-y-4" data-astro-cid-xyrvcziz="">
-                <p className="topper body-l text-emerald-700 font-bold uppercase tracking-wider text-xs md:text-sm flex items-center gap-2" data-astro-cid-xyrvcziz="">
-                  <Sparkles className="w-4 h-4 text-emerald-600 animate-pulse" />
+                <p className="topper body-l text-blue-700 font-bold uppercase tracking-wider text-xs md:text-sm flex items-center gap-2" data-astro-cid-xyrvcziz="">
+                  <Sparkles className="w-4 h-4 text-blue-600 animate-pulse" />
                   <b data-astro-cid-xyrvcziz="">10th National Assembly Civic Intelligence</b>
                 </p>
                 <h1 className="display-xxl text-3xl sm:text-4xl lg:text-5xl font-black font-display text-slate-950 tracking-tight leading-[1.18]" data-astro-cid-xyrvcziz="">
-                  <em className="checkmark font-sans font-black not-italic text-emerald-600">Simple, transparent</em> legislative tracking for all Nigerians
+                  <em className="checkmark font-sans font-black not-italic text-blue-600">Simple, transparent</em> legislative tracking for all Nigerians
                 </h1>
                 <div className="body-xl text-slate-600 text-base md:text-lg leading-relaxed font-normal" data-astro-cid-xyrvcziz="">
                   Plan civic engagement, monitor live bill readings, track lawmaker attendance records, and inspect voting scorecards — all from a single, easy-to-use platform.
@@ -206,7 +206,7 @@ export default function Home({
                 <div className="flex flex-wrap items-center gap-3.5">
                   <button
                     onClick={() => onNavigateTab("bills")}
-                    className="primary px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm md:text-base rounded-xl transition shadow-md hover:shadow-lg shadow-emerald-900/20 flex items-center gap-2 group cursor-pointer"
+                    className="primary px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm md:text-base rounded-xl transition shadow-md hover:shadow-lg shadow-blue-900/20 flex items-center gap-2 group cursor-pointer"
                     id="hero-button"
                     data-astro-cid-xyrvcziz="true"
                     role="button"
@@ -220,22 +220,22 @@ export default function Home({
                     className="px-6 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm md:text-base rounded-xl border border-slate-250 transition flex items-center gap-2 cursor-pointer"
                     id="hero-secondary-button"
                   >
-                    <Sparkles className="w-4 h-4 text-emerald-600" />
+                    <Sparkles className="w-4 h-4 text-blue-600" />
                     <span>Ask AI Advisor</span>
                   </button>
                 </div>
 
                 <ul className="styled-list inline type-plain body-m left flex flex-wrap items-center gap-y-2 gap-x-6 text-xs md:text-sm text-slate-600 font-medium">
                   <li className="li-check-blue flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
                     <span>100% Free & Open Access</span>
                   </li>
                   <li className="li-check-blue flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
                     <span>Official 10th NASS Hansard Data</span>
                   </li>
                   <li className="li-check-blue flex items-center gap-1.5">
-                    <CheckCircle className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
                     <span>Direct Lawmaker Accountability</span>
                   </li>
                 </ul>
@@ -260,8 +260,8 @@ export default function Home({
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent p-4 md:p-5 pt-10 text-white space-y-3">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-emerald-300">Live 10th Assembly Sync</span>
+                      <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-ping" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-blue-300">Live 10th Assembly Sync</span>
                     </div>
                     <span className="text-xs font-mono text-slate-300 font-semibold">{stats.totalMPs} Members Mapped</span>
                   </div>
@@ -273,7 +273,7 @@ export default function Home({
                     </div>
                     <div className="bg-slate-800/60 rounded-lg p-1.5 border border-slate-700/50">
                       <div className="text-[10px] text-slate-400 font-medium">Passed Acts</div>
-                      <div className="text-xs font-black text-emerald-400 font-mono">{stats.totalPassed}</div>
+                      <div className="text-xs font-black text-blue-400 font-mono">{stats.totalPassed}</div>
                     </div>
                     <div className="bg-slate-800/60 rounded-lg p-1.5 border border-slate-700/50">
                       <div className="text-[10px] text-slate-400 font-medium">Citizen Votes</div>
@@ -285,7 +285,7 @@ export default function Home({
 
               {/* Floating verified badge */}
               <div className="absolute -top-3 -left-3 bg-white border border-slate-200/90 rounded-xl px-3 py-1.5 shadow-md flex items-center gap-2 text-xs font-bold text-slate-800">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                <ShieldCheck className="w-4 h-4 text-blue-600" />
                 <span>Verified NASS Records</span>
               </div>
             </div>
@@ -309,10 +309,10 @@ export default function Home({
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 hover:border-slate-300 transition" id="stat-passed">
             <div className="flex items-center gap-2 text-slate-500 text-xs mb-1.5 font-medium">
-              <Percent className="w-4 h-4 text-emerald-600 animate-pulse" />
+              <Percent className="w-4 h-4 text-blue-600 animate-pulse" />
               <span>Assented Bills</span>
             </div>
-            <div className="text-xl md:text-2xl font-bold text-emerald-600 font-display">
+            <div className="text-xl md:text-2xl font-bold text-blue-600 font-display">
               {stats.totalPassed} <span className="text-xs text-slate-500 font-sans font-medium">Passed</span>
             </div>
           </div>
@@ -358,7 +358,7 @@ export default function Home({
           </h3>
           
           <form onSubmit={handleSearchSubmit} className="relative max-w-2xl mx-auto" id="publications-search-form">
-            <div className="flex items-center bg-white border border-slate-300 rounded-full shadow-xs px-4 py-2 hover:border-emerald-500 focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-500/20 transition">
+            <div className="flex items-center bg-white border border-slate-300 rounded-full shadow-xs px-4 py-2 hover:border-blue-500 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20 transition">
               <Search className="w-5 h-5 text-slate-400 shrink-0 ml-1 mr-3" />
               <input 
                 type="text"
@@ -371,7 +371,7 @@ export default function Home({
               <button 
                 type="submit" 
                 aria-label="Search"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white p-2 sm:px-5 sm:py-2 rounded-full text-xs font-bold transition shrink-0 flex items-center gap-1.5"
+                className="bg-blue-600 hover:bg-blue-700 text-white p-2 sm:px-5 sm:py-2 rounded-full text-xs font-bold transition shrink-0 flex items-center gap-1.5"
               >
                 <span className="hidden sm:inline">Search</span>
                 <ArrowRight className="w-4 h-4" />
@@ -425,9 +425,9 @@ export default function Home({
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto px-4 sm:px-8" id="impact-metrics-grid">
             
             {/* Metric 1 */}
-            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-300 transition">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
-                24m<span className="text-emerald-600 text-3xl font-bold">+</span>
+                24m<span className="text-blue-600 text-3xl font-bold">+</span>
               </h1>
               <p className="text-xs sm:text-sm text-slate-500 font-medium font-sans mt-2">
                 Citizens Reached
@@ -435,7 +435,7 @@ export default function Home({
             </div>
 
             {/* Metric 2 */}
-            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-300 transition">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
                 37
               </h1>
@@ -445,7 +445,7 @@ export default function Home({
             </div>
 
             {/* Metric 3 */}
-            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-300 transition">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
                 134
               </h1>
@@ -455,7 +455,7 @@ export default function Home({
             </div>
 
             {/* Metric 4 */}
-            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-300 transition">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
                 469
               </h1>
@@ -465,9 +465,9 @@ export default function Home({
             </div>
 
             {/* Metric 5 */}
-            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-300 transition">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
-                850<span className="text-emerald-600 text-3xl font-bold">+</span>
+                850<span className="text-blue-600 text-3xl font-bold">+</span>
               </h1>
               <p className="text-xs sm:text-sm text-slate-500 font-medium font-sans mt-2">
                 Bills & Datasets
@@ -475,7 +475,7 @@ export default function Home({
             </div>
 
             {/* Metric 6 */}
-            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-emerald-300 transition">
+            <div className="text-center p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-blue-300 transition">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-slate-900 tracking-tight">
                 57
               </h1>
@@ -491,11 +491,11 @@ export default function Home({
       {/* "What You Can Do on Parliament Tracker" Feature Highlights Grid (Standalone Layout) */}
       <section className="py-4 sm:py-8 lg:py-10 space-y-10" id="what-you-can-do-section">
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-sm font-bold text-emerald-600 uppercase tracking-widest block font-sans">
+          <span className="text-sm font-bold text-blue-600 uppercase tracking-widest block font-sans">
             What We Do
           </span>
           <h2 className="text-3xl md:text-4xl font-black font-display text-slate-900 tracking-tight leading-tight">
-            What You Can Do on <span className="text-emerald-600">Parliament Tracker</span>
+            What You Can Do on <span className="text-blue-600">Parliament Tracker</span>
           </h2>
           <p className="text-sm md:text-base text-slate-500 leading-relaxed font-sans max-w-2xl mx-auto">
             Empowering every citizen with the tools to monitor, participate in, and influence the legislative process — right from your device.
@@ -506,7 +506,7 @@ export default function Home({
           {/* Card 1: Track Bills */}
           <div 
             onClick={() => onNavigateTab("bills")}
-            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-emerald-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-blue-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
             id="whaddo-card-bills"
           >
             <div className="space-y-4">
@@ -519,7 +519,7 @@ export default function Home({
                 />
               </div>
               <div className="space-y-1 px-1">
-                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-emerald-650 transition leading-snug">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-600 transition leading-snug">
                   Track Bills in Real-Time
                 </h3>
                 <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
@@ -532,7 +532,7 @@ export default function Home({
           {/* Card 2: Raise & Sign Petitions */}
           <div 
             onClick={() => onNavigateTab("propose")}
-            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-emerald-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-blue-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
             id="whaddo-card-petitions"
           >
             <div className="space-y-4">
@@ -545,7 +545,7 @@ export default function Home({
                 />
               </div>
               <div className="space-y-1 px-1">
-                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-emerald-650 transition leading-snug">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-600 transition leading-snug">
                   Raise & Sign Petitions
                 </h3>
                 <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
@@ -558,7 +558,7 @@ export default function Home({
           {/* Card 3: Legislators */}
           <div 
             onClick={() => onNavigateTab("mps")}
-            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-emerald-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
+            className="group bg-white rounded-3xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md hover:border-blue-500/30 transition duration-300 cursor-pointer flex flex-col justify-between"
             id="whaddo-card-legislators"
           >
             <div className="space-y-4">
@@ -571,7 +571,7 @@ export default function Home({
                 />
               </div>
               <div className="space-y-1 px-1">
-                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-emerald-650 transition leading-snug">
+                <h3 className="text-lg font-black font-display text-slate-900 group-hover:text-blue-600 transition leading-snug">
                   Legislators
                 </h3>
                 <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-sans">
@@ -586,7 +586,7 @@ export default function Home({
         <div className="flex justify-center pt-2">
           <button
             onClick={() => onNavigateTab("bills")}
-            className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm rounded-xl transition shadow-lg shadow-emerald-600/20 flex items-center gap-2 group cursor-pointer"
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm rounded-xl transition shadow-lg shadow-blue-600/20 flex items-center gap-2 group cursor-pointer"
             id="btn-what-you-can-do-seemore"
           >
             <span>See More</span>
@@ -629,10 +629,10 @@ export default function Home({
 
           <div 
             onClick={() => onNavigateTab("mps")}
-            className="group cursor-pointer p-6 bg-white border border-slate-200 rounded-3xl hover:border-emerald-500 transition-all hover:shadow-md flex flex-col justify-between h-64"
+            className="group cursor-pointer p-6 bg-white border border-slate-200 rounded-3xl hover:border-blue-500 transition-all hover:shadow-md flex flex-col justify-between h-64"
           >
             <div className="space-y-4">
-              <div className="w-10 h-10 bg-emerald-50 text-emerald-700 rounded-2xl flex items-center justify-center border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+              <div className="w-10 h-10 bg-blue-50 text-blue-700 rounded-2xl flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-all">
                 <Users className="w-5 h-5" />
               </div>
               <div>
@@ -642,7 +642,7 @@ export default function Home({
                 </p>
               </div>
             </div>
-            <div className="flex items-center text-xs font-extrabold text-emerald-700 gap-1 mt-4">
+            <div className="flex items-center text-xs font-extrabold text-blue-700 gap-1 mt-4">
               <span>View Roster</span>
               <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition" />
             </div>
@@ -705,7 +705,7 @@ export default function Home({
             </div>
             <button 
               onClick={() => onNavigateTab("bills")}
-              className="text-xs font-bold text-emerald-600 hover:underline flex items-center gap-0.5"
+              className="text-xs font-bold text-blue-600 hover:underline flex items-center gap-0.5"
             >
               <span>View All</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -723,7 +723,7 @@ export default function Home({
                   onClick={() => onSelectBill(bill.id)}
                   className="py-4 first:pt-0 last:pb-0 cursor-pointer group flex items-start gap-4"
                 >
-                  <div className="w-7 h-7 bg-slate-50 text-slate-450 border rounded-lg flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5 group-hover:bg-emerald-50 group-hover:text-emerald-600 group-hover:border-emerald-200 transition">
+                  <div className="w-7 h-7 bg-slate-50 text-slate-450 border rounded-lg flex items-center justify-center font-mono font-bold text-xs shrink-0 mt-0.5 group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-200 transition">
                     0{index + 1}
                   </div>
 
@@ -733,14 +733,14 @@ export default function Home({
                       <span className="font-bold tracking-wider uppercase text-[9px]">{bill.category}</span>
                     </div>
 
-                    <h4 className="text-xs font-bold text-slate-800 leading-semibold group-hover:text-emerald-650 transition truncate">
+                    <h4 className="text-xs font-bold text-slate-800 leading-semibold group-hover:text-blue-600 transition truncate">
                       {bill.title}
                     </h4>
 
                     {/* Simulating public sentiment split bar */}
                     <div className="flex items-center gap-3 text-[10px] text-slate-500 font-sans">
                       <div className="flex-1 bg-slate-100 h-1.5 rounded-full overflow-hidden flex">
-                        <div className="bg-emerald-500 h-full" style={{ width: `${forPercentage}%` }} />
+                        <div className="bg-blue-500 h-full" style={{ width: `${forPercentage}%` }} />
                         <div className="bg-rose-450 h-full" style={{ width: `${100 - forPercentage}%` }} />
                       </div>
                       <span className="shrink-0 font-medium select-none flex items-center gap-1">
@@ -764,7 +764,7 @@ export default function Home({
             </div>
             <button 
               onClick={() => onNavigateTab("mps")}
-              className="text-xs font-bold text-emerald-600 hover:underline flex items-center gap-0.5"
+              className="text-xs font-bold text-blue-600 hover:underline flex items-center gap-0.5"
             >
               <span>View All</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -782,12 +782,12 @@ export default function Home({
                 >
                   <div className="flex items-center gap-3 min-w-0">
                     {/* Circle avatar placeholder */}
-                    <div className="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 font-display font-black text-slate-500 flex items-center justify-center text-sm shrink-0 uppercase group-hover:bg-emerald-50 group-hover:text-emerald-600 group-hover:border-emerald-200 transition-all">
+                    <div className="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 font-display font-black text-slate-500 flex items-center justify-center text-sm shrink-0 uppercase group-hover:bg-blue-50 group-hover:text-blue-600 group-hover:border-blue-200 transition-all">
                       {leg.name.split(" ").pop()?.substring(0, 2)}
                     </div>
 
                     <div className="min-w-0">
-                      <h4 className="text-xs font-bold text-slate-800 leading-snug truncate group-hover:text-emerald-650 transition">
+                      <h4 className="text-xs font-bold text-slate-800 leading-snug truncate group-hover:text-blue-600 transition">
                         {leg.title} {leg.name}
                       </h4>
                       <div className="flex items-center gap-2 mt-1">
@@ -805,7 +805,7 @@ export default function Home({
                   <div className="text-right shrink-0">
                     <div className="text-[10px] text-slate-400 font-bold uppercase">Index Score</div>
                     <div className="text-sm font-black font-mono text-slate-800 mt-0.5 flex items-center justify-end gap-1">
-                      <Award className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <Award className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                       <span>{leg.engagementScore}</span>
                     </div>
                   </div>
@@ -821,8 +821,8 @@ export default function Home({
       <section className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200/90 shadow-sm space-y-6" id="legislative-calendar-view">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-150/70 pb-5">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-750 border border-emerald-100 text-[11px] font-bold tracking-tight uppercase">
-              <Calendar className="w-3.5 h-3.5 text-emerald-600" />
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 border border-blue-100 text-[11px] font-bold tracking-tight uppercase">
+              <Calendar className="w-3.5 h-3.5 text-blue-600" />
               <span>Official Schedule</span>
             </div>
             <h2 className="text-xl md:text-2xl font-black font-display text-slate-900 tracking-tight">
@@ -842,7 +842,7 @@ export default function Home({
                 placeholder="Search schedule events..."
                 value={calendarSearch}
                 onChange={(e) => setCalendarSearch(e.target.value)}
-                className="pl-9 pr-4 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 max-w-full sm:w-56 transition font-medium"
+                className="pl-9 pr-4 py-2 border border-slate-200 rounded-xl text-xs bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 max-w-full sm:w-56 transition font-medium"
               />
             </div>
           </div>
@@ -895,11 +895,11 @@ export default function Home({
 
                 if (event.type === "committee") {
                   badgeAndColorTheme = {
-                    bgColor: "bg-emerald-50",
-                    textColor: "text-emerald-700",
-                    borderColor: "border-emerald-150",
-                    hoverBorder: "hover:border-emerald-400/80",
-                    dotColor: "bg-emerald-500",
+                    bgColor: "bg-sky-50",
+                    textColor: "text-sky-700",
+                    borderColor: "border-sky-150",
+                    hoverBorder: "hover:border-sky-400/80",
+                    dotColor: "bg-sky-500",
                     label: "Committee Hearing"
                   };
                 } else if (event.type === "recess") {
@@ -975,7 +975,7 @@ export default function Home({
       {/* 4. "How Co-Design Policy Works" - The Public Journey timeline (Standalone Section) */}
       <section className="py-6 sm:py-10 space-y-8" id="citizen-journey-section">
         <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-100 px-3.5 py-1 rounded-full uppercase tracking-wider">
+          <span className="text-xs font-extrabold text-blue-700 bg-blue-50 border border-blue-100 px-3.5 py-1 rounded-full uppercase tracking-wider">
             Citizen Co-Design Flow
           </span>
           <h2 className="text-xl md:text-3xl font-black font-display text-slate-950 tracking-tight">
@@ -999,7 +999,7 @@ export default function Home({
           </div>
 
           <div className="space-y-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-slate-300 transition">
-            <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white font-black font-mono flex items-center justify-center text-sm shadow-xs">
+            <div className="w-9 h-9 rounded-xl bg-blue-600 text-white font-black font-mono flex items-center justify-center text-sm shadow-xs">
               2
             </div>
             <h4 className="font-extrabold text-slate-900 text-base">Express Sentiment</h4>
@@ -1019,7 +1019,7 @@ export default function Home({
           </div>
 
           <div className="space-y-3 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-slate-300 transition">
-            <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white font-black font-mono flex items-center justify-center text-sm shadow-xs">
+            <div className="w-9 h-9 rounded-xl bg-blue-600 text-white font-black font-mono flex items-center justify-center text-sm shadow-xs">
               4
             </div>
             <h4 className="font-extrabold text-slate-900 text-base">Draft Reforms</h4>

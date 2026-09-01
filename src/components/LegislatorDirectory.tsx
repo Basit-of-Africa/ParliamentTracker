@@ -129,7 +129,7 @@ export default function LegislatorDirectory({
   };
 
   const getEngagementRating = (score: number) => {
-    if (score >= 90) return { label: "Excellent Leader", color: "text-emerald-700 bg-emerald-50" };
+    if (score >= 90) return { label: "Excellent Leader", color: "text-blue-700 bg-blue-50" };
     if (score >= 80) return { label: "Highly Engaged", color: "text-sky-700 bg-sky-50" };
     return { label: "Representative Participant", color: "text-amber-700 bg-amber-50" };
   };
@@ -144,9 +144,9 @@ export default function LegislatorDirectory({
       <div className="lg:col-span-2 space-y-6">
         
         {/* Sync Header Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-xs">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-blue-50 border border-blue-100 p-4 rounded-xl text-xs">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 bg-emerald-100 text-emerald-700 rounded-lg shrink-0">
+            <div className="p-2 bg-blue-100 text-blue-700 rounded-lg shrink-0">
               <Landmark className="w-4 h-4" />
             </div>
             <div>
@@ -158,7 +158,7 @@ export default function LegislatorDirectory({
           <button
             onClick={handleSyncAssembly}
             disabled={isSyncing}
-            className="w-full sm:w-auto px-4 py-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-250 disabled:text-slate-400 text-white font-extrabold rounded-xl cursor-pointer flex items-center justify-center gap-1.5 transition text-xs shrink-0 shadow-sm"
+            className="w-full sm:w-auto px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-250 disabled:text-slate-400 text-white font-extrabold rounded-xl cursor-pointer flex items-center justify-center gap-1.5 transition text-xs shrink-0 shadow-sm"
           >
             {isSyncing ? (
               <>
@@ -176,7 +176,7 @@ export default function LegislatorDirectory({
 
         {syncMessage && (
           <div className="p-3 bg-slate-50 text-slate-700 border border-slate-200 font-bold rounded-xl animate-fade flex items-center gap-2 text-xs">
-            <AlertCircle className="w-4 h-4 text-emerald-600 animate-bounce shrink-0" />
+            <AlertCircle className="w-4 h-4 text-blue-600 animate-bounce shrink-0" />
             <span>{syncMessage}</span>
           </div>
         )}
@@ -191,7 +191,7 @@ export default function LegislatorDirectory({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by Legislator Name, State (e.g. Lagos), Constituency..."
-              className="w-full pl-9 pr-4 py-2 bg-slate-50 text-slate-800 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+              className="w-full pl-9 pr-4 py-2 bg-slate-50 text-slate-800 text-xs rounded-xl border border-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
 
@@ -244,7 +244,7 @@ export default function LegislatorDirectory({
                 onClick={() => setInspectedLegislatorId(leg.id)}
                 className={`cursor-pointer rounded-2xl border bg-white p-4 transition-all hover:shadow-sm flex flex-col justify-between ${
                   isInspected 
-                    ? "border-emerald-500 ring-1 ring-emerald-500/30" 
+                    ? "border-blue-500 ring-1 ring-blue-500/30" 
                     : "border-slate-200"
                 }`}
               >
@@ -312,10 +312,10 @@ export default function LegislatorDirectory({
                   {activeInspectedLeg.party} Party
                 </span>
                 <h3 className="text-base font-extrabold font-display mt-2 text-slate-900">{activeInspectedLeg.title} {activeInspectedLeg.name}</h3>
-                <p className="text-sm text-slate-500 mt-1 font-medium">{activeInspectedLeg.constituency}, {activeInspectedLeg.state} State</p>
+                <p className="text-sm text-slate-550 mt-1 font-medium">{activeInspectedLeg.constituency}, {activeInspectedLeg.state} State</p>
                 <button
                   onClick={() => onSelectLegislator(activeInspectedLeg.id)}
-                  className="mt-3 px-4 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl transition shadow-sm w-full cursor-pointer flex items-center justify-center gap-1.5"
+                  className="mt-3 px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs rounded-xl transition shadow-sm w-full cursor-pointer flex items-center justify-center gap-1.5"
                 >
                   <Users className="w-3.5 h-3.5" />
                   <span>Open Dedicated Profile</span>
@@ -330,10 +330,10 @@ export default function LegislatorDirectory({
               <div className="grid grid-cols-2 gap-3 text-xs">
                 <div className="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
                   <div className="flex items-center gap-1 text-slate-400 text-[10px] mb-1">
-                    <Award className="w-3.5 h-3.5 text-emerald-600" />
+                    <Award className="w-3.5 h-3.5 text-blue-600" />
                     <span className="font-medium text-slate-500">NASS Index Score</span>
                   </div>
-                  <div className="text-base font-extrabold text-emerald-605 font-mono">{activeInspectedLeg.engagementScore}%</div>
+                  <div className="text-base font-extrabold text-blue-600 font-mono">{activeInspectedLeg.engagementScore}%</div>
                 </div>
 
                 <div className="bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
@@ -394,7 +394,7 @@ export default function LegislatorDirectory({
                         <div className="font-mono text-[9px] font-bold text-slate-500 bg-white px-1 py-0.2 border rounded w-max inline">
                           {b.billNumber}
                         </div>
-                        <h5 className="font-semibold text-slate-800 mt-1 line-clamp-1 group-hover:text-emerald-600 group-hover:underline transition leading-tight">
+                        <h5 className="font-semibold text-slate-800 mt-1 line-clamp-1 group-hover:text-blue-600 group-hover:underline transition leading-tight">
                           {b.title}
                         </h5>
                       </div>

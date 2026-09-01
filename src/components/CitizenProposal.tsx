@@ -214,7 +214,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
         {/* Intro */}
         <div className="bg-white rounded-2xl border border-slate-205 p-5 shadow-sm space-y-4">
           <div className="flex items-center gap-2">
-            <div className="p-2 bg-emerald-50 text-emerald-650 rounded-lg">
+            <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
               <BookOpen className="w-5 h-5 animate-pulse" />
             </div>
             <div>
@@ -238,7 +238,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="e.g. Healthcare Workers Hazard Allowance and Welfare Trust Act"
-                className="w-full px-3 py-2.5 bg-slate-50 text-slate-900 rounded-lg border border-slate-200 text-xs font-semibold focus:ring-1 focus:ring-emerald-500 focus:outline-none"
+                className="w-full px-3 py-2.5 bg-slate-50 text-slate-900 rounded-lg border border-slate-200 text-xs font-semibold focus:ring-1 focus:ring-blue-500 focus:outline-none"
               />
             </div>
 
@@ -250,7 +250,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                   id="proposal-category"
                   value={category}
                   onChange={(e) => setCategory(e.target.value as BillCategory)}
-                  className="w-full bg-slate-50 p-2.5 border border-slate-200 rounded-lg text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  className="w-full bg-slate-50 p-2.5 border border-slate-200 rounded-lg text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500"
                 >
                   {Object.values(BillCategory).map(cat => (
                     <option key={cat} value={cat}>{cat}</option>
@@ -267,7 +267,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                     setChamber(e.target.value as Chamber);
                     setSponsorId(""); // reset selected sponsor when chamber switches
                   }}
-                  className="w-full bg-slate-50 p-2.5 border border-slate-200 rounded-lg text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  className="w-full bg-slate-50 p-2.5 border border-slate-200 rounded-lg text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500"
                 >
                   <option value={Chamber.SENATE}>Senate</option>
                   <option value={Chamber.HOUSE_OF_REPS}>House of Representatives</option>
@@ -281,7 +281,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                   id="proposal-sponsor"
                   value={sponsorId}
                   onChange={(e) => setSponsorId(e.target.value)}
-                  className="w-full bg-slate-50 p-2.5 border border-slate-200 text-slate-805 rounded-lg text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  className="w-full bg-slate-50 p-2.5 border border-slate-200 text-slate-805 rounded-lg text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-blue-500"
                 >
                   <option value="">-- Choose active member --</option>
                   {matchingSponsors.map(leg => (
@@ -303,7 +303,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                 value={summary}
                 onChange={(e) => setSummary(e.target.value)}
                 placeholder="State your legislative ideas clearly. E.g. To mandate robust hazard allowances of ₦50,000 monthly for federal doctors, tax private health premiums 1.5% to finance safety insurance, and audit county clinical tools across geographic zones every six months..."
-                className="w-full p-3 bg-slate-50 text-slate-900 border border-slate-200 rounded-lg text-xs font-medium focus:ring-1 focus:ring-emerald-500 focus:outline-none"
+                className="w-full p-3 bg-slate-50 text-slate-900 border border-slate-200 rounded-lg text-xs font-medium focus:ring-1 focus:ring-blue-500 focus:outline-none"
               />
             </div>
 
@@ -320,7 +320,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
                 type="submit"
                 id="btn-draft-proposal"
                 disabled={drafting}
-                className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl transition text-xs flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl transition text-xs flex items-center justify-center gap-2 shadow-sm cursor-pointer"
               >
                 <Sparkles className={`w-4.5 h-4.5 text-yellow-300 ${drafting ? "animate-spin" : ""}`} />
                 <span>{drafting ? "Gemini AI is Refining Draft & Compiling Projections..." : "Draft & Submit Citizen Bill"}</span>
@@ -342,7 +342,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
             {/* Bill Details summary info block */}
             <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-left space-y-2.5 max-w-xl mx-auto text-xs font-semibold">
               <div className="flex items-center justify-between font-bold">
-                <span className="font-mono text-emerald-600 px-2 py-0.5 bg-emerald-5 border border-emerald-150 rounded">
+                <span className="font-mono text-blue-600 px-2 py-0.5 bg-blue-50 border border-blue-200 rounded">
                   {draftResult.billNumber}
                 </span>
                 <span className="text-slate-500">{draftResult.category}</span>
@@ -355,7 +355,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
             <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-xs mx-auto font-bold">
               <button
                 onClick={() => onNavigateToBill(draftResult.id)}
-                className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-sm cursor-pointer transition"
+                className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs rounded-xl flex items-center justify-center gap-1.5 shadow-sm cursor-pointer transition"
               >
                 <span>Track Dynamic Progress</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -378,7 +378,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
         <div className="bg-white border border-slate-200 rounded-2xl p-5 space-y-5 sticky top-5 shadow-sm">
           <div>
             <h3 className="text-xs uppercase tracking-wider font-bold text-slate-500 flex items-center gap-1.5 font-mono">
-              <Landmark className="w-4 h-4 text-emerald-600" />
+              <Landmark className="w-4 h-4 text-blue-600" />
               <span>Nigerian Legislative Help</span>
             </h3>
             <p className="text-sm text-slate-500 mt-1 leading-normal font-medium">
@@ -389,7 +389,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
           <div className="space-y-4 text-xs font-sans">
             <div className="space-y-1">
               <h4 className="font-bold text-slate-800 flex items-center gap-1.5">
-                <span className="w-5 h-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-mono font-bold text-[10px]">1</span>
+                <span className="w-5 h-5 rounded-lg bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center font-mono font-bold text-[10px]">1</span>
                 <span>Draft Submission & Sponsor Matching</span>
               </h4>
               <p className="text-xs md:text-sm text-slate-550 pl-6 text-justify font-medium">
@@ -399,7 +399,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
 
             <div className="space-y-1">
               <h4 className="font-bold text-slate-800 flex items-center gap-1.5">
-                <span className="w-5 h-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-mono font-bold text-[10px]">2</span>
+                <span className="w-5 h-5 rounded-lg bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center font-mono font-bold text-[10px]">2</span>
                 <span>First and Second Readings</span>
               </h4>
               <p className="text-xs md:text-sm text-slate-550 pl-6 text-justify font-medium">
@@ -409,7 +409,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
 
             <div className="space-y-1">
               <h4 className="font-bold text-slate-800 flex items-center gap-1.5">
-                <span className="w-5 h-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-mono font-bold text-[10px]">3</span>
+                <span className="w-5 h-5 rounded-lg bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center font-mono font-bold text-[10px]">3</span>
                 <span>Committee Stage</span>
               </h4>
               <p className="text-xs md:text-sm text-slate-550 pl-6 text-justify font-medium">
@@ -419,7 +419,7 @@ export default function CitizenProposal({ legislators, onNavigateToBill, onRefre
 
             <div className="space-y-1">
               <h4 className="font-bold text-slate-800 flex items-center gap-1.5">
-                <span className="w-5 h-5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center font-mono font-bold text-[10px]">4</span>
+                <span className="w-5 h-5 rounded-lg bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center font-mono font-bold text-[10px]">4</span>
                 <span>Third Reading & Presidential Assent</span>
               </h4>
               <p className="text-xs md:text-sm text-slate-550 pl-6 text-justify font-medium">

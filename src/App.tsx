@@ -527,7 +527,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-emerald-500/20 selection:text-emerald-500">
+    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-blue-500/20 selection:text-blue-600">
       
       {/* Platform Header */}
       <Header activeTab={activeTab} setActiveTab={(tab) => {
@@ -541,7 +541,7 @@ export default function App() {
         
         {loading && (
           <div className="flex flex-col items-center justify-center py-20 space-y-4" id="starting-loader-screen">
-            <div className="w-10 h-10 border-4 border-emerald-500/30 border-t-emerald-600 rounded-full animate-spin" />
+            <div className="w-10 h-10 border-4 border-blue-500/30 border-t-blue-600 rounded-full animate-spin" />
             <span className="text-xs text-slate-500 animate-pulse font-medium">
               Synchronizing with Nigerian National Assembly legislative nodes...
             </span>
@@ -642,12 +642,12 @@ export default function App() {
 
                   {activeTab === "watchlist" && (
                     <div id="watchlist-workspace">
-                      <div className="mb-6 p-6 bg-gradient-to-br from-emerald-950 via-slate-900 to-emerald-900 text-white rounded-3xl border border-emerald-800/20 shadow-sm relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+                      <div className="mb-6 p-6 bg-gradient-to-br from-blue-950 via-slate-900 to-blue-900 text-white rounded-3xl border border-blue-800/20 shadow-sm relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
                         <h2 className="text-xl md:text-2xl font-black font-display tracking-tight">
                           My Legislative Watchlist
                         </h2>
-                        <p className="text-sm text-emerald-250 mt-1 max-w-2xl font-medium">
+                        <p className="text-sm text-blue-200 mt-1 max-w-2xl font-medium">
                           Your curated selection of 10th National Assembly Senate and House bills and custom citizen proposals. Follow active readings, cast votes, and send direct emails to sponsors.
                         </p>
                       </div>
@@ -721,13 +721,13 @@ export default function App() {
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl border shadow-xl ${
               isOnline
-                ? "bg-slate-900/95 text-slate-100 border-emerald-800"
+                ? "bg-slate-900/95 text-slate-100 border-blue-800"
                 : "bg-amber-950/95 text-amber-100 border-amber-800"
             }`}
             id="network-pwa-toast"
           >
             {isOnline ? (
-              <Wifi className="w-5 h-5 text-emerald-400 animate-pulse" />
+              <Wifi className="w-5 h-5 text-blue-400 animate-pulse" />
             ) : (
               <WifiOff className="w-5 h-5 text-amber-500 animate-pulse" />
             )}
@@ -762,7 +762,7 @@ export default function App() {
             id="pwa-install-overlay"
           >
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-emerald-950/80 text-emerald-400 rounded-2xl border border-emerald-900/40 flex-shrink-0">
+              <div className="p-3 bg-blue-950/80 text-blue-400 rounded-2xl border border-blue-900/40 flex-shrink-0">
                 <Smartphone className="w-6 h-6" />
               </div>
               <div className="flex-1">
@@ -793,7 +793,7 @@ export default function App() {
               </button>
               <button
                 onClick={handleInstallApp}
-                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold rounded-xl transition shadow-lg shadow-emerald-950/40 flex items-center gap-1.5 cursor-pointer"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-extrabold rounded-xl transition shadow-lg shadow-blue-950/40 flex items-center gap-1.5 cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5" />
                 <span>Install WebApp</span>
@@ -811,7 +811,7 @@ export default function App() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 15 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 z-40 p-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-lg shadow-emerald-600/20 border border-emerald-500/30 transition-all hover:scale-110 active:scale-90 cursor-pointer flex items-center justify-center group"
+            className="fixed bottom-6 right-6 z-40 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg shadow-blue-600/20 border border-blue-500/30 transition-all hover:scale-110 active:scale-90 cursor-pointer flex items-center justify-center group"
             id="btn-scroll-to-top"
             title="Scroll back to top"
           >
