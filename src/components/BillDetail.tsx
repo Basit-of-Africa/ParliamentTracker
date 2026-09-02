@@ -4,8 +4,8 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { motion } from "motion/react";
-import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark, ArrowUpRight, Printer, Mail } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { ArrowLeft, Landmark, Milestone, Sparkles, CheckCircle2, AlertCircle, Share2, ThumbsUp, ThumbsDown, Vote, MessageSquare, Send, Stars, Play, RefreshCw, Bookmark, ArrowUpRight, Printer, Mail, Check, Clock, ChevronRight } from "lucide-react";
 import { Bill, Chamber, LegislativeStage, UserReview, Legislator } from "../types";
 
 interface BillDetailProps {
@@ -571,81 +571,266 @@ export default function BillDetail({
           
           {/* TAB 1: PROGRESS TRACKER (STEPPER LIST) */}
           {activeSubTab === "progress" && (
-            <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm space-y-6">
-              <div>
-                <h3 className="text-base font-bold font-display text-slate-900">
-                  National Assembly Legislative Path
-                </h3>
-                <p className="text-sm text-slate-500 mt-1">
-                  How a draft becomes statute. View official clerks timeline records for the 10th Assembly.
-                </p>
+            <motion.div 
+              key={`progress-tab-${bill.id}`}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm space-y-6"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
+                <div>
+                  <h3 className="text-base font-bold font-display text-slate-900 flex items-center gap-2">
+                    <span>National Assembly Legislative Path</span>
+                    <span className="text-xs font-normal text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-100 font-sans font-semibold">
+                      {bill.chamberOfOrigin}
+                    </span>
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 mt-1">
+                    Official 10th Assembly clerk timeline. Tracks progression from initial gazette to presidential assent.
+                  </p>
+                </div>
+
+                {/* Live Dynamic Stage Meter Badge */}
+                <div className="flex items-center gap-3 bg-slate-50 p-2.5 rounded-xl border border-slate-200/80 self-start sm:self-auto shrink-0">
+                  <div className="text-right">
+                    <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Advancement</div>
+                    <motion.div 
+                      key={bill.stageProgress}
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                      className="text-xs font-extrabold text-slate-800 font-mono"
+                    >
+                      {bill.stageProgress}% Complete
+                    </motion.div>
+                  </div>
+                  <div className="w-9 h-9 rounded-lg bg-blue-600 text-white flex items-center justify-center font-mono font-bold text-xs shadow-xs">
+                    {bill.timeline.filter(t => t.completed).length}/{bill.timeline.length}
+                  </div>
+                </div>
               </div>
 
-              {/* Vertical Stepper Timeline */}
-              <div className="space-y-6 relative before:absolute before:left-3.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-100" id="legislative-progress-stepper">
+              {/* Mini Segmented Progress Bar */}
+              <div className="space-y-1.5 bg-slate-50/70 p-3 rounded-xl border border-slate-200/60">
+                <div className="flex justify-between items-center text-[11px] font-semibold text-slate-600">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                    <span>Current Active Stage: <strong className="text-slate-900">{bill.currentStage}</strong></span>
+                  </span>
+                  <span className="font-mono text-[10px] text-slate-400">
+                    Step {Math.max(1, bill.timeline.findIndex(s => s.stage === bill.currentStage) + 1)} of {bill.timeline.length}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-7 gap-1.5 pt-1">
+                  {bill.timeline.map((step, idx) => {
+                    const isDone = step.completed;
+                    const isCur = bill.currentStage === step.stage;
+                    return (
+                      <div key={step.stage} className="space-y-1">
+                        <div className="h-1.5 rounded-full overflow-hidden bg-slate-200">
+                          <motion.div
+                            className={`h-full rounded-full ${
+                              isDone ? "bg-blue-600" : isCur ? "bg-amber-500" : "bg-transparent"
+                            }`}
+                            initial={{ width: 0 }}
+                            animate={{ width: isDone || isCur ? "100%" : "0%" }}
+                            transition={{ duration: 0.5, delay: idx * 0.05, ease: "easeOut" }}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Vertical Stepper Timeline with Framer Motion */}
+              <motion.div 
+                className="space-y-6 relative pt-2"
+                id="legislative-progress-stepper"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.08,
+                      delayChildren: 0.04
+                    }
+                  }
+                }}
+              >
+                {/* Background Connecting Line */}
+                <div className="absolute left-[17px] top-6 bottom-6 w-0.5 bg-slate-100 rounded-full" />
+
+                {/* Animated Dynamic Progress Line */}
+                <motion.div
+                  className="absolute left-[17px] top-6 w-0.5 bg-gradient-to-b from-blue-600 via-blue-500 to-amber-500 rounded-full origin-top"
+                  initial={{ height: 0 }}
+                  animate={{
+                    height: (() => {
+                      const curIdx = bill.timeline.findIndex((s) => s.stage === bill.currentStage);
+                      const compCount = bill.timeline.filter((s) => s.completed).length;
+                      const activeIndex = curIdx >= 0 ? curIdx : Math.max(0, compCount - 1);
+                      if (bill.timeline.length <= 1) return "0%";
+                      return `${Math.min(100, Math.max(0, (activeIndex / (bill.timeline.length - 1)) * 100))}%`;
+                    })()
+                  }}
+                  transition={{ duration: 0.7, ease: [0.34, 1.56, 0.64, 1] }}
+                />
+
                 {bill.timeline.map((step, index) => {
                   const isCompleted = step.completed;
                   const isCurrent = bill.currentStage === step.stage;
                   
                   return (
-                    <div
-                      key={step.stage}
+                    <motion.div
+                      key={`${step.stage}-${bill.currentStage}`}
                       id={`stepper-step-${getStageDisplayIndex(step.stage)}`}
+                      variants={{
+                        hidden: { opacity: 0, x: -16, y: 8 },
+                        visible: { 
+                          opacity: 1, 
+                          x: 0, 
+                          y: 0,
+                          transition: {
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 24
+                          }
+                        }
+                      }}
+                      layout
                       className={`flex gap-4 relative transition-all ${
-                        isCompleted ? "opacity-100" : "opacity-50"
+                        isCompleted ? "opacity-100" : isCurrent ? "opacity-100" : "opacity-55 hover:opacity-85"
                       }`}
                     >
-                      {/* Check dot icon */}
-                      <div className="relative z-10">
-                        {isCompleted ? (
-                          <div className="w-8 h-8 rounded-full bg-blue-500 border-4 border-white text-white flex items-center justify-center shadow-sm">
-                            <CheckCircle2 className="w-4 h-4 font-bold" />
-                          </div>
-                        ) : isCurrent ? (
-                          <div className="w-8 h-8 rounded-full bg-amber-500 border-4 border-amber-100 text-white flex items-center justify-center animate-pulse shadow-sm">
-                            <AlertCircle className="w-4 h-4" />
-                          </div>
-                        ) : (
-                          <div className="w-8 h-8 rounded-full bg-slate-100 border-4 border-white text-slate-400 flex items-center justify-center text-xs font-bold font-mono">
-                            {index + 1}
-                          </div>
-                        )}
+                      {/* Check dot icon with animated spring nodes */}
+                      <div className="relative z-10 shrink-0 pt-0.5">
+                        <AnimatePresence mode="wait">
+                          {isCompleted ? (
+                            <motion.div
+                              key="completed-icon"
+                              initial={{ scale: 0.6, rotate: -20, opacity: 0 }}
+                              animate={{ scale: 1, rotate: 0, opacity: 1 }}
+                              exit={{ scale: 0.6, opacity: 0 }}
+                              transition={{ type: "spring", stiffness: 450, damping: 22 }}
+                              className="w-9 h-9 rounded-full bg-blue-600 border-4 border-white text-white flex items-center justify-center shadow-sm shadow-blue-600/20"
+                              title="Completed Stage"
+                            >
+                              <Check className="w-4 h-4 stroke-[3px]" />
+                            </motion.div>
+                          ) : isCurrent ? (
+                            <motion.div
+                              key="current-icon"
+                              initial={{ scale: 0.6, opacity: 0 }}
+                              animate={{ scale: 1, opacity: 1 }}
+                              exit={{ scale: 0.6, opacity: 0 }}
+                              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                              className="relative flex items-center justify-center"
+                            >
+                              {/* Pulsing Outer Halo */}
+                              <motion.span
+                                className="absolute w-12 h-12 rounded-full bg-amber-400/25 -z-10"
+                                animate={{ scale: [1, 1.35, 1], opacity: [0.6, 0.1, 0.6] }}
+                                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                              />
+                              <div className="w-9 h-9 rounded-full bg-amber-500 border-4 border-amber-100 text-white flex items-center justify-center shadow-md shadow-amber-500/25">
+                                <AlertCircle className="w-4 h-4 font-bold" />
+                              </div>
+                            </motion.div>
+                          ) : (
+                            <motion.div
+                              key="upcoming-icon"
+                              initial={{ scale: 0.8, opacity: 0 }}
+                              animate={{ scale: 1, opacity: 1 }}
+                              className="w-9 h-9 rounded-full bg-slate-100 border-4 border-white text-slate-400 flex items-center justify-center text-xs font-bold font-mono shadow-xs"
+                            >
+                              {index + 1}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
                       </div>
 
-                      {/* Content step card */}
-                      <div className={`flex-1 p-4 rounded-xl border transition ${
-                        isCurrent 
-                          ? "bg-amber-50/50 border-amber-200" 
-                          : isCompleted 
-                          ? "bg-slate-50/60 border-slate-200/50" 
-                          : "bg-white border-slate-100"
-                      }`}>
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 leading-normal">
-                          <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+                      {/* Content step card with smooth layout animation */}
+                      <motion.div 
+                        layout
+                        whileHover={{ x: 3 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                        className={`flex-1 p-4 rounded-xl border transition-all duration-300 ${
+                          isCurrent 
+                            ? "bg-gradient-to-r from-amber-50/70 to-white border-amber-300 shadow-sm shadow-amber-500/5 ring-1 ring-amber-300/40" 
+                            : isCompleted 
+                            ? "bg-slate-50/70 hover:bg-slate-50 border-slate-200/70 shadow-2xs" 
+                            : "bg-white border-slate-150 text-slate-400"
+                        }`}
+                      >
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 leading-normal">
+                          <h4 className={`text-sm font-bold flex items-center gap-2 ${
+                            isCurrent ? "text-amber-950" : isCompleted ? "text-slate-900" : "text-slate-600"
+                          }`}>
                             <span>{step.stage}</span>
-                            {isCurrent && (
-                              <span className="text-[9px] px-1.5 py-0.2 rounded bg-amber-500 text-white font-bold animate-pulse font-sans">
-                                ACTIVE STAGE
-                              </span>
-                            )}
+                            <AnimatePresence>
+                              {isCurrent && (
+                                <motion.span 
+                                  initial={{ scale: 0.7, opacity: 0 }}
+                                  animate={{ scale: 1, opacity: 1 }}
+                                  exit={{ scale: 0.7, opacity: 0 }}
+                                  className="inline-flex items-center gap-1 text-[9px] px-2 py-0.5 rounded-full bg-amber-500 text-white font-extrabold uppercase tracking-wider shadow-2xs font-sans"
+                                >
+                                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping inline-block" />
+                                  <span>Active Stage</span>
+                                </motion.span>
+                              )}
+                              {isCompleted && !isCurrent && (
+                                <motion.span
+                                  initial={{ scale: 0.8, opacity: 0 }}
+                                  animate={{ scale: 1, opacity: 1 }}
+                                  className="text-[10px] text-blue-600 font-semibold flex items-center gap-1 font-sans"
+                                >
+                                  <CheckCircle2 className="w-3 h-3 text-blue-600" />
+                                  <span>Passed</span>
+                                </motion.span>
+                              )}
+                            </AnimatePresence>
                           </h4>
                           {step.date && (
-                             <span className="font-mono text-[10px] text-slate-550 bg-slate-100 px-1.5 py-0.5 rounded border border-slate-250 font-semibold self-start sm:self-auto">
-                              {step.date}
-                            </span>
+                            <motion.span 
+                              key={step.date}
+                              initial={{ opacity: 0, y: -2 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              className={`font-mono text-[10px] px-2 py-0.5 rounded border font-semibold self-start sm:self-auto flex items-center gap-1 ${
+                                isCurrent 
+                                  ? "bg-amber-100/60 text-amber-800 border-amber-200" 
+                                  : "bg-slate-100 text-slate-550 border-slate-200"
+                              }`}
+                            >
+                              <Clock className="w-3 h-3 text-slate-400" />
+                              <span>{step.date}</span>
+                            </motion.span>
                           )}
                         </div>
                         {step.note && (
-                          <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+                          <motion.p 
+                            key={step.note}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.3 }}
+                            className={`text-xs mt-2 leading-relaxed font-sans ${
+                              isCurrent ? "text-amber-900/80 font-medium" : "text-slate-500"
+                            }`}
+                          >
                             {step.note}
-                          </p>
+                          </motion.p>
                         )}
-                      </div>
-                    </div>
+                      </motion.div>
+                    </motion.div>
                   );
                 })}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           )}
 
           {/* TAB 2: AI BRIEFS PANELS */}
