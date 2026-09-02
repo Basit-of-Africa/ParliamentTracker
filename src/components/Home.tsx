@@ -26,6 +26,7 @@ import {
   Search
 } from "lucide-react";
 import { Bill, Legislator, PoliticalParty } from "../types";
+import LegislativeTrendsChart from "./LegislativeTrendsChart";
 
 interface HomeProps {
   bills: Bill[];
@@ -348,6 +349,9 @@ export default function Home({
           </div>
         </div>
       </div>
+
+      {/* Monthly Legislative Velocity Trends Line Chart */}
+      <LegislativeTrendsChart bills={bills} />
 
       {/* Explore Datasets, Infographics and Publications + Our Impact at a Glance Section */}
       <section className="py-8 sm:py-12 space-y-12" id="explore-publications-and-impact-section">
