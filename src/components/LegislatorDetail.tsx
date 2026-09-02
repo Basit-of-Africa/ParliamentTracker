@@ -127,7 +127,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
   };
 
   const getEngagementRating = (score: number) => {
-    if (score >= 90) return { label: "Excellent Leader", color: "text-emerald-700 bg-emerald-50 border-emerald-200" };
+    if (score >= 90) return { label: "Excellent Leader", color: "text-blue-700 bg-blue-50 border-blue-200" };
     if (score >= 80) return { label: "Highly Engaged", color: "text-sky-700 bg-sky-50 border-sky-100" };
     return { label: "Representative Participant", color: "text-amber-700 bg-amber-50 border-amber-100" };
   };
@@ -264,7 +264,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
               <span className="text-[10px] font-bold px-2 py-0.5 bg-white/15 text-white/90 rounded-full border border-white/10 uppercase tracking-widest leading-none">
                 10th Assembly Active
               </span>
-              <span className="text-[10px] bg-emerald-500/85 text-white font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+              <span className="text-[10px] bg-blue-500/85 text-white font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
                 {legislator.status}
               </span>
             </div>
@@ -307,7 +307,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-semibold">
               <div className="bg-slate-50 p-3 rounded-xl border border-slate-200/80 flex flex-col justify-between h-20">
                 <span className="text-slate-400 font-medium text-[10px] flex items-center gap-1">
-                  <Percent className="w-3.5 h-3.5 text-emerald-600" /> Attendance Ledger
+                  <Percent className="w-3.5 h-3.5 text-blue-600" /> Attendance Ledger
                 </span>
                 <span className="text-lg font-bold text-slate-800 font-mono mt-1">{legislator.attendanceRate}%</span>
               </div>
@@ -335,7 +335,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
             </div>
 
             <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs leading-relaxed text-slate-600 flex items-start gap-3">
-              <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+              <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold text-slate-705">Credential Assurance:</span> This profile page displays direct digital mapping records compiled to bridge accountability gaps dynamically. You can review the citizen engagement brief or submit an email petition instantly via the links.
               </div>
@@ -350,7 +350,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                 onClick={() => setActiveDetailsTab("bills")}
                 className={`px-5 py-4 font-display font-extrabold text-sm border-b-2 flex items-center gap-2 transition cursor-pointer ${
                   activeDetailsTab === "bills"
-                    ? "border-emerald-600 text-emerald-600 bg-white"
+                    ? "border-blue-600 text-blue-600 bg-white"
                     : "border-transparent text-slate-500 hover:text-slate-855 hover:bg-slate-100/50"
                 }`}
                 id="tab-btn-sponsored-bills"
@@ -358,7 +358,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                 <BookOpen className="w-4 h-4" />
                 <span>Sponsored Legislation</span>
                 <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-sans font-extrabold ml-1 ${
-                  activeDetailsTab === "bills" ? "bg-emerald-100 text-emerald-700" : "bg-slate-100 text-slate-500"
+                  activeDetailsTab === "bills" ? "bg-blue-100 text-blue-700" : "bg-slate-100 text-slate-500"
                 }`}>
                   {sponsoredBills.length}
                 </span>
@@ -367,7 +367,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                 onClick={() => setActiveDetailsTab("voting")}
                 className={`px-5 py-4 font-display font-extrabold text-sm border-b-2 flex items-center gap-2 transition cursor-pointer ${
                   activeDetailsTab === "voting"
-                    ? "border-emerald-600 text-emerald-600 bg-white"
+                    ? "border-blue-600 text-blue-600 bg-white"
                     : "border-transparent text-slate-500 hover:text-slate-855 hover:bg-slate-100/50"
                 }`}
                 id="tab-btn-voting-history"
@@ -375,7 +375,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                 <Vote className="w-4 h-4 hover:animate-pulse" />
                 <span>Voting History</span>
                 <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-sans font-extrabold ml-1 ${
-                  activeDetailsTab === "voting" ? "bg-emerald-100 text-emerald-700" : "bg-slate-100 text-slate-500"
+                  activeDetailsTab === "voting" ? "bg-blue-100 text-blue-700" : "bg-slate-100 text-slate-500"
                 }`}>
                   {bills.length}
                 </span>
@@ -402,7 +402,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                         <div
                           key={b.id}
                           onClick={() => onSelectBill(b.id)}
-                          className="p-4 bg-slate-50/40 border border-slate-200 hover:border-emerald-500 rounded-2xl hover:shadow-sm cursor-pointer transition flex flex-col justify-between gap-3 group"
+                          className="p-4 bg-slate-50/40 border border-slate-200 hover:border-blue-500 rounded-2xl hover:shadow-sm cursor-pointer transition flex flex-col justify-between gap-3 group"
                         >
                           <div className="space-y-2">
                             <div className="flex justify-between items-center text-[10px]">
@@ -411,7 +411,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                               </span>
                               <span className="font-semibold text-slate-450 uppercase">{b.category}</span>
                             </div>
-                            <h4 className="text-xs font-bold leading-snug text-slate-800 group-hover:text-emerald-650 transition">
+                            <h4 className="text-xs font-bold leading-snug text-slate-800 group-hover:text-blue-600 transition">
                               {b.title}
                             </h4>
                           </div>
@@ -471,7 +471,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                               </td>
                               <td className="px-4 py-3 text-center">
                                 {vote === "For" ? (
-                                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-200 animate-fade">
+                                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-blue-100 text-blue-800 border border-blue-200 animate-fade">
                                     <Check className="w-3 h-3 stroke-[3px]" />
                                     <span>YEA</span>
                                   </span>
@@ -495,7 +495,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                               <td className="px-4 py-3 text-right font-sans">
                                 <button
                                   onClick={() => onSelectBill(bill.id)}
-                                  className="text-emerald-600 hover:text-emerald-700 font-bold transition text-[11px] underline cursor-pointer"
+                                  className="text-blue-600 hover:text-blue-700 font-bold transition text-[11px] underline cursor-pointer"
                                 >
                                   View Bill
                                 </button>
@@ -530,7 +530,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
               </div>
 
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center gap-3">
-                <Landmark className="w-4 h-4 text-emerald-650 shrink-0" />
+                <Landmark className="w-4 h-4 text-blue-600 shrink-0" />
                 <div>
                   <div className="text-[10px] text-slate-400 font-bold uppercase">Consular Capital Office</div>
                   <div className="text-slate-700 font-semibold mt-0.5">10th Assembly Complex, Three Arms Zone, Abuja</div>
@@ -542,7 +542,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
           {/* Mail / Correspondence Portal */}
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
             <h3 className="text-sm font-bold font-display text-slate-905 flex items-center gap-1.5">
-              <MessageSquare className="w-5 h-5 text-emerald-600 shrink-0" />
+              <MessageSquare className="w-5 h-5 text-blue-600 shrink-0" />
               <span>Direct Representative Mailer</span>
             </h3>
             <p className="text-sm text-slate-500 leading-relaxed font-sans font-medium">
@@ -553,7 +553,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
               <div className={`p-3 text-[11px] font-medium rounded-xl leading-relaxed border ${
                 submitFeedback.startsWith("Error") 
                   ? "bg-red-50 text-red-700 border-red-200" 
-                  : "bg-emerald-50 text-emerald-805 border-emerald-200"
+                  : "bg-blue-50 text-blue-800 border-blue-200"
               }`} id="correspondence-response-alert">
                 {submitFeedback}
               </div>
@@ -568,7 +568,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                   value={senderName}
                   onChange={(e) => setSenderName(e.target.value)}
                   placeholder="e.g. Basit Ajibade"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 focus:outline-emerald-500 font-medium text-slate-800"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 focus:outline-blue-500 font-medium text-slate-800"
                 />
               </div>
 
@@ -580,7 +580,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                   value={senderEmail}
                   onChange={(e) => setSenderEmail(e.target.value)}
                   placeholder="e.g. constituent@domain.ng"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 focus:outline-emerald-500 font-medium text-slate-805"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 focus:outline-blue-500 font-medium text-slate-805"
                 />
               </div>
 
@@ -589,7 +589,7 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                 <select
                   value={messageTopic}
                   onChange={(e) => setMessageTopic(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 focus:outline-emerald-500 font-semibold text-slate-700"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 focus:outline-blue-500 font-semibold text-slate-700"
                 >
                   <option value="Policy Feedback">Policy & Bill Feedback</option>
                   <option value="Constituency Infrastructure">Constituency Development & Power</option>
@@ -606,14 +606,14 @@ export default function LegislatorDetail({ id, legislators, bills, onBack, onSel
                   value={messageBody}
                   onChange={(e) => setMessageBody(e.target.value)}
                   placeholder="Review the constituency performance, list policy suggestions, highlight development concerns..."
-                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 focus:outline-emerald-500 font-medium text-slate-850"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-lg p-2 focus:outline-blue-500 font-medium text-slate-850"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl transition text-xs flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+                className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-xl transition text-xs flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>{isSubmitting ? "Dispatching Message..." : "Send Authorized Letter"}</span>

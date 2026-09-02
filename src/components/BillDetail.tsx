@@ -271,7 +271,7 @@ export default function BillDetail({
 
         {/* Title */}
         <div className="space-y-2">
-          <span className="text-[9px] font-black text-emerald-850 bg-emerald-50 border border-emerald-250 px-2 py-0.5 rounded w-max block uppercase tracking-wider">Official Short Title</span>
+          <span className="text-[9px] font-black text-blue-900 bg-blue-50 border border-blue-200 px-2 py-0.5 rounded w-max block uppercase tracking-wider">Official Short Title</span>
           <h2 className="text-xl font-black text-slate-900 tracking-tight leading-snug">
             {bill.title}
           </h2>
@@ -324,11 +324,11 @@ export default function BillDetail({
               {/* Pros & Cons detailed */}
               <div className="grid grid-cols-2 gap-4 pt-2">
                 <div>
-                  <h4 className="font-black text-emerald-850 mb-1.5 uppercase text-[9px] tracking-widest border-b border-emerald-100 pb-0.5">Advantages (Pros)</h4>
+                  <h4 className="font-black text-blue-900 mb-1.5 uppercase text-[9px] tracking-widest border-b border-blue-100 pb-0.5">Advantages (Pros)</h4>
                   <ul className="space-y-1.5">
                     {bill.aiAnalysis.pros.map((pro, i) => (
                       <li key={i} className="text-[11px] text-slate-650 flex items-start gap-1.5 leading-relaxed">
-                        <span className="text-emerald-600 shrink-0 font-bold">•</span>
+                        <span className="text-blue-600 shrink-0 font-bold">•</span>
                         <span>{pro}</span>
                       </li>
                     ))}
@@ -365,7 +365,7 @@ export default function BillDetail({
             </thead>
             <tbody>
               {bill.timeline.map((step) => (
-                <tr key={step.stage} className={`border-b border-slate-100 py-3 ${step.completed ? "opacity-100 bg-emerald-50/10" : "opacity-40"}`}>
+                <tr key={step.stage} className={`border-b border-slate-100 py-3 ${step.completed ? "opacity-100 bg-blue-50/10" : "opacity-40"}`}>
                   <td className="py-2.5 font-bold text-slate-800">
                     {step.completed ? "✓ " : "○ "} {step.stage}
                   </td>
@@ -434,7 +434,7 @@ export default function BillDetail({
               id="btn-print-bill"
               title="Print clean legislative summary"
             >
-              <Printer className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
+              <Printer className="w-3.5 h-3.5 text-blue-600 animate-pulse" />
               <span>Print Summary</span>
             </button>
 
@@ -455,7 +455,7 @@ export default function BillDetail({
             <span className="font-mono text-xs px-2.5 py-1 bg-slate-100 text-slate-600 border border-slate-200 rounded font-bold">
               {bill.billNumber}
             </span>
-            <span className="text-xs px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 font-semibold font-sans">
+            <span className="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100 font-semibold font-sans">
               {bill.category}
             </span>
           </div>
@@ -473,14 +473,14 @@ export default function BillDetail({
         {/* Sponsor line and Meta */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-5 border-t border-slate-200">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-emerald-50 border border-emerald-200 text-emerald-600 font-display font-extrabold rounded-full flex items-center justify-center text-sm">
+            <div className="w-10 h-10 bg-blue-50 border border-blue-200 text-blue-600 font-display font-extrabold rounded-full flex items-center justify-center text-sm">
               {sponsor?.name ? sponsor.name.split(" ").pop()?.substring(0, 2).toUpperCase() : "SP"}
             </div>
             <div>
               <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Chief Sponsor</div>
               <button
                 onClick={() => sponsor && onSelectLegislator(sponsor.id)}
-                className="text-slate-800 hover:text-emerald-650 font-bold text-xs md:text-sm text-left hover:underline transition"
+                className="text-slate-800 hover:text-blue-600 font-bold text-xs md:text-sm text-left hover:underline transition"
               >
                 {bill.sponsorName}
               </button>
@@ -490,7 +490,7 @@ export default function BillDetail({
           <div>
             <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Chamber of Origin</div>
             <div className="text-slate-700 font-semibold text-xs md:text-sm mt-0.5 flex items-center gap-1.5">
-              <Landmark className="w-4 h-4 text-emerald-600" />
+              <Landmark className="w-4 h-4 text-blue-600" />
               {bill.chamberOfOrigin}
             </div>
           </div>
@@ -498,7 +498,7 @@ export default function BillDetail({
           <div className="space-y-1.5 min-w-[150px]">
             <div className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Status Index</div>
             <div className="text-slate-705 font-semibold text-xs md:text-sm mt-0.5 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
               Progress: {bill.stageProgress}% ({bill.currentStage})
             </div>
             {/* Visual Legislative Progress Bar with dynamic first-render motion */}
@@ -506,10 +506,10 @@ export default function BillDetail({
               <motion.div
                 className={`h-full rounded-full ${
                   bill.currentStage === LegislativeStage.ASSENT
-                    ? "bg-emerald-500"
+                    ? "bg-blue-500"
                     : bill.currentStage === LegislativeStage.VETOED
                     ? "bg-rose-500"
-                    : "bg-emerald-500"
+                    : "bg-blue-500"
                 }`}
                 initial={{ width: 0 }}
                 animate={{ width: `${bill.stageProgress}%` }}
@@ -526,7 +526,7 @@ export default function BillDetail({
           onClick={() => setActiveSubTab("progress")}
           className={`pb-3 text-sm font-semibold border-b-2 px-4 whitespace-nowrap transition-all flex items-center gap-2 ${
             activeSubTab === "progress"
-              ? "border-emerald-600 text-slate-900 font-bold"
+              ? "border-blue-600 text-slate-900 font-bold"
               : "border-transparent text-slate-450 hover:text-slate-600"
           }`}
         >
@@ -538,7 +538,7 @@ export default function BillDetail({
           onClick={() => setActiveSubTab("ai-brief")}
           className={`pb-3 text-sm font-semibold border-b-2 px-4 whitespace-nowrap transition-all flex items-center gap-2 ${
             activeSubTab === "ai-brief"
-              ? "border-emerald-600 text-slate-900 font-bold"
+              ? "border-blue-600 text-slate-900 font-bold"
               : "border-transparent text-slate-450 hover:text-slate-600"
           }`}
           id="tab-trigger-ai-brief"
@@ -554,7 +554,7 @@ export default function BillDetail({
           onClick={() => setActiveSubTab("citizen-opinion")}
           className={`pb-3 text-sm font-semibold border-b-2 px-4 whitespace-nowrap transition-all flex items-center gap-2 ${
             activeSubTab === "citizen-opinion"
-              ? "border-emerald-600 text-slate-900 font-bold"
+              ? "border-blue-600 text-slate-900 font-bold"
               : "border-transparent text-slate-450 hover:text-slate-600"
           }`}
         >
@@ -598,7 +598,7 @@ export default function BillDetail({
                       {/* Check dot icon */}
                       <div className="relative z-10">
                         {isCompleted ? (
-                          <div className="w-8 h-8 rounded-full bg-emerald-500 border-4 border-white text-white flex items-center justify-center shadow-sm">
+                          <div className="w-8 h-8 rounded-full bg-blue-500 border-4 border-white text-white flex items-center justify-center shadow-sm">
                             <CheckCircle2 className="w-4 h-4 font-bold" />
                           </div>
                         ) : isCurrent ? (
@@ -662,9 +662,9 @@ export default function BillDetail({
                   </p>
                 </div>
                 {bill.aiAnalysis && (
-                  <div className="flex flex-col items-center p-2.5 bg-emerald-50 border border-emerald-150 rounded-xl">
-                    <span className="text-[10px] text-emerald-650 uppercase tracking-wider font-bold">Policy Rating</span>
-                    <span className="text-xl font-bold text-emerald-600 font-display mt-0.5">{bill.aiAnalysis.overallRating}<span className="text-xs text-emerald-400 font-sans font-normal">/100</span></span>
+                  <div className="flex flex-col items-center p-2.5 bg-blue-50 border border-blue-150 rounded-xl">
+                    <span className="text-[10px] text-blue-700 uppercase tracking-wider font-bold">Policy Rating</span>
+                    <span className="text-xl font-bold text-blue-600 font-display mt-0.5">{bill.aiAnalysis.overallRating}<span className="text-xs text-blue-400 font-sans font-normal">/100</span></span>
                   </div>
                 )}
               </div>
@@ -706,13 +706,13 @@ export default function BillDetail({
                   {/* Pros and Cons lists */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-4 border-t border-slate-200">
                     <div className="space-y-2">
-                      <h4 className="text-xs font-bold text-emerald-700 uppercase tracking-widest flex items-center gap-1">
+                      <h4 className="text-xs font-bold text-blue-700 uppercase tracking-widest flex items-center gap-1">
                         ✓ Legislative Advantages (Pros)
                       </h4>
                       <ul className="space-y-1.5">
                         {bill.aiAnalysis.pros.map((pro, i) => (
                           <li key={i} className="text-xs text-slate-600 flex items-start gap-2 leading-relaxed font-medium">
-                            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full shrink-0 mt-1.5" />
+                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full shrink-0 mt-1.5" />
                             <span>{pro}</span>
                           </li>
                         ))}
@@ -773,7 +773,7 @@ export default function BillDetail({
               {/* Input Form */}
               <form onSubmit={handleCommentSubmit} className="bg-slate-50 p-4 rounded-xl border border-slate-200/80 space-y-3">
                 <h4 className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                  <Send className="w-3.5 h-3.5 text-emerald-600" />
+                  <Send className="w-3.5 h-3.5 text-blue-600" />
                   <span>Leave Your Citizen Feedback</span>
                 </h4>
                 
@@ -785,7 +785,7 @@ export default function BillDetail({
                     value={newCommentName}
                     onChange={(e) => setNewCommentName(e.target.value)}
                     placeholder="Your Full Name (e.g. Ibrahim Bello)"
-                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs focus:outline-emerald-500 text-slate-800 font-medium"
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs focus:outline-blue-500 text-slate-800 font-medium"
                   />
                   
                   {/* Rating selection */}
@@ -793,7 +793,7 @@ export default function BillDetail({
                     id="comment-rating"
                     value={newCommentRating}
                     onChange={(e) => setNewCommentRating(Number(e.target.value))}
-                    className="w-full px-2 py-2 bg-white border border-slate-200 rounded-lg text-xs focus:outline-emerald-500 text-slate-700 font-semibold"
+                    className="w-full px-2 py-2 bg-white border border-slate-200 rounded-lg text-xs focus:outline-blue-500 text-slate-700 font-semibold"
                   >
                     <option value={5}>⭐⭐⭐⭐⭐ (Highly Support)</option>
                     <option value={4}>⭐⭐⭐⭐ (Support)</option>
@@ -810,14 +810,14 @@ export default function BillDetail({
                   value={newCommentText}
                   onChange={(e) => setNewCommentText(e.target.value)}
                   placeholder="Review the bill, list suggestions, highlight concerns, or state legal arguments..."
-                  className="w-full p-3 bg-white border border-slate-200 rounded-lg text-xs focus:outline-emerald-500 text-slate-800 font-medium"
+                  className="w-full p-3 bg-white border border-slate-200 rounded-lg text-xs focus:outline-blue-500 text-slate-800 font-medium"
                 />
 
                 <div className="flex justify-end">
                   <button
                     type="submit"
                     disabled={isSubmittingComment}
-                    className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs rounded-lg transition flex items-center gap-1 cursor-pointer"
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs rounded-lg transition flex items-center gap-1 cursor-pointer"
                   >
                     {isSubmittingComment ? "Submitting..." : "Post Citizen Comment"}
                   </button>
@@ -864,7 +864,7 @@ export default function BillDetail({
           {/* CITIZEN POLL / PUBLIC SURVEY */}
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
             <h3 className="text-sm font-bold font-display text-slate-900 flex items-center gap-1.5">
-              <Vote className="w-5.5 h-5.5 text-emerald-600 animate-bounce" />
+              <Vote className="w-5.5 h-5.5 text-blue-600 animate-bounce" />
               <span>Participatory Citizen Poll</span>
             </h3>
             <p className="text-sm text-slate-500 leading-normal font-medium">
@@ -876,12 +876,12 @@ export default function BillDetail({
               {/* Support slider line */}
               <div className="space-y-1">
                 <div className="flex justify-between text-xs font-semibold">
-                  <span className="text-emerald-600 flex items-center gap-1">Support ({supportPercent}%)</span>
+                  <span className="text-blue-600 flex items-center gap-1">Support ({supportPercent}%)</span>
                   <span className="text-rose-600">Oppose ({opposePercent}%)</span>
                 </div>
                 
                 <div className="w-full h-3 bg-red-100 rounded-full overflow-hidden flex">
-                  <div className="h-full bg-emerald-500 transition-all duration-300" style={{ width: `${supportPercent}%` }} />
+                  <div className="h-full bg-blue-500 transition-all duration-300" style={{ width: `${supportPercent}%` }} />
                   <div className="h-full bg-rose-500 transition-all duration-300" style={{ width: `${opposePercent}%` }} />
                 </div>
               </div>
@@ -893,7 +893,7 @@ export default function BillDetail({
                     onClick={() => handleVoteLocal("for")}
                     id="btn-vote-support"
                     disabled={voteSubmitting}
-                    className="py-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-600 border border-emerald-100 font-bold text-xs rounded-xl flex items-center justify-center gap-1 transition cursor-pointer"
+                    className="py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-600 border border-blue-100 font-bold text-xs rounded-xl flex items-center justify-center gap-1 transition cursor-pointer"
                   >
                     <ThumbsUp className="w-4 h-4" />
                     <span>Support Act</span>
@@ -910,7 +910,7 @@ export default function BillDetail({
                   </button>
                 </div>
               ) : (
-                <div className="text-center py-2 bg-emerald-50 text-emerald-800 text-xs rounded-lg font-bold border border-emerald-200 flex items-center justify-center gap-1">
+                <div className="text-center py-2 bg-blue-50 text-blue-800 text-xs rounded-lg font-bold border border-blue-200 flex items-center justify-center gap-1">
                   ✓ Citizen vote registered on server successfully!
                 </div>
               )}
@@ -920,7 +920,7 @@ export default function BillDetail({
           {/* SHARE BILL MODULE */}
           <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
             <h3 className="text-sm font-bold font-display text-slate-900 flex items-center gap-1.5">
-              <Share2 className="w-4.5 h-4.5 text-emerald-600" />
+              <Share2 className="w-4.5 h-4.5 text-blue-600" />
               <span>Share Bill Information</span>
             </h3>
             <p className="text-xs text-slate-500 leading-normal font-medium">
@@ -934,7 +934,7 @@ export default function BillDetail({
                 className="py-2 px-1 bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-slate-300 text-slate-700 font-bold text-[10px] rounded-lg flex flex-col items-center justify-center gap-1.5 transition cursor-pointer"
                 title="Share via Email"
               >
-                <Mail className="w-4 h-4 text-emerald-600" />
+                <Mail className="w-4 h-4 text-blue-600" />
                 <span>Email</span>
               </button>
 
@@ -963,7 +963,7 @@ export default function BillDetail({
                 <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Shareable Summary</span>
                 <button
                   onClick={handleCopySummary}
-                  className="text-[10px] text-emerald-600 hover:text-emerald-700 font-bold hover:underline flex items-center gap-1 cursor-pointer"
+                  className="text-[10px] text-blue-600 hover:text-blue-700 font-bold hover:underline flex items-center gap-1 cursor-pointer"
                 >
                   {copied ? "✓ Copied!" : "📋 Copy"}
                 </button>
@@ -973,7 +973,7 @@ export default function BillDetail({
                 <textarea
                   readOnly
                   value={shareText}
-                  className="w-full h-32 p-2.5 bg-slate-50 border border-slate-200 text-[10px] font-mono rounded-lg outline-none text-slate-600 leading-relaxed overflow-y-auto resize-none select-all focus:ring-1 focus:ring-emerald-500"
+                  className="w-full h-32 p-2.5 bg-slate-50 border border-slate-200 text-[10px] font-mono rounded-lg outline-none text-slate-600 leading-relaxed overflow-y-auto resize-none select-all focus:ring-1 focus:ring-blue-500"
                   id={`share-summary-text-${bill.id}`}
                 />
               </div>
@@ -1003,7 +1003,7 @@ export default function BillDetail({
 
                 <div>
                   <span className="text-slate-400 font-medium text-[11px]">Engagement Score</span>
-                  <div className="font-bold text-emerald-600 mt-0.5 font-mono text-sm">{sponsor.engagementScore}%</div>
+                  <div className="font-bold text-blue-600 mt-0.5 font-mono text-sm">{sponsor.engagementScore}%</div>
                 </div>
 
                 <div>
@@ -1029,7 +1029,7 @@ export default function BillDetail({
           {/* SIMULATE LEGISLATIVE PROGRESS */}
           <div className="bg-slate-50 text-slate-800 rounded-2xl border border-slate-200 p-5 shadow-sm space-y-4">
             <h3 className="text-sm font-bold font-display text-slate-900 flex items-center gap-1.5">
-              <Play className="w-4.5 h-4.5 text-emerald-600 transform rotate-90" />
+              <Play className="w-4.5 h-4.5 text-blue-600 transform rotate-90" />
               <span>NASS Legislative Simulator</span>
             </h3>
             <p className="text-xs text-slate-500 leading-normal font-medium">
@@ -1043,7 +1043,7 @@ export default function BillDetail({
                   id="simulator-target-stage"
                   value={simulatedStage}
                   onChange={(e) => setSimulatedStage(e.target.value as LegislativeStage)}
-                  className="w-full bg-white text-slate-800 rounded-lg border border-slate-200 p-2 text-xs font-semibold focus:ring-1 focus:ring-emerald-500"
+                  className="w-full bg-white text-slate-800 rounded-lg border border-slate-200 p-2 text-xs font-semibold focus:ring-1 focus:ring-blue-500"
                 >
                   {stagesList.map((stg) => (
                     <option key={stg} value={stg}>
@@ -1061,7 +1061,7 @@ export default function BillDetail({
                   value={simulatedNote}
                   onChange={(e) => setSimulatedNote(e.target.value)}
                   placeholder="e.g. Debated general outlines, public opinion was positive..."
-                  className="w-full bg-white text-slate-800 rounded-lg border border-slate-200 p-2 text-xs font-medium focus:ring-1 focus:ring-emerald-500"
+                  className="w-full bg-white text-slate-800 rounded-lg border border-slate-200 p-2 text-xs font-medium focus:ring-1 focus:ring-blue-500"
                 />
               </div>
 
